@@ -11,16 +11,20 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Looper;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -28,8 +32,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.app.ActivityCompat;
-
-import com.fxn.stash.Stash;
 
 import java.io.File;
 import java.text.DecimalFormat;
@@ -52,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Stash.init(getApplicationContext());
 
         fileListView = findViewById(R.id.fileListView);
         fileScrollView = findViewById(R.id.fileScrollView);
@@ -64,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         constraintSet.clone(layout);
-
-        requestWriteExternalPermission();
     }
 
     /**
@@ -81,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
      * Runs search and delete on background thread
      */
     public final void clean(View view) {
+        requestWriteExternalPermission();
+
         if (!running) {
             if (!prefs.getBoolean("one_click", false)) // one-click disabled
                 new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
@@ -229,9 +230,26 @@ public class MainActivity extends AppCompatActivity {
      * Request write permission
      */
     public synchronized void requestWriteExternalPermission() {
-        ActivityCompat.requestPermissions(this,
-                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE},
-                1);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) { // android 11 and up
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            Manifest.permission.READ_EXTERNAL_STORAGE,
+                            Manifest.permission.MANAGE_EXTERNAL_STORAGE},
+                    1);
+
+            if (!Environment.isExternalStorageManager()) { // all files
+                Toast.makeText(this, "Permission needed!", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                Uri uri = Uri.fromParts("package", getPackageName(), null);
+                intent.setData(uri);
+                startActivity(intent);
+            }
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            Manifest.permission.READ_EXTERNAL_STORAGE},
+                    1);
+        }
     }
 
     /**

@@ -5,13 +5,13 @@
 package theredspy15.ltecleanerfoss;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.widget.TextView;
-
-import com.fxn.stash.Stash;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -25,7 +25,8 @@ import static theredspy15.ltecleanerfoss.WhitelistActivity.getWhiteList;
 
 public class FileScanner {
 
-    private File path;
+    SharedPreferences prefs;
+    private final File path;
     private Resources res;
     private MainActivity gui;
     private int filesRemoved = 0;
@@ -34,12 +35,13 @@ public class FileScanner {
     private boolean emptyDir = false;
     private boolean autoWhite = true;
     private boolean corpse = false;
-    private static ArrayList<String> filters = new ArrayList<>();
-    private static String[] protectedFileList = {
+    private static final ArrayList<String> filters = new ArrayList<>();
+    private static final String[] protectedFileList = {
             "backup", "copy", "copies", "important", "do_not_edit"};
 
     FileScanner(File path) {
         this.path = path;
+        prefs = PreferenceManager.getDefaultSharedPreferences(gui.getApplicationContext());
     }
     private List<File> getListFiles() {
         return getListFiles(path);
@@ -100,7 +102,7 @@ public class FileScanner {
             if (file.getName().toLowerCase().contains(protectedFile) &&
                     !getWhiteList().contains(file.getAbsolutePath().toLowerCase())) {
                 getWhiteList().add(file.getAbsolutePath().toLowerCase());
-                Stash.put("whiteList", getWhiteList());
+                prefs.edit().putString("whiteList", getWhiteList().toString()).apply();
                 return true;
             }
         }

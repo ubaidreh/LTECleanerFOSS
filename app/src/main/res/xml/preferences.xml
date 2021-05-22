@@ -36,16 +36,6 @@
             android:targetClass="theredspy15.ltecleanerfoss.WhitelistActivity" />
     </Preference>
 
-    <Preference android:title="@string/make_suggestion"
-        android:key="suggestion"
-        app:iconSpaceReserved="false"
-        android:summary="@string/suggestion_sum">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="com.package.name"
-            android:targetClass="com.package.name.ActivityName" />
-    </Preference>
-
     <PreferenceCategory android:title="Filters" app:iconSpaceReserved="false">
         <CheckBoxPreference
             app:iconSpaceReserved="false"

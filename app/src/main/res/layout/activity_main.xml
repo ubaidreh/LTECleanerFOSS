@@ -36,7 +36,7 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <mehdi.sakout.fancybuttons.FancyButton
+    <Button
         android:id="@+id/settingsButton"
         android:layout_width="65dp"
         android:layout_height="50dp"
@@ -49,6 +49,7 @@
         android:paddingTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         fancy:fb_borderWidth="1dp"
         fancy:fb_defaultColor="@color/colorPrimaryDark"
         fancy:fb_focusColor="@color/colorAccent"
@@ -57,7 +58,7 @@
         fancy:fb_text=""
         fancy:fb_textColor="@color/buttonText" />
 
-    <mehdi.sakout.fancybuttons.FancyButton
+    <Button
         android:id="@+id/cleanButton"
         android:layout_width="152dp"
         android:layout_height="51dp"
@@ -70,6 +71,7 @@
         android:paddingTop="10dp"
         android:paddingRight="20dp"
         android:paddingBottom="10dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

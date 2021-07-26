@@ -58,7 +58,7 @@ Upoming major features:
 
 ## Screenshots
 
-<img src="/Screenshots/Screenshot_1529468353_framed.png" width="300">
+<img src="/Screenshots/Screenshot_1529468353_framed.png" width="200">
 
 ## Join the team
   * Test the app with different devices

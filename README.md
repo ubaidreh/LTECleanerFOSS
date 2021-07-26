@@ -5,6 +5,7 @@
 ![logo](https://imgur.com/ykSLpTS.png) 
 
 ![Android CI](https://github.com/TheRedSpy15/LTECleanerFOSS/workflows/Android%20CI/badge.svg)
+[![GitHub issues](https://img.shields.io/github/issues/TheRedSpy15/LTECleanerFOSS?color=red)](https://github.com/TheRedSpy15/LTECleanerFOSS/issues)
 [![Crowdin](https://badges.crowdin.net/lte-cleaner/localized.svg)](https://crowdin.com/project/lte-cleaner)
 ![code-inspector](https://www.code-inspector.com/project/2073/score/svg)
 ![code-grade](https://www.code-inspector.com/project/2073/status/svg)

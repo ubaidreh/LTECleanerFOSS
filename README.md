@@ -91,6 +91,6 @@ Buy us a coffee or two, as it enables us to put more free time into the active d
      
 </details>
 
-__Privacy Policy:__ https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html
+**Privacy Policy:** [Link](https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html)
 
 ![license](https://imgur.com/QQlcEVT.png)

@@ -68,6 +68,22 @@ Upoming major features:
      
 </details>
 
+## Support by donating
+
+Buy us a coffee or two, as it enables us to put more free time into the active development.
+
+<table>
+  <tr>
+    <th colspan="3">Thank you for donating</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/sponsors/TheRedSpy15"><img src="icon_for_github_sponsors_png" height=25/></a></td>
+    <td align="center">Github Sponsors</td>
+    <td><a href="https://github.com/sponsors/TheRedSpy15">https://github.com/sponsors/TheRedSpy15</a></td>
+  </tr>
+
+</table>
+
 __Privacy Policy:__ https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html
 
 ![license](https://imgur.com/QQlcEVT.png)

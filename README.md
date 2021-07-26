@@ -60,6 +60,12 @@ Upoming major features:
 
 <img src="/Screenshots/Screenshot_1529468353_framed.png" width="300">
 
+## Join the team
+  * Test the app with different devices
+  * Report issues and feature requests in the [issue tracker](https://github.com/TheRedSpy15/LTECleanerFOSS/issues)
+  * Create a [Pull Request](https://opensource.guide/how-to-contribute/#opening-a-pull-request)
+  * Translate this app into more languages on [Crowdin](https://crowdin.com/project/lte-cleaner)
+
 ## Support by donating
 
 Buy us a coffee or two, as it enables us to put more free time into the active development.

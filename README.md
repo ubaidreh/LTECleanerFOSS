@@ -2,7 +2,7 @@
 
 ***The last Android cleaner you will ever need!***
 
-![logo](https://imgur.com/ykSLpTS.png) 
+<img src="https://imgur.com/ykSLpTS.png" width="300">
 
 ![Android CI](https://github.com/TheRedSpy15/LTECleanerFOSS/workflows/Android%20CI/badge.svg)
 [![GitHub issues](https://img.shields.io/github/issues/TheRedSpy15/LTECleanerFOSS?color=red)](https://github.com/TheRedSpy15/LTECleanerFOSS/issues)

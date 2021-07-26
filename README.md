@@ -4,7 +4,10 @@
 
 ![logo](https://imgur.com/ykSLpTS.png) 
 
-![Android CI](https://github.com/TheRedSpy15/LTECleanerFOSS/workflows/Android%20CI/badge.svg) [![Crowdin](https://badges.crowdin.net/lte-cleaner/localized.svg)](https://crowdin.com/project/lte-cleaner) ![code-inspector](https://www.code-inspector.com/project/2073/score/svg) ![code-grade](https://www.code-inspector.com/project/2073/status/svg)
+![Android CI](https://github.com/TheRedSpy15/LTECleanerFOSS/workflows/Android%20CI/badge.svg)
+[![Crowdin](https://badges.crowdin.net/lte-cleaner/localized.svg)](https://crowdin.com/project/lte-cleaner)
+![code-inspector](https://www.code-inspector.com/project/2073/score/svg)
+![code-grade](https://www.code-inspector.com/project/2073/status/svg)
 [![GitHub license](https://img.shields.io/github/license/TheRedSpy15/LTECleanerFOSS?color=lightgrey)](/blob/master/LICENSE)
 
 Tired of the abundance of phone cleaners on the play store? Tired of 
@@ -15,6 +18,17 @@ There are simply way too many apps out there that claim to speed up your device.
 LTE Cleaner only aims to clean your phone by removing safe to delete files, which not only frees up a lot of space, but also improve your privacy. Since LTE Cleaner removes .log files, which well, log what you do.
 
 __LTE Cleaner is 100% free, open source, ad free, and deletes everything it claims to.__
+
+<details>
+  <summary>Notice</summary>
+
+December 13th, 2020:
+
+*In response to the large number of apps on the play store that are cloning LTE Cleaner and running ads, I will be changing from the MIT license, to GPLv3.*
+
+*2020 has been crazy too. I have not in anyway worked on this app since the summer. But I'm back baby!*
+
+</details>
 
 ## Install
 
@@ -45,13 +59,15 @@ Upoming major features:
 
 <img src="/Screenshots/Screenshot_1529468353_framed.png" width="300">
 
+<details>
+  <summary>Contributors</summary>
+  
+#### Logo creation
+
+* Big thanks to [Ander Méndez](https://github.com/mendezand) for creating the awesome logo!
+     
+</details>
+
 __Privacy Policy:__ https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html
 
-Big thanks to Ander Méndez for creating the awesome logo!
-GitHub: https://github.com/mendezand 
-
 ![license](https://imgur.com/QQlcEVT.png)
-### NOTICE!!! - December 13th (2020)
-**In response to the large number of apps on the play store that are cloning LTE Cleaner and running ads, I will be changing from the MIT license, to GPLv3.**
-
-**2020 has been crazy too. I have not in anyway worked on this app since the summer. But I'm back baby!**

@@ -5,7 +5,7 @@
 ![logo](https://imgur.com/ykSLpTS.png) 
 
 ![Android CI](https://github.com/TheRedSpy15/LTECleanerFOSS/workflows/Android%20CI/badge.svg) [![Crowdin](https://badges.crowdin.net/lte-cleaner/localized.svg)](https://crowdin.com/project/lte-cleaner) ![code-inspector](https://www.code-inspector.com/project/2073/score/svg) ![code-grade](https://www.code-inspector.com/project/2073/status/svg)
-[![GitHub license](https://img.shields.io/github/license/TheRedSpy15/LTECleanerFOSS?color=lightgrey)](https://github.com/fr3ts0n/AndrOBD/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/TheRedSpy15/LTECleanerFOSS?color=lightgrey)](/blob/master/LICENSE)
 
 Tired of the abundance of phone cleaners on the play store? Tired of 
 them being extremely shady? Tired of them doing nothing? Tired of ads? 

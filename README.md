@@ -59,15 +59,6 @@ Upoming major features:
 
 <img src="/Screenshots/Screenshot_1529468353_framed.png" width="300">
 
-<details>
-  <summary>Contributors</summary>
-  
-#### Logo creation
-
-* Big thanks to [Ander Méndez](https://github.com/mendezand) for creating the awesome logo!
-     
-</details>
-
 ## Support by donating
 
 Buy us a coffee or two, as it enables us to put more free time into the active development.
@@ -77,12 +68,21 @@ Buy us a coffee or two, as it enables us to put more free time into the active d
     <th colspan="3">Thank you for donating</th>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/sponsors/TheRedSpy15"><img src="icon_for_github_sponsors_png" height=25/></a></td>
+    <td align="center"><a href="https://github.com/sponsors/TheRedSpy15"><img src="https://github.blog/wp-content/uploads/2019/05/mona-heart-featured.png" height=25/></a></td>
     <td align="center">Github Sponsors</td>
     <td><a href="https://github.com/sponsors/TheRedSpy15">https://github.com/sponsors/TheRedSpy15</a></td>
   </tr>
 
 </table>
+
+<details>
+  <summary>Contributors</summary>
+  
+#### Logo creation
+
+* Big thanks to [Ander Méndez](https://github.com/mendezand) for creating the awesome logo!
+     
+</details>
 
 __Privacy Policy:__ https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html
 

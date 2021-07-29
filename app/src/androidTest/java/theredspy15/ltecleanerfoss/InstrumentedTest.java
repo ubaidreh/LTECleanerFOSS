@@ -11,8 +11,6 @@ import android.os.Environment;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.platform.app.InstrumentationRegistry;
 
-import com.fxn.stash.Stash;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,8 +36,7 @@ public class InstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         File path = new File(Environment.getExternalStorageDirectory().toString() + "/");
         Resources res = appContext.getResources();
-        fs = new FileScanner(path);
-        Stash.init(appContext);
+        fs = new FileScanner(path, appContext);
         fs.setAutoWhite(false);
         fs.setResources(res);
         fs.setDelete(true);

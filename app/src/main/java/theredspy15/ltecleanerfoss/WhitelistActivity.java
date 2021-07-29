@@ -1,13 +1,10 @@
 /*
- * Copyright 2020 Hunter J Drum
+ * Copyright 2021 Hunter J Drum
  */
 
 package theredspy15.ltecleanerfoss;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
@@ -26,7 +23,6 @@ public class WhitelistActivity extends AppCompatActivity {
 
     ListView listView;
     BaseAdapter adapter;
-    static SharedPreferences prefs;
     private static List<String> whiteList;
 
     @Override
@@ -38,8 +34,6 @@ public class WhitelistActivity extends AppCompatActivity {
 
         adapter = new ArrayAdapter<>(this, R.layout.custom_textview, getWhiteList());
         listView.setAdapter(adapter);
-
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
     }
 
     /**
@@ -53,14 +47,14 @@ public class WhitelistActivity extends AppCompatActivity {
                 .setMessage(R.string.are_you_reset_whitelist)
                 .setPositiveButton(R.string.reset, (dialog, whichButton) -> {
                     whiteList.clear();
-                    prefs.edit().putString("whiteList", whiteList.toString()).apply();
+                    MainActivity.prefs.edit().putString("whiteList", whiteList.toString()).apply();
                     refreshListView();
                 })
                 .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
     }
 
     public void addRecommended(View view) {
-        File externalDir = Environment.getExternalStorageDirectory();
+        File externalDir = this.getExternalFilesDir(null);
 
         if (!whiteList.contains(new File(externalDir, "Music").getPath())) {
             whiteList.add(new File(externalDir, "Music").getPath());
@@ -73,9 +67,8 @@ public class WhitelistActivity extends AppCompatActivity {
             whiteList.add(new File(externalDir, "Download").getPath());
             whiteList.add(new File(externalDir, "DCIM").getPath());
             whiteList.add(new File(externalDir, "Documents").getPath());
-            prefs.edit().putString("whiteList", whiteList.toString()).apply();
+            MainActivity.prefs.edit().putString("whiteList", whiteList.toString()).apply();
             refreshListView();
-
         } else
             Toast.makeText(this, "Already added",
                     Toast.LENGTH_LONG).show();
@@ -86,7 +79,6 @@ public class WhitelistActivity extends AppCompatActivity {
      * @param view the view that is clicked
      */
     public final void addToWhiteList(View view) {
-
         final EditText input = new EditText(WhitelistActivity.this);
 
         new AlertDialog.Builder(WhitelistActivity.this,R.style.MyAlertDialogTheme)
@@ -95,10 +87,17 @@ public class WhitelistActivity extends AppCompatActivity {
                 .setView(input)
                 .setPositiveButton(R.string.add, (dialog, whichButton) -> {
                     whiteList.add(String.valueOf(input.getText()));
-                    prefs.edit().putString("whiteList", whiteList.toString()).apply();
+                    MainActivity.prefs.edit().putString("whiteList", whiteList.toString()).apply();
                     refreshListView();
                 })
                 .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
+    }
+
+    public final void viewWhiteList(View view) {
+        AlertDialog.Builder build = new AlertDialog.Builder(this);
+        build.setItems((CharSequence[]) whiteList.toArray(), (dialog12, which) -> {
+            //do stuff....
+        }).create().show();
     }
 
     public void refreshListView() {
@@ -111,8 +110,7 @@ public class WhitelistActivity extends AppCompatActivity {
 
     public static synchronized List<String> getWhiteList() {
         if (whiteList == null) {
-            String whiteListStrings = prefs.getString("whiteList","no whitelist");
-            assert whiteListStrings != null;
+            String whiteListStrings = MainActivity.prefs.getString("whiteList","no whitelist");
             String[] whitelistString = whiteListStrings.split(", ");
             whiteList = Arrays.asList(whitelistString.clone());
         }

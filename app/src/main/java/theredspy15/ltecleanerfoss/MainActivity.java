@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
-    SharedPreferences prefs;
+    static SharedPreferences prefs;
 
     LinearLayout fileListView;
     ScrollView fileScrollView;
@@ -62,8 +62,6 @@ public class MainActivity extends AppCompatActivity {
         statusText = findViewById(R.id.statusTextView);
         layout = findViewById(R.id.main_layout);
 
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
-
         constraintSet.clone(layout);
     }
 
@@ -81,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public final void clean(View view) {
         requestWriteExternalPermission();
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        WhitelistActivity.getWhiteList();
 
         if (!running) {
             if (!prefs.getBoolean("one_click", false)) // one-click disabled
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         File path = Environment.getExternalStorageDirectory();
 
         // scanner setup
-        FileScanner fs = new FileScanner(path);
+        FileScanner fs = new FileScanner(path, this);
         fs.setEmptyDir(prefs.getBoolean("empty", false));
         fs.setAutoWhite(prefs.getBoolean("auto_white", true));
         fs.setDelete(delete);
@@ -257,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 1 &&
                 grantResults.length > 0 &&
                 grantResults[0] != PackageManager.PERMISSION_GRANTED)

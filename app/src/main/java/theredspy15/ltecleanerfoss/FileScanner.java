@@ -5,6 +5,7 @@
 package theredspy15.ltecleanerfoss;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -39,9 +40,10 @@ public class FileScanner {
     private static final String[] protectedFileList = {
             "backup", "copy", "copies", "important", "do_not_edit"};
 
-    FileScanner(File path) {
+    FileScanner(File path, Context context) {
         this.path = path;
-        prefs = PreferenceManager.getDefaultSharedPreferences(gui.getApplicationContext());
+        prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        WhitelistActivity.getWhiteList();
     }
     private List<File> getListFiles() {
         return getListFiles(path);

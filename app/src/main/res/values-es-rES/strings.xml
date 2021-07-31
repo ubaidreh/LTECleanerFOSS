@@ -53,6 +53,8 @@
     <string name="corpse_title">Suprimir archivos de cadáver</string>
     <string name="donate">Donar</string>
     <string name="donate_sum">¡Cómprame un Café! O elegir cuánto donar usando PayPal para que pueda seguir apoyando esta aplicación</string>
+    <string name="recommended">Recommended</string>
+    <string name="defaultwhitelist">Default</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>Archivo</item>

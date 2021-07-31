@@ -53,6 +53,8 @@
     <string name="corpse_title">corpse ファイルの削除</string>
     <string name="donate">ドナーテ</string>
     <string name="donate_sum">コーヒーを買ってくれ ! または、 PayPal を使用した寄付の程度を選択して、このアプリをサポートすることができます。</string>
+    <string name="recommended">Recommended</string>
+    <string name="defaultwhitelist">Default</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

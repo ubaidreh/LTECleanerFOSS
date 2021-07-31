@@ -53,6 +53,8 @@
     <string name="corpse_title">Ceset dosyalarını sil</string>
     <string name="donate">Bağışta</string>
     <string name="donate_sum">Bana bir kahve ısmarla! Veya PayPal kullanarak bu uygulamayı desteklemeye devam edebilmem için ne kadar bağışta bulunacağımı seçin</string>
+    <string name="recommended">Recommended</string>
+    <string name="defaultwhitelist">Default</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

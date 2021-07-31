@@ -17,13 +17,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class WhitelistActivity extends AppCompatActivity {
 
     ListView listView;
     BaseAdapter adapter;
-    private static List<String> whiteList;
+    private static LinkedList<String> whiteList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +55,8 @@ public class WhitelistActivity extends AppCompatActivity {
     }
 
     public void addRecommended(View view) {
-        File externalDir = this.getExternalFilesDir(null);
+        String externalDir = this.getExternalFilesDir(null).getPath();
+        externalDir = externalDir.substring(0, externalDir.indexOf("Android"));
 
         if (!whiteList.contains(new File(externalDir, "Music").getPath())) {
             whiteList.add(new File(externalDir, "Music").getPath());
@@ -110,9 +112,10 @@ public class WhitelistActivity extends AppCompatActivity {
 
     public static synchronized List<String> getWhiteList() {
         if (whiteList == null) {
-            String whiteListStrings = MainActivity.prefs.getString("whiteList","no whitelist");
-            String[] whitelistString = whiteListStrings.split(", ");
-            whiteList = Arrays.asList(whitelistString.clone());
+            String whiteListString = MainActivity.prefs.getString("whiteList","no whitelist");
+            String[] whitelistStrings = whiteListString.split(", ");
+            whiteList = new LinkedList<>(Arrays.asList(whitelistStrings));
+            //whiteList.
         }
         return whiteList;
     }

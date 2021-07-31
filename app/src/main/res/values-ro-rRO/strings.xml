@@ -53,6 +53,8 @@
     <string name="corpse_title">Ştergere fişiere cadavru</string>
     <string name="donate">Donează</string>
     <string name="donate_sum">Cumpăr o cafea! Sau alegeţi cât de mult să donaţi folosind PayPal, astfel încât să pot păstra susţinerea acestei aplicaţii</string>
+    <string name="recommended">Recommended</string>
+    <string name="defaultwhitelist">Default</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

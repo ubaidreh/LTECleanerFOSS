@@ -53,6 +53,8 @@
     <string name="corpse_title">Usuń pliki korpusu</string>
     <string name="donate">Donate</string>
     <string name="donate_sum">Kup mi kawę! Lub wybrać, jak wiele do darowizny za pomocą PayPal, więc mogę utrzymać obsługę tej aplikacji</string>
+    <string name="recommended">Recommended</string>
+    <string name="defaultwhitelist">Default</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -53,6 +53,8 @@
     <string name="corpse_title">Slet lig-filer</string>
     <string name="donate">Donér</string>
     <string name="donate_sum">Køb mig en kop kaffe! Eller vælg, hvor meget der skal doneres ved hjælp af PayPal, så jeg kan fortsætte med at støtte denne app.</string>
+    <string name="recommended">Recommended</string>
+    <string name="defaultwhitelist">Default</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

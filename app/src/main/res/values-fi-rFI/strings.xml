@@ -53,6 +53,8 @@
     <string name="corpse_title">Poista ruumistiedostot</string>
     <string name="donate">Donaatti</string>
     <string name="donate_sum">Osta minulle kahvia! Tai valita, kuinka paljon lahjoittaa PayPal niin voin jatkaa tukea tätä sovellusta</string>
+    <string name="recommended">Recommended</string>
+    <string name="defaultwhitelist">Default</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

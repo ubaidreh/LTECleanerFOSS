@@ -53,6 +53,8 @@
     <string name="corpse_title">מחיקת קובצי גופה</string>
     <string name="donate">דונטה</string>
     <string name="donate_sum">קנה לי קפה! או לבחור כמה לתרום באמצעות PayPal כדי שאוכל להמשיך לתמוך באפליקציה זו</string>
+    <string name="recommended">Recommended</string>
+    <string name="defaultwhitelist">Default</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

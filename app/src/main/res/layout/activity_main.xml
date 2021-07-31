@@ -35,7 +35,7 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/settingsButton"
         android:layout_width="65dp"
         android:layout_height="50dp"
@@ -50,10 +50,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/cleanButton"
-        android:layout_width="152dp"
-        android:layout_height="51dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -64,6 +64,9 @@
         android:paddingRight="20dp"
         android:paddingBottom="10dp"
         android:text="Clean"
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="3dp"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,8 +109,6 @@
         android:id="@+id/statusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginEnd="129dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/status_idle"
         android:textColor="@color/colorAccent"

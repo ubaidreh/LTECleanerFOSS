@@ -55,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        WhitelistActivity.getWhiteList();
+
         fileListView = findViewById(R.id.fileListView);
         fileScrollView = findViewById(R.id.fileScrollView);
         scanPBar = findViewById(R.id.scanProgress);
@@ -79,8 +82,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public final void clean(View view) {
         requestWriteExternalPermission();
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        WhitelistActivity.getWhiteList();
 
         if (!running) {
             if (!prefs.getBoolean("one_click", false)) // one-click disabled
@@ -114,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
     private void scan(boolean delete) {
         Looper.prepare();
         running = true;
+        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
         reset();
 
         File path = Environment.getExternalStorageDirectory();
@@ -162,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
         fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 
         running = false;
+        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
         Looper.loop();
     }
 

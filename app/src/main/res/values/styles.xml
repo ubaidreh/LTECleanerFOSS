@@ -5,7 +5,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -13,7 +13,7 @@
         <item name="android:textColorPrimary">#fff</item>
     </style>
 
-    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppThemeLight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorSecondary</item>
         <item name="colorPrimaryDark">@color/colorSecondaryLight</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -22,7 +22,7 @@
     </style>
 
     <!-- Settings theme. -->
-    <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="SettingsTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -30,7 +30,7 @@
         <item name="android:textColorPrimary">#fff</item>
     </style>
 
-    <style name="SettingsThemeLight" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="SettingsThemeLight" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorSecondary</item>
         <item name="colorPrimaryDark">@color/colorSecondary</item>
         <item name="colorAccent">@color/colorAccent</item>

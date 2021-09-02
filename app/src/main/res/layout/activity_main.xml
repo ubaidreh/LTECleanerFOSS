@@ -44,9 +44,14 @@
         android:onClick="settings"
         android:paddingBottom="10dp"
         android:paddingLeft="20dp"
+        android:textColor="#FFF"
+        android:minWidth="0dp"
+        android:layout_gravity="end"
+        style="?android:attr/borderlessButtonStyle"
+        app:backgroundTint="@android:color/transparent"
         android:paddingRight="20dp"
         android:paddingTop="10dp"
-        android:text="*"
+        app:icon="@drawable/ic_baseline_settings_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -63,6 +68,7 @@
         android:paddingTop="10dp"
         android:paddingRight="20dp"
         android:paddingBottom="10dp"
+        android:textColor="#FFF"
         android:text="Clean"
         app:strokeColor="@color/colorAccent"
         app:strokeWidth="3dp"

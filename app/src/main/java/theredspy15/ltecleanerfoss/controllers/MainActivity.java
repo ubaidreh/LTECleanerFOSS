@@ -2,7 +2,7 @@
  * Copyright 2020 Hunter J Drum
  */
 
-package theredspy15.ltecleanerfoss;
+package theredspy15.ltecleanerfoss.controllers;
 
 
 import android.Manifest;
@@ -18,10 +18,7 @@ import android.os.Environment;
 import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
-import android.transition.TransitionManager;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,25 +27,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.core.app.ActivityCompat;
 
 import java.io.File;
 import java.text.DecimalFormat;
 
+import theredspy15.ltecleanerfoss.FileScanner;
+import theredspy15.ltecleanerfoss.R;
+import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
-    ConstraintSet constraintSet = new ConstraintSet();
     static boolean running = false;
     static SharedPreferences prefs;
 
-    LinearLayout fileListView;
-    ScrollView fileScrollView;
-    ProgressBar scanPBar;
-    TextView progressText;
-    TextView statusText;
-    ConstraintLayout layout;
+    public ActivityMainBinding binding;
 
     @SuppressLint("LogConditional")
     @Override
@@ -57,17 +50,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.cleanButton.setOnClickListener(this::clean);
+        binding.settingsButton.setOnClickListener(this::settings);
+
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
-
-        fileListView = findViewById(R.id.fileListView);
-        fileScrollView = findViewById(R.id.fileScrollView);
-        scanPBar = findViewById(R.id.scanProgress);
-        progressText = findViewById(R.id.ScanTextView);
-        statusText = findViewById(R.id.statusTextView);
-        //layout = findViewById(R.id.main_layout);
-
-        constraintSet.clone(layout);
     }
 
     /**
@@ -101,11 +91,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void animateBtn() {
-        TransitionManager.beginDelayedTransition(layout);
-        constraintSet.clear(R.id.cleanButton,ConstraintSet.TOP);
-        constraintSet.clear(R.id.statusTextView,ConstraintSet.BOTTOM);
-        constraintSet.setMargin(R.id.statusTextView,ConstraintSet.TOP,50);
-        constraintSet.applyTo(layout);
+        binding.topSpacer.setVisibility(View.GONE);
+        binding.fileScrollView.setVisibility(View.VISIBLE);
     }
 
     /**
@@ -123,27 +110,27 @@ public class MainActivity extends AppCompatActivity {
         File path = Environment.getExternalStorageDirectory();
 
         // scanner setup
-        FileScanner fs = new FileScanner(path, this);
-        fs.setEmptyDir(prefs.getBoolean("empty", false));
-        fs.setAutoWhite(prefs.getBoolean("auto_white", true));
-        fs.setDelete(delete);
-        fs.setCorpse(prefs.getBoolean("corpse", false));
-        fs.setGUI(this);
-
-        // filters
-        fs.setUpFilters(prefs.getBoolean("generic", true),
-                prefs.getBoolean("aggressive", false),
-                prefs.getBoolean("apk", false));
+        FileScanner fs = new FileScanner(path, this)
+                .setEmptyDir(prefs.getBoolean("empty", false))
+                .setAutoWhite(prefs.getBoolean("auto_white", true))
+                .setDelete(delete)
+                .setCorpse(prefs.getBoolean("corpse", false))
+                .setGUI(binding)
+                .setContext(this)
+                .setUpFilters(
+                        prefs.getBoolean("generic", true),
+                        prefs.getBoolean("aggressive", false),
+                        prefs.getBoolean("apk", false));
 
         // failed scan
         if (path.listFiles() == null) { // is this needed? yes.
             TextView textView = printTextView("Scan failed.", Color.RED);
-            runOnUiThread(() -> fileListView.addView(textView));
+            runOnUiThread(() -> binding.fileListView.addView(textView));
         }
 
         runOnUiThread(() -> {
             animateBtn();
-            statusText.setText(getString(R.string.status_running));
+            binding.statusTextView.setText(getString(R.string.status_running));
         });
 
         // start scanning
@@ -151,25 +138,25 @@ public class MainActivity extends AppCompatActivity {
 
         // crappy but working fix for percentage never reaching 100
         runOnUiThread(() -> {
-            scanPBar.setProgress(scanPBar.getMax());
-            progressText.setText("100%");
+            binding.scanProgress.setProgress(binding.scanProgress.getMax());
+            TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
+            textView.setText("100%");
         });
 
         // kilobytes found/freed text
         runOnUiThread(() -> {
             if (delete) {
-                statusText.setText(getString(R.string.freed) + " " + convertSize(kilobytesTotal));
+                binding.statusTextView.setText(getString(R.string.freed) + " " + convertSize(kilobytesTotal));
             } else {
-                statusText.setText(getString(R.string.found) + " " + convertSize(kilobytesTotal));
+                binding.statusTextView.setText(getString(R.string.found) + " " + convertSize(kilobytesTotal));
             }
         });
-        fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
+        binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 
         running = false;
         runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
         Looper.loop();
     }
-
 
     /**
      * Convenience method to quickly create a textview
@@ -203,15 +190,15 @@ public class MainActivity extends AppCompatActivity {
      * If there is any error while deleting, turns text view of path red
      * @param file file to delete
      */
-    synchronized TextView displayPath(File file) {
+    public synchronized TextView displayPath(File file) {
         // creating and adding a text view to the scroll view with path to file
         TextView textView = printTextView(file.getAbsolutePath(), getResources().getColor(R.color.colorAccent));
 
         // adding to scroll view
-        runOnUiThread(() -> fileListView.addView(textView));
+        runOnUiThread(() -> binding.fileListView.addView(textView));
 
         // scroll to bottom
-        fileScrollView.post(() -> fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
+        binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 
         return textView;
     }
@@ -225,9 +212,9 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         runOnUiThread(() -> {
-            fileListView.removeAllViews();
-            scanPBar.setProgress(0);
-            scanPBar.setMax(1);
+            binding.fileListView.removeAllViews();
+            binding.scanProgress.setProgress(0);
+            binding.scanProgress.setMax(1);
         });
     }
 

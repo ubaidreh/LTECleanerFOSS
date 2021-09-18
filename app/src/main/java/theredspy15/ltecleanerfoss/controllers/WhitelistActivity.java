@@ -2,39 +2,48 @@
  * Copyright 2021 Hunter J Drum
  */
 
-package theredspy15.ltecleanerfoss;
+package theredspy15.ltecleanerfoss.controllers;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
+
+import theredspy15.ltecleanerfoss.R;
+import theredspy15.ltecleanerfoss.databinding.ActivityWhitelistBinding;
 
 public class WhitelistActivity extends AppCompatActivity {
 
-    ListView listView;
     BaseAdapter adapter;
-    private static LinkedList<String> whiteList;
+    private static ArrayList<String> whiteList;
+
+    ActivityWhitelistBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whitelist);
-        listView = findViewById(R.id.whitelistView);
+
+        binding = ActivityWhitelistBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        binding.resetWhiteList.setOnClickListener(this::emptyWhitelist);
+        binding.recommendedButton.setOnClickListener(this::addRecommended);
+        binding.addWhiteList.setOnClickListener(this::addToWhiteList);
 
         adapter = new ArrayAdapter<>(this, R.layout.custom_textview, getWhiteList());
-        listView.setAdapter(adapter);
+        binding.whitelistView.setAdapter(adapter);
     }
 
     /**
@@ -95,18 +104,11 @@ public class WhitelistActivity extends AppCompatActivity {
                 .setNegativeButton(R.string.cancel, (dialog, whichButton) -> { }).show();
     }
 
-    public final void viewWhiteList(View view) {
-        AlertDialog.Builder build = new AlertDialog.Builder(this);
-        build.setItems((CharSequence[]) whiteList.toArray(), (dialog12, which) -> {
-            //do stuff....
-        }).create().show();
-    }
-
     public void refreshListView() {
         runOnUiThread(() -> {
             adapter.notifyDataSetChanged();
-            listView.invalidateViews();
-            listView.refreshDrawableState();
+            binding.whitelistView.invalidateViews();
+            binding.whitelistView.refreshDrawableState();
         });
     }
 
@@ -114,8 +116,7 @@ public class WhitelistActivity extends AppCompatActivity {
         if (whiteList == null) {
             String whiteListString = MainActivity.prefs.getString("whiteList","no whitelist");
             String[] whitelistStrings = whiteListString.split(", ");
-            whiteList = new LinkedList<>(Arrays.asList(whitelistStrings));
-            //whiteList.
+            whiteList = new ArrayList<>(Arrays.asList(whitelistStrings));
         }
         return whiteList;
     }

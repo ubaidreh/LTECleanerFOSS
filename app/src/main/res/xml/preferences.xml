@@ -33,7 +33,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetPackage="theredspy15.ltecleanerfoss"
-            android:targetClass="theredspy15.ltecleanerfoss.WhitelistActivity" />
+            android:targetClass="theredspy15.ltecleanerfoss.controllers.WhitelistActivity" />
     </Preference>
 
     <PreferenceCategory android:title="Filters" app:iconSpaceReserved="false">

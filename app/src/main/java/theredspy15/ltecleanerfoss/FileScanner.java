@@ -4,6 +4,8 @@
 
 package theredspy15.ltecleanerfoss;
 
+import static theredspy15.ltecleanerfoss.controllers.WhitelistActivity.getWhiteList;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -17,19 +19,21 @@ import android.widget.TextView;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
-import static theredspy15.ltecleanerfoss.WhitelistActivity.getWhiteList;
+import theredspy15.ltecleanerfoss.controllers.MainActivity;
+import theredspy15.ltecleanerfoss.controllers.WhitelistActivity;
+import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
 
 public class FileScanner {
 
     SharedPreferences prefs;
+    private Context context;
     private final File path;
     private Resources res;
-    private MainActivity gui;
+    private ActivityMainBinding gui;
     private int filesRemoved = 0;
     private long kilobytesTotal = 0;
     private boolean delete = false;
@@ -40,7 +44,7 @@ public class FileScanner {
     private static final String[] protectedFileList = {
             "backup", "copy", "copies", "important", "do_not_edit"};
 
-    FileScanner(File path, Context context) {
+    public FileScanner(File path, Context context) {
         this.path = path;
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
         WhitelistActivity.getWhiteList();
@@ -137,10 +141,10 @@ public class FileScanner {
     }
 
     private synchronized List<String> getInstalledPackages() {
-        final PackageManager pm = gui.getPackageManager();
+        final PackageManager pm = context.getPackageManager();
         List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
 
-        List<String> packagesString = new LinkedList<>();
+        List<String> packagesString = new ArrayList<>();
         for (ApplicationInfo packageInfo : packages) {
             packagesString.add(packageInfo.packageName);
         }
@@ -165,12 +169,12 @@ public class FileScanner {
      * by calling preferences.getBoolean()
      */
     @SuppressLint("ResourceType")
-    synchronized void setUpFilters(boolean generic, boolean aggressive, boolean apk) {
+    public synchronized FileScanner setUpFilters(boolean generic, boolean aggressive, boolean apk) {
         List<String> folders = new ArrayList<>();
         List<String> files = new ArrayList<>();
 
         if (gui != null)
-            setResources(gui.getResources());
+            setResources(context.getResources());
 
         if (generic) {
             folders.addAll(Arrays.asList(res.getStringArray(R.array.generic_filter_folders)));
@@ -191,9 +195,11 @@ public class FileScanner {
 
         // apk
         if (apk) filters.add(getRegexForFile(".apk"));
+
+        return this;
     }
 
-    long startScan() {
+    public long startScan() {
         byte cycles = 0;
         byte maxCycles = 10;
         List<File> foundFiles;
@@ -204,14 +210,14 @@ public class FileScanner {
 
             // find files
             foundFiles = getListFiles();
-            if (gui != null) gui.scanPBar.setMax(gui.scanPBar.getMax() + foundFiles.size());
+            if (gui != null) gui.scanProgress.setMax(gui.scanProgress.getMax() + foundFiles.size());
 
             // scan & delete
             for (File file : foundFiles) {
                 if (filter(file)) { // filter
                     TextView tv = null;
                     if (gui != null)
-                        tv = gui.displayPath(file);
+                        tv = ((MainActivity)context).displayPath(file);
 
                     if (delete) {
                         kilobytesTotal += file.length();
@@ -226,9 +232,9 @@ public class FileScanner {
 
                 if (gui != null) {
                     // progress
-                    gui.runOnUiThread(() -> gui.scanPBar.setProgress(gui.scanPBar.getProgress() + 1));
-                    double scanPercent = gui.scanPBar.getProgress() * 100.0 / gui.scanPBar.getMax();
-                    gui.runOnUiThread(() -> gui.progressText.setText(String.format(Locale.US, "%.0f", scanPercent) + "%"));
+                    ((MainActivity)context).runOnUiThread(() -> gui.scanProgress.setProgress(gui.scanProgress.getProgress() + 1));
+                    double scanPercent = gui.scanProgress.getProgress() * 100.0 / gui.scanProgress.getMax();
+                    ((MainActivity)context).runOnUiThread(() -> gui.scanTextView.setText(String.format(Locale.US, "%.0f", scanPercent) + "%"));
                 }
             }
 
@@ -249,27 +255,38 @@ public class FileScanner {
         return ".+"+ file.replace(".", "\\.") + "$";
     }
 
-    void setGUI(MainActivity gui) {
+    public FileScanner setGUI(ActivityMainBinding gui) {
         this.gui = gui;
+        return this;
     }
 
-    void setResources(Resources res) {
+    FileScanner setResources(Resources res) {
         this.res = res;
+        return this;
     }
 
-    void setEmptyDir(boolean emptyDir) {
+    public FileScanner setEmptyDir(boolean emptyDir) {
         this.emptyDir = emptyDir;
+        return this;
     }
 
-    void setDelete(boolean delete) {
+    public FileScanner setDelete(boolean delete) {
         this.delete = delete;
+        return this;
     }
 
-    void setCorpse(boolean corpse) {
+    public FileScanner setCorpse(boolean corpse) {
         this.corpse = corpse;
+        return this;
     }
 
-    void setAutoWhite(boolean autoWhite) {
+    public FileScanner setAutoWhite(boolean autoWhite) {
         this.autoWhite = autoWhite;
+        return this;
+    }
+
+    public FileScanner setContext(Context context) {
+        this.context = context;
+        return this;
     }
 }

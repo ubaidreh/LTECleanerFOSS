@@ -3,13 +3,15 @@
   ~ Copyright 2020 Hunter J Drum
   -->
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".WhitelistActivity">
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context=".controllers.WhitelistActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -19,6 +21,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:text="@string/whitelist"
+        android:layout_gravity="center"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -28,12 +31,13 @@
 
     <ListView
         android:id="@+id/whitelistView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
+        android:layout_weight="3"
         android:background="@color/colorPrimaryDark"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/recommendedButton"
@@ -41,55 +45,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/resetWhiteList"
+    <LinearLayout
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:onClick="emptyWhitelist"
-        android:paddingLeft="20dp"
-        android:paddingTop="1dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="1dp"
-        android:text="Remove"
-        android:textColor="#FFF"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/recommendedButton"
-        app:layout_constraintEnd_toStartOf="@+id/recommendedButton" />
+        android:orientation="horizontal">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resetWhiteList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="1dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="1dp"
+            android:text="@string/reset"
+            android:textColor="#FFF"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recommendedButton"
+            app:layout_constraintEnd_toStartOf="@+id/recommendedButton" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/addWhiteList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:onClick="addToWhiteList"
-        android:paddingLeft="20dp"
-        android:paddingTop="1dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="1dp"
-        android:text="Add"
-        android:textColor="#FFF"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/recommendedButton"
-        app:layout_constraintStart_toEndOf="@+id/recommendedButton" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recommendedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="@string/defaultwhitelist"
+            android:textColor="#FFF"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/recommendedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
-        android:onClick="addRecommended"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp"
-        android:text="@string/defaultwhitelist"
-        android:textColor="#FFF"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addWhiteList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="1dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="1dp"
+            android:text="@string/add"
+            android:textColor="#FFF"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/recommendedButton"
+            app:layout_constraintStart_toEndOf="@+id/recommendedButton" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>

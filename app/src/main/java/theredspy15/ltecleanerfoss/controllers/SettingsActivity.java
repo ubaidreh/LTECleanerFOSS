@@ -2,12 +2,14 @@
  * Copyright 2021 Hunter J Drum
  */
 
-package theredspy15.ltecleanerfoss;
+package theredspy15.ltecleanerfoss.controllers;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
+
+import theredspy15.ltecleanerfoss.R;
 
 public class SettingsActivity extends AppCompatActivity {
 

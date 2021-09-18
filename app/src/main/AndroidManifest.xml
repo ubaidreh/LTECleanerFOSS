@@ -22,16 +22,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="theredspy15.ltecleanerfoss.PromptActivity"
+            android:name="theredspy15.ltecleanerfoss.controllers.PromptActivity"
             android:label="@string/title_activity_prompt"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="theredspy15.ltecleanerfoss.WhitelistActivity"
-            android:parentActivityName="theredspy15.ltecleanerfoss.SettingsActivity"
+            android:name="theredspy15.ltecleanerfoss.controllers.WhitelistActivity"
+            android:parentActivityName="theredspy15.ltecleanerfoss.controllers.SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingsTheme" />
         <activity
-            android:name="theredspy15.ltecleanerfoss.MainActivity"
+            android:name="theredspy15.ltecleanerfoss.controllers.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,8 +40,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="theredspy15.ltecleanerfoss.SettingsActivity"
-            android:parentActivityName="theredspy15.ltecleanerfoss.MainActivity"
+            android:name="theredspy15.ltecleanerfoss.controllers.SettingsActivity"
+            android:parentActivityName="theredspy15.ltecleanerfoss.controllers.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SettingsTheme" />
     </application>

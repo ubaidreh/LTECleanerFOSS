@@ -131,19 +131,15 @@ public class MainActivity extends AppCompatActivity {
         runOnUiThread(() -> {
             animateBtn();
             binding.statusTextView.setText(getString(R.string.status_running));
-        });
 
-        // start scanning
-        long kilobytesTotal = fs.startScan();
-
-        // crappy but working fix for percentage never reaching 100
-        runOnUiThread(() -> {
+            // crappy but working fix for percentage never reaching 100 exactly
             binding.scanProgress.setProgress(binding.scanProgress.getMax());
             TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
             textView.setText("100%");
         });
 
         // kilobytes found/freed text
+        long kilobytesTotal = fs.startScan();
         runOnUiThread(() -> {
             if (delete) {
                 binding.statusTextView.setText(getString(R.string.freed) + " " + convertSize(kilobytesTotal));

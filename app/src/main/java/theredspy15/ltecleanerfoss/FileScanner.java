@@ -222,25 +222,23 @@ public class FileScanner {
             for (File file : foundFiles) {
                 if (filter(file)) { // filter
                     TextView tv = null;
-                    if (gui != null)
-                        tv = ((MainActivity)context).displayPath(file);
+                    if (gui != null) tv = ((MainActivity)context).displayPath(file);
 
                     if (delete) {
                         kilobytesTotal += file.length();
                         ++filesRemoved;
-                        if (file.delete()) { // deletion
-
-                        } else if (tv != null) {
-                            TextView finalTv = tv;
-                            ((MainActivity)context).runOnUiThread(() -> finalTv.setTextColor(Color.GRAY)); // error effect
+                        if (!file.delete()) { // deletion
+                            if (tv != null) {
+                                TextView finalTv = tv;
+                                ((MainActivity)context).runOnUiThread(() -> finalTv.setTextColor(Color.GRAY)); // error effect - red looks too concerning
+                            }
                         }
                     } else {
                         kilobytesTotal += file.length();
                     }
                 }
 
-                if (gui != null) {
-                    // progress
+                if (gui != null) { // progress
                     ((MainActivity)context).runOnUiThread(() -> gui.scanProgress.setProgress(gui.scanProgress.getProgress() + 1));
                     double scanPercent = gui.scanProgress.getProgress() * 100.0 / gui.scanProgress.getMax();
                     ((MainActivity)context).runOnUiThread(() -> gui.scanTextView.setText(String.format(Locale.US, "%.0f", scanPercent) + "%"));

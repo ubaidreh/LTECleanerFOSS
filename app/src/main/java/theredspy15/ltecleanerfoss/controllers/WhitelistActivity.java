@@ -117,6 +117,8 @@ public class WhitelistActivity extends AppCompatActivity {
             String whiteListString = MainActivity.prefs.getString("whiteList","no whitelist");
             String[] whitelistStrings = whiteListString.split(", ");
             whiteList = new ArrayList<>(Arrays.asList(whitelistStrings));
+            whiteList.remove("[");
+            whiteList.remove("]");
         }
         return whiteList;
     }

@@ -16,10 +16,6 @@ import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.work.Worker;
-import androidx.work.WorkerParameters;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -252,24 +248,6 @@ public class FileScanner {
         }
 
         return kilobytesTotal;
-    }
-
-    public class UploadWorker extends Worker {
-        public UploadWorker(
-                @NonNull Context context,
-                @NonNull WorkerParameters params) {
-            super(context, params);
-        }
-
-        @Override
-        public Result doWork() {
-
-            // Do the work here--in this case, upload the images.
-            //uploadImages();
-
-            // Indicate whether the work finished successfully with the Result
-            return Result.success();
-        }
     }
 
     private String getRegexForFolder(String folder) {

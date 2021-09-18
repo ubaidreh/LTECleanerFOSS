@@ -16,6 +16,10 @@ import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.work.Worker;
+import androidx.work.WorkerParameters;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,18 +68,20 @@ public class FileScanner {
 
         if (files != null) {
             for (File file : files) {
-                if (!isWhiteListed(file)) { // won't touch if whitelisted
-                    if (file.isDirectory()) { // folder
+                if (file != null) { // hopefully to fix crashes on a very limited number of devices.
+                    if (!isWhiteListed(file)) { // won't touch if whitelisted
+                        if (file.isDirectory()) { // folder
 
-                        if (autoWhite) {
-                            if (!autoWhiteList(file))
-                                inFiles.add(file);
-                        }
-                        else inFiles.add(file); // add folder itself
+                            if (autoWhite) {
+                                if (!autoWhiteList(file))
+                                    inFiles.add(file);
+                            }
+                            else inFiles.add(file); // add folder itself
 
-                        inFiles.addAll(getListFiles(file)); // add contents to returned list
+                            inFiles.addAll(getListFiles(file)); // add contents to returned list
 
-                    } else inFiles.add(file); // add file
+                        } else inFiles.add(file); // add file
+                    }
                 }
             }
         }
@@ -224,7 +230,10 @@ public class FileScanner {
                         ++filesRemoved;
                         if (file.delete()) { // deletion
 
-                        } else if (tv != null) tv.setTextColor(Color.GRAY); // error effect
+                        } else if (tv != null) {
+                            TextView finalTv = tv;
+                            ((MainActivity)context).runOnUiThread(() -> finalTv.setTextColor(Color.GRAY)); // error effect
+                        }
                     } else {
                         kilobytesTotal += file.length();
                     }
@@ -245,6 +254,24 @@ public class FileScanner {
         }
 
         return kilobytesTotal;
+    }
+
+    public class UploadWorker extends Worker {
+        public UploadWorker(
+                @NonNull Context context,
+                @NonNull WorkerParameters params) {
+            super(context, params);
+        }
+
+        @Override
+        public Result doWork() {
+
+            // Do the work here--in this case, upload the images.
+            //uploadImages();
+
+            // Indicate whether the work finished successfully with the Result
+            return Result.success();
+        }
     }
 
     private String getRegexForFolder(String folder) {

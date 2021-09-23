@@ -53,8 +53,8 @@
     <string name="corpse_title">Corpse-Dateien löschen</string>
     <string name="donate">Spenden</string>
     <string name="donate_sum">Kauf mir einen Kaffee! Oder wählen Sie, wie viel mit PayPal zu spenden, damit ich diese App unterstützen kann</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">Empfohlen</string>
+    <string name="defaultwhitelist">Standard</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -53,8 +53,8 @@
     <string name="corpse_title">Usuń ostałe pliki</string>
     <string name="donate">Wesprzyj</string>
     <string name="donate_sum">Postaw mi kawę! Lub wybierz, jak dużo chcesz przekazać poprzez PayPal, aby wesprzeć rozwój tej aplikacji</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">Zalecane</string>
+    <string name="defaultwhitelist">Domyślne</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

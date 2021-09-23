@@ -127,13 +127,15 @@ public class FileScanner {
     public synchronized boolean filter(File file) {
         if (file != null) {
             // corpse checking - TODO: needs improved!
-            if (file.getParentFile() != null && file.getParentFile().getParentFile() != null&& corpse)
+            if (file.getParentFile() != null && file.getParentFile().getParentFile() != null&& corpse) {
                 if (file.getParentFile().getName().equals("data") && file.getParentFile().getParentFile().getName().equals("Android"))
                     if (!getInstalledPackages().contains(file.getName()) && !file.getName().equals(".nomedia"))
                         return true;
+            }
 
-            if (file.isDirectory() && isDirectoryEmpty(file)
-                    && emptyDir) return true; // empty folder
+            if (file.isDirectory()) {
+                if (isDirectoryEmpty(file) && emptyDir) return true; // empty folder
+            }
 
             for (String filter : filters)
                 if (file.getAbsolutePath().toLowerCase()

@@ -53,8 +53,8 @@
     <string name="corpse_title">Supprimer les fichiers de dépouille</string>
     <string name="donate">Donate</string>
     <string name="donate_sum">Achète-moi un café ! Ou choisissez le montant à donner à l\'aide de PayPal afin que je puisse continuer à soutenir cette application</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">Recommandé</string>
+    <string name="defaultwhitelist">Par défaut</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

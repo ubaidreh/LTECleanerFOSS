@@ -53,8 +53,8 @@
     <string name="corpse_title">Excluir arquivos de cadáver</string>
     <string name="donate">Doar</string>
     <string name="donate_sum">Compre um Café! Ou escolha o quanto doar usando o PayPal para que eu possa continuar suportando este app</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">Recomendado</string>
+    <string name="defaultwhitelist">Padrão</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

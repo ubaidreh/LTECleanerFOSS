@@ -53,8 +53,8 @@
     <string name="corpse_title">Удалить остатки</string>
     <string name="donate">Внести пожертвование (задонатить автору)</string>
     <string name="donate_sum">Угостите меня чашечкой кофе! Или выберите, сколько сможете пожертвовать с помощью PayPal, чтобы я мог и дальше поддерживать это приложение</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">Рекомендовано</string>
+    <string name="defaultwhitelist">По умолчанию</string>
     <string-array name="generic_filter_files">
         <item>Tmp</item>
         <item>.log</item>

@@ -53,8 +53,8 @@
     <string name="corpse_title">Διαγραφή αρχείων πτωμάτων</string>
     <string name="donate">Δότη!</string>
     <string name="donate_sum">Κέρασέ με ένα καφέ! Ή να επιλέξετε πόσο να δωρίσουν χρησιμοποιώντας PayPal έτσι μπορώ να κρατήσει την υποστήριξη αυτής της εφαρμογής</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">Συνιστάται.</string>
+    <string name="defaultwhitelist">Προεπιλογή:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>- .log</item>

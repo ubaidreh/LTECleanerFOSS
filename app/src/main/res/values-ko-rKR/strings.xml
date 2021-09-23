@@ -53,8 +53,8 @@
     <string name="corpse_title">시체 파일 삭제하기</string>
     <string name="donate">기부하다</string>
     <string name="donate_sum">커피를 사세요! 아니면 이 앱을 계속 지원할 수 있도록 페이팔을 사용하여 기부할 금액을 선택하십시오.</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">권장</string>
+    <string name="defaultwhitelist">기본값</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

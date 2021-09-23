@@ -53,8 +53,8 @@
     <string name="corpse_title">Dode bestanden verwijderen</string>
     <string name="donate">Doneren</string>
     <string name="donate_sum">Koop een koffie voor me! Of kies hoeveel te doneren met PayPal, zodat ik deze app kan blijven ondersteunen</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">Aanbevolen</string>
+    <string name="defaultwhitelist">Standaard</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

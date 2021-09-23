@@ -53,8 +53,8 @@
     <string name="corpse_title">残骸ファイルの削除</string>
     <string name="donate">寄付</string>
     <string name="donate_sum">このアプリのサポートを続けられるように、私にコーヒーを買ってください！または、PayPalで寄付金額を選ぶこともできます。</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">推奨</string>
+    <string name="defaultwhitelist">デフォルト</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

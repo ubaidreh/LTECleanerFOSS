@@ -53,8 +53,8 @@
     <string name="corpse_title">Xoá tập tin xác chết</string>
     <string name="donate">Hiến tặng</string>
     <string name="donate_sum">Mua cà phê cho tôi! Hoặc chọn cách quyên góp bằng PayPal để tôi có thể giư ̃ lại ứng dụng này</string>
-    <string name="recommended">Recommended</string>
-    <string name="defaultwhitelist">Default</string>
+    <string name="recommended">Đề nghị</string>
+    <string name="defaultwhitelist">Mặc định</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

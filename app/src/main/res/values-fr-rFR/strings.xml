@@ -55,6 +55,9 @@
     <string name="donate_sum">Achète-moi un café ! Ou choisissez le montant à donner à l\'aide de PayPal afin que je puisse continuer à soutenir cette application</string>
     <string name="recommended">Recommandé</string>
     <string name="defaultwhitelist">Par défaut</string>
+    <string name="other">Other</string>
+    <string name="daily_title">Daily Clean</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
 import theredspy15.ltecleanerfoss.controllers.MainActivity;
 import theredspy15.ltecleanerfoss.controllers.WhitelistActivity;
@@ -49,6 +48,7 @@ public class FileScanner {
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
         WhitelistActivity.getWhiteList();
     }
+
     private List<File> getListFiles() {
         return getListFiles(path);
     }
@@ -179,8 +179,7 @@ public class FileScanner {
         List<String> folders = new ArrayList<>();
         List<String> files = new ArrayList<>();
 
-        if (gui != null)
-            setResources(context.getResources());
+        setResources(context.getResources());
 
         if (generic) {
             folders.addAll(Arrays.asList(res.getStringArray(R.array.generic_filter_folders)));

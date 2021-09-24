@@ -4,6 +4,10 @@
 
 package theredspy15.ltecleanerfoss;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Environment;
@@ -17,10 +21,6 @@ import org.junit.runner.RunWith;
 
 import java.io.File;
 import java.io.IOException;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -36,7 +36,7 @@ public class InstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         File path = new File(Environment.getExternalStorageDirectory().toString() + "/");
         Resources res = appContext.getResources();
-        fs = new FileScanner(path, appContext);
+        fs = new FileScanner(path,appContext);
         fs.setAutoWhite(false);
         fs.setResources(res);
         fs.setDelete(true);

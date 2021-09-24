@@ -55,9 +55,9 @@
     <string name="donate_sum">给我买杯咖啡 或者选择使用 PayPal 捐款多少，这样我就可以继续支持这个应用</string>
     <string name="recommended">建议的</string>
     <string name="defaultwhitelist">缺省值</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
+    <string name="other">其他</string>
+    <string name="daily_title">每日清理</string>
+    <string name="daily_sum">每天自动运行，无需打开应用程序</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

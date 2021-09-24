@@ -55,6 +55,9 @@
     <string name="donate_sum">Kup mi kafe! Nebo zvolte, kolik se darovat pomocí služby PayPal, takže mohu pokračovat v podpoře této aplikace</string>
     <string name="recommended">Doporučeno</string>
     <string name="defaultwhitelist">Výchozí</string>
+    <string name="other">Other</string>
+    <string name="daily_title">Daily Clean</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
     <string-array name="generic_filter_files">
         <item>.tmp.</item>
         <item>.log</item>

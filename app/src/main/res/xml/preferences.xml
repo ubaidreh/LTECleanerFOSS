@@ -97,7 +97,7 @@
             android:title="@string/one_click_clean" />
         <CheckBoxPreference
             app:iconSpaceReserved="false"
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:textColor="#FFF"
             android:key="dailyclean"
             android:persistent="true"

@@ -19,7 +19,8 @@ import theredspy15.ltecleanerfoss.R;
 import theredspy15.ltecleanerfoss.controllers.MainActivity;
 
 public class CleanWorker extends Worker {
-    private static final String CHANNEL_ID = "LTECleanWorker";
+    private static final String CHANNEL_ID = "cleanworker";
+    private boolean isRunning = false;
 
     public CleanWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -29,12 +30,13 @@ public class CleanWorker extends Worker {
     @Override
     public Result doWork() {
 
-        if (MainActivity.prefs.getBoolean("dailyclean",true)) scan();
+        if (MainActivity.prefs.getBoolean("dailyclean",false) && !isRunning) scan();
 
         return Result.success();
     }
 
-    private void scan() {
+    private synchronized void scan() {
+        isRunning = true;
         File path = Environment.getExternalStorageDirectory();
 
         // scanner setup
@@ -72,5 +74,6 @@ public class CleanWorker extends Worker {
             notificationManager.createNotificationChannel(notificationChannel);
             notificationManager.notify(1,notification);
         }
+        isRunning = false;
     }
 }

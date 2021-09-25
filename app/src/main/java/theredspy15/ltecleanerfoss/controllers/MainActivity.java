@@ -143,8 +143,6 @@ public class MainActivity extends AppCompatActivity {
 
             // crappy but working fix for percentage never reaching 100 exactly
             binding.scanProgress.setProgress(binding.scanProgress.getMax());
-            TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
-            textView.setText("100%");
         });
 
         // kilobytes found/freed text
@@ -155,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 binding.statusTextView.setText(getString(R.string.found) + " " + convertSize(kilobytesTotal));
             }
+            TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
+            textView.setText("100%");// crappy but working fix for percentage never reaching 100 exactly
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 

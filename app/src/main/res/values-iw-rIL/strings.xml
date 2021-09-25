@@ -55,6 +55,9 @@
     <string name="donate_sum">קנה לי קפה! או לבחור כמה לתרום באמצעות PayPal כדי שאוכל להמשיך לתמוך באפליקציה זו</string>
     <string name="recommended">מומלץ</string>
     <string name="defaultwhitelist">ברירת מחדל</string>
+    <string name="other">Other</string>
+    <string name="daily_title">Daily Clean</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

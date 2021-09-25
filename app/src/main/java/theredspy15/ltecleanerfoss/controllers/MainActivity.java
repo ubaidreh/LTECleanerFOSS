@@ -28,18 +28,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
-import androidx.work.ExistingPeriodicWorkPolicy;
-import androidx.work.PeriodicWorkRequest;
-import androidx.work.WorkManager;
 
 import java.io.File;
 import java.text.DecimalFormat;
-import java.util.concurrent.TimeUnit;
 
 import theredspy15.ltecleanerfoss.FileScanner;
 import theredspy15.ltecleanerfoss.R;
 import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
-import theredspy15.ltecleanerfoss.workers.CleanWorker;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
 
-        PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 16, TimeUnit.MINUTES)
-                .build();
-        WorkManager.getInstance().enqueueUniquePeriodicWork("cleanworker",ExistingPeriodicWorkPolicy.KEEP,periodicWork);
+        //PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 16, TimeUnit.MINUTES)
+        //        .build();
+        //WorkManager.getInstance().enqueueUniquePeriodicWork("cleanworker",ExistingPeriodicWorkPolicy.KEEP,periodicWork);
     }
 
     /**

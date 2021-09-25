@@ -19,8 +19,10 @@ import android.widget.TextView;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import theredspy15.ltecleanerfoss.controllers.MainActivity;
 import theredspy15.ltecleanerfoss.controllers.WhitelistActivity;
@@ -110,7 +112,7 @@ public class FileScanner {
             if (file.getName().toLowerCase().contains(protectedFile) &&
                     !getWhiteList().contains(file.getAbsolutePath().toLowerCase())) {
                 getWhiteList().add(file.getAbsolutePath().toLowerCase());
-                prefs.edit().putString("whiteList", getWhiteList().toString()).apply();
+                prefs.edit().putStringSet("whitelist", new HashSet<>(getWhiteList())).apply(); // I think this breaks auto whitelists
                 return true;
             }
         }
@@ -165,7 +167,7 @@ public class FileScanner {
      */
     private synchronized boolean isDirectoryEmpty(File directory) {
 
-        if (directory.list() != null && directory.list() != null) return directory.list().length == 0;
+        if (directory.list() != null && directory.list() != null) return Objects.requireNonNull(directory.list()).length == 0;
         else return false;
     }
 

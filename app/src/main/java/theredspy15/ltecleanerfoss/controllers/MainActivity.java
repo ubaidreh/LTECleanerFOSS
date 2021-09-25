@@ -39,7 +39,7 @@ import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     static boolean running = false;
-    static SharedPreferences prefs;
+    public static SharedPreferences prefs;
 
     public ActivityMainBinding binding;
 
@@ -58,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
+
+        //PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 16, TimeUnit.MINUTES)
+        //        .build();
+        //WorkManager.getInstance().enqueueUniquePeriodicWork("cleanworker",ExistingPeriodicWorkPolicy.KEEP,periodicWork);
     }
 
     /**
@@ -134,8 +138,6 @@ public class MainActivity extends AppCompatActivity {
 
             // crappy but working fix for percentage never reaching 100 exactly
             binding.scanProgress.setProgress(binding.scanProgress.getMax());
-            TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
-            textView.setText("100%");
         });
 
         // kilobytes found/freed text
@@ -146,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 binding.statusTextView.setText(getString(R.string.found) + " " + convertSize(kilobytesTotal));
             }
+            TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
+            textView.setText("100%");// crappy but working fix for percentage never reaching 100 exactly
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 
@@ -167,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         return textView;
     }
 
-    private String convertSize(long length) {
+    public static String convertSize(long length) {
         final DecimalFormat format = new DecimalFormat("#.##");
         final long MiB = 1024 * 1024;
         final long KiB = 1024;

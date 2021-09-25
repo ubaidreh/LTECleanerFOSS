@@ -86,7 +86,7 @@
             android:title="@string/auto_whitelist" />
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Miscellaneous" app:iconSpaceReserved="false">
+    <PreferenceCategory android:title="@string/other" app:iconSpaceReserved="false">
         <CheckBoxPreference
             app:iconSpaceReserved="false"
             android:defaultValue="false"
@@ -95,6 +95,14 @@
             android:persistent="true"
             android:summary="@string/oneclick_sum"
             android:title="@string/one_click_clean" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="false"
+            android:textColor="#FFF"
+            android:key="dailyclean"
+            android:persistent="true"
+            android:summary="@string/daily_sum"
+            android:title="@string/daily_title" />
     </PreferenceCategory>
 
 </PreferenceScreen>

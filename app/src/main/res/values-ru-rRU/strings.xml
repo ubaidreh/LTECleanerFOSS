@@ -55,7 +55,7 @@
     <string name="donate_sum">Угостите меня чашечкой кофе! Или выберите, сколько сможете пожертвовать с помощью PayPal, чтобы я мог и дальше поддерживать это приложение</string>
     <string name="recommended">Рекомендовано</string>
     <string name="defaultwhitelist">По умолчанию</string>
-    <string name="other">Other</string>
+    <string name="other">Прочее</string>
     <string name="daily_title">Ежедневная очистка</string>
     <string name="daily_sum">Автоматически запускается ежедневно, без необходимости заходить в приложение</string>
     <string-array name="generic_filter_files">

@@ -56,8 +56,8 @@
     <string name="recommended">Рекомендовано</string>
     <string name="defaultwhitelist">По умолчанию</string>
     <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
+    <string name="daily_title">Ежедневная очистка</string>
+    <string name="daily_sum">Автоматически запускается ежедневно, без необходимости заходить в приложение</string>
     <string-array name="generic_filter_files">
         <item>Tmp</item>
         <item>.log</item>

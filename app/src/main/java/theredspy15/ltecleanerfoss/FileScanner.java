@@ -30,6 +30,8 @@ import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
 
 public class FileScanner {
 
+    public static boolean isRunning = false;
+
     SharedPreferences prefs;
     private Context context;
     private final File path;
@@ -112,7 +114,7 @@ public class FileScanner {
             if (file.getName().toLowerCase().contains(protectedFile) &&
                     !getWhiteList().contains(file.getAbsolutePath().toLowerCase())) {
                 getWhiteList().add(file.getAbsolutePath().toLowerCase());
-                prefs.edit().putStringSet("whitelist", new HashSet<>(getWhiteList())).apply(); // I think this breaks auto whitelists
+                prefs.edit().putStringSet("whitelist", new HashSet<>(getWhiteList())).apply();
                 return true;
             }
         }
@@ -207,6 +209,7 @@ public class FileScanner {
     }
 
     public long startScan() {
+        FileScanner.isRunning = true;
         byte cycles = 0;
         byte maxCycles = 10;
         List<File> foundFiles;
@@ -252,6 +255,7 @@ public class FileScanner {
             ++cycles;
         }
 
+        FileScanner.isRunning = false;
         return kilobytesTotal;
     }
 

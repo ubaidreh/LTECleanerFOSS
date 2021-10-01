@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Environment;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.work.Worker;
@@ -19,8 +20,7 @@ import theredspy15.ltecleanerfoss.R;
 import theredspy15.ltecleanerfoss.controllers.MainActivity;
 
 public class CleanWorker extends Worker {
-    private static final String CHANNEL_ID = "cleanworker";
-    private boolean isRunning = false;
+    private static final String CHANNEL_ID = CleanWorker.class.getSimpleName();
 
     public CleanWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -30,13 +30,19 @@ public class CleanWorker extends Worker {
     @Override
     public Result doWork() {
 
-        if (MainActivity.prefs.getBoolean("dailyclean",false) && !isRunning) scan();
+        if (MainActivity.prefs.getBoolean("dailyclean",false) && !FileScanner.isRunning) {
+            try {
+                scan();
+            } catch (Exception e) {
+                Log.e(CHANNEL_ID,"error running cleanworker",e);
+                return Result.failure();
+            }
+        }
 
         return Result.success();
     }
 
-    private synchronized void scan() {
-        isRunning = true;
+    private void scan() {
         File path = Environment.getExternalStorageDirectory();
 
         // scanner setup
@@ -60,7 +66,7 @@ public class CleanWorker extends Worker {
             String title = "Cleaned:"+" "+MainActivity.convertSize(kilobytesTotal);
 
             Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"name", NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"name", NotificationManager.IMPORTANCE_MIN);
 
             PendingIntent pendingIntent=PendingIntent.getActivity(getApplicationContext(),1,intent,0);
             Notification notification=new Notification.Builder(getApplicationContext(),CHANNEL_ID)
@@ -72,8 +78,7 @@ public class CleanWorker extends Worker {
 
             NotificationManager notificationManager=(NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
             notificationManager.createNotificationChannel(notificationChannel);
-            notificationManager.notify(1,notification);
+            notificationManager.notify(1159864,notification);
         }
-        isRunning = false;
     }
 }

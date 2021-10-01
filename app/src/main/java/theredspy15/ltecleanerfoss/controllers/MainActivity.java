@@ -28,17 +28,21 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
 
 import java.io.File;
 import java.text.DecimalFormat;
+import java.util.concurrent.TimeUnit;
 
 import theredspy15.ltecleanerfoss.FileScanner;
 import theredspy15.ltecleanerfoss.R;
 import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding;
+import theredspy15.ltecleanerfoss.workers.CleanWorker;
 
 public class MainActivity extends AppCompatActivity {
 
-    static boolean running = false;
     public static SharedPreferences prefs;
 
     public ActivityMainBinding binding;
@@ -59,9 +63,9 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
 
-        //PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 16, TimeUnit.MINUTES)
-        //        .build();
-        //WorkManager.getInstance().enqueueUniquePeriodicWork("cleanworker",ExistingPeriodicWorkPolicy.KEEP,periodicWork);
+        PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 21, TimeUnit.MINUTES,5,TimeUnit.MINUTES)
+                .build();
+        WorkManager.getInstance().enqueueUniquePeriodicWork(CleanWorker.class.getSimpleName(), ExistingPeriodicWorkPolicy.REPLACE,periodicWork);
     }
 
     /**
@@ -79,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     public final void clean(View view) {
         requestWriteExternalPermission();
 
-        if (!running) {
+        if (!FileScanner.isRunning) {
             if (!prefs.getBoolean("one_click", false)) // one-click disabled
                 new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
                         .setTitle(R.string.select_task)
@@ -107,8 +111,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
-        running = true;
-        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
+        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!FileScanner.isRunning));
         reset();
 
         File path = Environment.getExternalStorageDirectory();
@@ -153,8 +156,7 @@ public class MainActivity extends AppCompatActivity {
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 
-        running = false;
-        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!running));
+        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!FileScanner.isRunning));
         Looper.loop();
     }
 

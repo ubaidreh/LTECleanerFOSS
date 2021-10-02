@@ -58,7 +58,7 @@
     <string name="other">其他</string>
     <string name="daily_title">每日清理</string>
     <string name="daily_sum">每天自动运行，无需打开应用程序</string>
-    <string name="other_apps">Check out my other apps!</string>
+    <string name="other_apps">看看我的其他应用！</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

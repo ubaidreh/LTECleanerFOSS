@@ -26,6 +26,13 @@
             android:data="https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html" />
     </Preference>
 
+    <Preference android:title="Check out my other apps!"
+        android:key="privacyPolicy"
+        app:iconSpaceReserved="false">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="https://play.google.com/store/apps/developer?id=TheRedSpy15" />
+    </Preference>
+
     <Preference android:title="@string/whitelist"
         android:key="whitelist"
         app:iconSpaceReserved="false"

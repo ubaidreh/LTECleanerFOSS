@@ -55,6 +55,9 @@
     <string name="donate_sum">Κέρασέ με ένα καφέ! Ή να επιλέξετε πόσο να δωρίσουν χρησιμοποιώντας PayPal έτσι μπορώ να κρατήσει την υποστήριξη αυτής της εφαρμογής</string>
     <string name="recommended">Συνιστάται.</string>
     <string name="defaultwhitelist">Προεπιλογή:</string>
+    <string name="other">Other</string>
+    <string name="daily_title">Daily Clean</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>- .log</item>

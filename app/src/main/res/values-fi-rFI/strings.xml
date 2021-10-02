@@ -5,90 +5,93 @@
 <resources>
     <string name="app_name">LTE-Cleaner</string>
     <string name="lte_cleaner">-LTE Cleaner!</string>
-    <string name="no_files_found">Ei löytynyt tiedostoja</string>
-    <string name="delete_empty_folders">Poista tyhjä kansio</string>
-    <string name="aggressive_filter">Ota käyttöön aggressiivinen suodatin</string>
+    <string name="no_files_found">Tiedostoja ei löytynyt</string>
+    <string name="delete_empty_folders">Poista tyhjät kansiot</string>
+    <string name="aggressive_filter">Ota käyttöön aggressiivinen suodatus</string>
     <string name="Save">Tallenna</string>
-    <string name="filter">Suodatin</string>
-    <string name="whitelist">Whitelist</string>
+    <string name="filter">Suodattimet</string>
+    <string name="whitelist">Valkolista</string>
     <string name="privacy_policy">Yksityisyyden suoja</string>
-    <string name="add_to_whitelist">Lisää valkoiseen luetteloon</string>
+    <string name="add_to_whitelist">Lisää valkoiselle listalle</string>
     <string name="add">Lisää</string>
     <string name="cancel">Peruuta</string>
-    <string name="enter_file_name">Anna tiedoston/kansion nimi valkoiseksi</string>
-    <string name="make_suggestion">Tee ehdotuksia</string>
-    <string name="select_task">Valitse tehtävä</string>
-    <string name="do_you_want_to">Haluatko poistaa (puhdistuksen) kaikki tiedostot tai vain näyttää ne?</string>
-    <string name="clean">Puhdas</string>
+    <string name="enter_file_name">Syötä tiedoston/kansion nimi</string>
+    <string name="make_suggestion">Ehdota</string>
+    <string name="select_task">Valitse toiminto</string>
+    <string name="do_you_want_to">Haluatko suorittaa pelkän analyysin vai toteuttaa heti puhdistuksen?</string>
+    <string name="clean">Puhdista</string>
     <string name="analyze">Analysoi</string>
-    <string name="enable_generic_filter">Ota yleinen suodatin käyttöön</string>
-    <string name="one_click_clean">Yksi napsautus</string>
-    <string name="freed">Freed: </string>
+    <string name="enable_generic_filter">Käytä yleissuodatinta</string>
+    <string name="one_click_clean">Yhden napautuksen puhdistus</string>
+    <string name="freed">Vapautettu: </string>
     <string name="found">Löytyi: </string>
-    <string name="auto_whitelist">Auto-Whitelist</string>
-    <string name="reset_whitelist">Tyhjä valkoisistako?</string>
-    <string name="are_you_reset_whitelist">Oletko varma, että haluat tyhjentää valkoisten?</string>
-    <string name="reset">Kirkas</string>
+    <string name="auto_whitelist">Automaattinen valkolista</string>
+    <string name="reset_whitelist">Valkolistan tyhjennys?</string>
+    <string name="are_you_reset_whitelist">Oletko varma, että haluat tyhjentää valkolistan?</string>
+    <string name="reset">Tyhjennä</string>
     <string name="delete_apk_files">Poista .apk-tiedostot</string>
-    <string name="lte_threading">LTE-Thluen (Nopeammin)</string>
-    <string name="default_whitelist">Whitelist-oletusarvo</string>
-    <string name="add_defaults">Lisää suositellut Whitelistit</string>
+    <string name="lte_threading">LTE-säikeistys (nopeuttava)</string>
+    <string name="default_whitelist">Oletusvalkolista</string>
+    <string name="add_defaults">Lisää suositellut kohteet valkolistalle</string>
     <string name="nothing_found">Ei löytynyt</string>
-    <string name="status_idle">Tila: tila</string>
+    <string name="status_idle">Tila: ei käynnissä</string>
     <string name="progress_0">0 %</string>
-    <string name="status_running">Tila: käytössä</string>
+    <string name="status_running">Tila: käynnissä</string>
     <string name="privacy_sum">Näytä tietosuojakäytäntö (ulkoinen linkki)</string>
-    <string name="whitelist_sum">Näyttää polkuja, joita ei ole skannauksessa</string>
-    <string name="suggestion_sum">Avaa GitHub-sovellus sovelluksesta. Ei tarvetta</string>
+    <string name="whitelist_sum">Näytä skannauksen ulkopuolelle jätettävät polut</string>
+    <string name="suggestion_sum">Avaa GitHub-issue sovelluksessa. Käyttäjätiliä ei tarvita.</string>
     <string name="generic_sum">.tmp, .log, Logs, lokit</string>
     <string name="aggressive_sum">Liian paljon listattavaksi.</string>
-    <string name="apk_sum">Android-tiedostot</string>
-    <string name="oneclick_sum">Ei valintaikkunan valikkoa, kun napsautus</string>
-    <string name="autowhite_sum">Tunnisteita, jotka on suojattava automaattisesti</string>
-    <string name="prompt_string">Lisää tiedoston käyttöoikeudet</string>
+    <string name="apk_sum">Android-sovellusten asennustiedostot</string>
+    <string name="oneclick_sum">Aloita puhdistus heti nappia painamalla</string>
+    <string name="autowhite_sum">Tunnista suojattavaksi suositeltavat kansiot automaattisesti</string>
+    <string name="prompt_string">Lisää tallennustilan käyttöoikeudet</string>
     <string name="settings_string">Asetukset</string>
     <string name="hello_blank_fragment">Terve, tyhjä kappale</string>
     <string name="title_activity_prompt">PromptAktiviteetti</string>
-    <string name="corpse_summary">Asennemattomasta sovelluksesta jääneet tiedostot</string>
-    <string name="corpse_title">Poista ruumistiedostot</string>
-    <string name="donate">Donaatti</string>
-    <string name="donate_sum">Osta minulle kahvia! Tai valita, kuinka paljon lahjoittaa PayPal niin voin jatkaa tukea tätä sovellusta</string>
+    <string name="corpse_summary">Poistetun sovelluksen jälkeensä jättämät tiedostot</string>
+    <string name="corpse_title">Poista jälkeen jääneet tiedostot</string>
+    <string name="donate">Lahjoita</string>
+    <string name="donate_sum">Osta minulle kahvi! Tai lahjoita valitsemasi summa PayPalin kautta niin voin jatkaa sovelluksen tukemista</string>
     <string name="recommended">Suositeltava</string>
-    <string name="defaultwhitelist">Oletusarvo</string>
+    <string name="other">Other</string>
+    <string name="daily_title">Daily Clean</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
+    <string name="defaultwhitelist">Oletus</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
     </string-array>
     <string-array name="generic_filter_folders">
-        <item>Kirjat</item>
-        <item>Lokit</item>
-        <item>Temp</item>
-        <item>Väliaikainen</item>
-        <item>Tilapäinen</item>
+        <item>Logs</item>
+        <item>logs</item>
+        <item>temp</item>
+        <item>Temporary</item>
+        <item>temporary</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string-array name="aggressive_filter_folders">
-        <item>Supersonikadit</item>
-        <item>Välimuisti</item>
-        <item>Analyyttiset</item>
-        <item>-peukalonkynsiä?</item>
-        <item>Gangsteri</item>
+        <item>supersonicads</item>
+        <item>Cache</item>
+        <item>Analytics</item>
+        <item>thumbnails?</item>
+        <item>mobvista</item>
         <item>UnityAdsVideoCache</item>
-        <item>Aluspeukalot?</item>
+        <item>albumthumbs?</item>
         <item>LOST.DIR</item>
         <item>.Trash</item>
-        <item>Desktopini</item>
-        <item>Leakkanaari</item>
-        <item>.Jakelu</item>
-        <item>.valonheittiV100</item>
-        <item>Fseventsd</item>
+        <item>desktop.ini</item>
+        <item>leakcanary</item>
+        <item>.DS_Store</item>
+        <item>.spotlight-V100</item>
+        <item>fseventsd</item>
         <item>Bugreport</item>
-        <item>Bugretit</item>
+        <item>bugreports</item>
         <item>.Trash</item>
-        <item>Välimuisti</item>
+        <item>cache</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
-        <item>Peukalot?</item>
+        <item>thumbs?.db</item>
     </string-array>
 </resources>

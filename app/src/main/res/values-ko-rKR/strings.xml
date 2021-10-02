@@ -55,6 +55,9 @@
     <string name="donate_sum">커피를 사세요! 아니면 이 앱을 계속 지원할 수 있도록 페이팔을 사용하여 기부할 금액을 선택하십시오.</string>
     <string name="recommended">권장</string>
     <string name="defaultwhitelist">기본값</string>
+    <string name="other">Other</string>
+    <string name="daily_title">Daily Clean</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

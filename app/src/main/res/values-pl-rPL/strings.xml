@@ -58,6 +58,7 @@
     <string name="other">Inne</string>
     <string name="daily_title">Czyszczenie codzienne</string>
     <string name="daily_sum">Uruchamia się automatycznie każdego dnia, bez potrzeby otwierania aplikacji</string>
+    <string name="other_apps">Check out my other apps!</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

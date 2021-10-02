@@ -58,6 +58,7 @@
     <string name="other">Altro</string>
     <string name="daily_title">Pulizia Quotidiana</string>
     <string name="daily_sum">Esegui giornalmente, senza dover aprire la app</string>
+    <string name="other_apps">Check out my other apps!</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>File</item>

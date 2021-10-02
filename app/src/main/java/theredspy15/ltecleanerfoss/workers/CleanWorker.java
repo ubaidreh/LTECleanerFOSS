@@ -35,7 +35,25 @@ public class CleanWorker extends Worker {
                 scan();
             } catch (Exception e) {
                 Log.e(CHANNEL_ID,"error running cleanworker",e);
-                return Result.failure();
+                // notification
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+
+                    Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                    NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"name", NotificationManager.IMPORTANCE_DEFAULT);
+
+                    PendingIntent pendingIntent=PendingIntent.getActivity(getApplicationContext(),1,intent,0);
+                    Notification notification=new Notification.Builder(getApplicationContext(),CHANNEL_ID)
+                            .setContentTitle(e.getLocalizedMessage())
+                            .setContentIntent(pendingIntent)
+                            .setChannelId(CHANNEL_ID)
+                            .setSmallIcon(R.drawable.ic_baseline_cleaning_services_24)
+                            .build();
+
+                    NotificationManager notificationManager=(NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+                    notificationManager.createNotificationChannel(notificationChannel);
+                    notificationManager.notify(1159864,notification);
+                }
+                return Result.retry();
             }
         }
 
@@ -66,7 +84,7 @@ public class CleanWorker extends Worker {
             String title = "Cleaned:"+" "+MainActivity.convertSize(kilobytesTotal);
 
             Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"name", NotificationManager.IMPORTANCE_MIN);
+            NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"name", NotificationManager.IMPORTANCE_DEFAULT);
 
             PendingIntent pendingIntent=PendingIntent.getActivity(getApplicationContext(),1,intent,0);
             Notification notification=new Notification.Builder(getApplicationContext(),CHANNEL_ID)

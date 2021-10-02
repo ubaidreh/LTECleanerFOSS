@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 21, TimeUnit.MINUTES,5,TimeUnit.MINUTES)
                 .build();
-        WorkManager.getInstance().enqueueUniquePeriodicWork(CleanWorker.class.getSimpleName(), ExistingPeriodicWorkPolicy.REPLACE,periodicWork);
+        WorkManager.getInstance().enqueueUniquePeriodicWork(CleanWorker.class.getSimpleName(), ExistingPeriodicWorkPolicy.KEEP,periodicWork);
     }
 
     /**

@@ -172,8 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
         runOnUiThread(()->arrangeViews(delete));
 
-        //File path = Environment.getExternalStorageDirectory();
-        File path = new File(Environment.getExternalStorageDirectory().getPath());
+        File path = Environment.getExternalStorageDirectory();
 
         // scanner setup
         FileScanner fs = new FileScanner(path, this)

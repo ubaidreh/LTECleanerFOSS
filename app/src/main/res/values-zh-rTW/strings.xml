@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp、 .log、日誌、日誌</string>
     <string name="aggressive_sum">這裡列出太多</string>
     <string name="apk_sum">Android 的安裝程式檔案</string>
-    <string name="oneclick_sum">按一下清除時，沒有對話框功能表</string>
+    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
     <string name="autowhite_sum">偵測應該自動保護的資料夾</string>
     <string name="prompt_string">請新增檔案存取許可權</string>
     <string name="settings_string">設定</string>
@@ -59,6 +59,7 @@
     <string name="daily_title">Daily Clean</string>
     <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
     <string name="other_apps">Check out my other apps!</string>
+    <string name="other_apps_sum">I try to have a new one out every week or so</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

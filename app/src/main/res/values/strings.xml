@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">Too much to list here</string>
     <string name="apk_sum">Installer files for android</string>
-    <string name="oneclick_sum">No dialog menu when clicking Clean</string>
+    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
     <string name="autowhite_sum">Detect folders that should be protected automatically</string>
     <string name="prompt_string">Please add file access permissions</string>
     <string name="settings_string">Settings</string>
@@ -59,6 +59,7 @@
     <string name="daily_title">Daily Clean</string>
     <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
     <string name="other_apps">Check out my other apps!</string>
+    <string name="other_apps_sum">I try to have a new one out every week or so</string>
 
 
     <string-array name="generic_filter_files">

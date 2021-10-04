@@ -14,37 +14,18 @@
     android:id="@+id/main_layout"
     android:background="@color/colorPrimary">
 
-    <Space
-        android:id="@+id/topSpacer"
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/statusTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="@string/status_idle"
-        android:textAlignment="center"
-        android:textColor="@color/colorAccent"
-        android:textSize="40sp"
-        android:textStyle="bold" />
-
     <FrameLayout
         android:id="@+id/frameLayout"
+        android:visibility="visible"
+        android:layout_weight="4"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <ProgressBar
             android:id="@+id/scanProgress"
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="151dp"
-            android:layout_height="144dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/circular_background"
             android:indeterminate="false"
             android:max="1"
@@ -84,40 +65,86 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/statusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/status_idle"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center|bottom"
+        app:columnCount="2"
+        app:rowCount="2">
 
         <com.google.android.material.button.MaterialButton
+            style="?android:attr/borderlessButtonStyle"
             android:id="@+id/cleanButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/clean"
-            android:layout_gravity="center"
-            android:textColor="#FFF"
-            app:cornerRadius="30dp"
-            app:strokeColor="@color/colorAccent"
-            app:strokeWidth="3dp" />
+            app:layout_columnWeight="1"
+            android:minWidth="0dp"
+            app:layout_rowWeight="1"
+            app:iconGravity="top"
+            app:icon="@drawable/ic_baseline_cleaning_services_24"
+            android:text="@string/clean" />
 
-    </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            android:id="@+id/eightBtn"
+            app:iconGravity="top"
+            app:icon="@drawable/ic_baseline_search_24"
+            android:text="@string/analyze"
+            android:minWidth="0dp"
+            app:backgroundTint="@android:color/transparent" />
 
-    <Space
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <com.google.android.material.button.MaterialButton
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nineBtn"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            app:iconGravity="top"
+            app:icon="@drawable/ic_baseline_list_24"
+            android:text="@string/whitelist"
+            android:minWidth="0dp"
+            app:backgroundTint="@android:color/transparent" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/settingsButton"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:layout_gravity="end|bottom"
-        android:minWidth="0dp"
-        android:textColor="#FFF"
-        app:backgroundTint="@android:color/transparent"
-        app:icon="@drawable/ic_baseline_settings_24" />
+        <com.google.android.material.button.MaterialButton
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_rowWeight="1"
+            android:id="@+id/settingsButton"
+            app:layout_columnWeight="1"
+            app:icon="@drawable/ic_baseline_settings_24"
+            app:iconGravity="top"
+            android:text="@string/settings_string"
+            android:minWidth="0dp"
+            app:backgroundTint="@android:color/transparent" />
+
+    </androidx.gridlayout.widget.GridLayout>
 
 </LinearLayout>

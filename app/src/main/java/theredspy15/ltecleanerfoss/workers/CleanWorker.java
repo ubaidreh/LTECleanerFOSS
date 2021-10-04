@@ -6,14 +6,11 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Environment;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
-
-import java.io.File;
 
 import theredspy15.ltecleanerfoss.FileScanner;
 import theredspy15.ltecleanerfoss.R;
@@ -35,24 +32,6 @@ public class CleanWorker extends Worker {
                 scan();
             } catch (Exception e) {
                 Log.e(CHANNEL_ID,"error running cleanworker",e);
-                // notification
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-
-                    Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-                    NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"name", NotificationManager.IMPORTANCE_DEFAULT);
-
-                    PendingIntent pendingIntent=PendingIntent.getActivity(getApplicationContext(),1,intent,0);
-                    Notification notification=new Notification.Builder(getApplicationContext(),CHANNEL_ID)
-                            .setContentTitle(e.getLocalizedMessage())
-                            .setContentIntent(pendingIntent)
-                            .setChannelId(CHANNEL_ID)
-                            .setSmallIcon(R.drawable.ic_baseline_cleaning_services_24)
-                            .build();
-
-                    NotificationManager notificationManager=(NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-                    notificationManager.createNotificationChannel(notificationChannel);
-                    notificationManager.notify(1159864,notification);
-                }
                 return Result.retry();
             }
         }
@@ -61,7 +40,7 @@ public class CleanWorker extends Worker {
     }
 
     private void scan() {
-        File path = Environment.getExternalStorageDirectory();
+        /*File path = Environment.getExternalStorageDirectory();
 
         // scanner setup
         FileScanner fs = new FileScanner(path,getApplicationContext())
@@ -77,18 +56,18 @@ public class CleanWorker extends Worker {
                         MainActivity.prefs.getBoolean("apk", false));
 
         // kilobytes found/freed text
-        long kilobytesTotal = fs.startScan();
+        long kilobytesTotal = fs.startScan();*/
 
         // notification
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            String title = "Cleaned:"+" "+MainActivity.convertSize(kilobytesTotal);
+            //String title = "Cleaned:"+" "+MainActivity.convertSize(kilobytesTotal);
 
             Intent intent=new Intent(getApplicationContext(),MainActivity.class);
             NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID,"name", NotificationManager.IMPORTANCE_DEFAULT);
 
             PendingIntent pendingIntent=PendingIntent.getActivity(getApplicationContext(),1,intent,0);
             Notification notification=new Notification.Builder(getApplicationContext(),CHANNEL_ID)
-                    .setContentTitle(title)
+                    .setContentTitle("title")
                     .setContentIntent(pendingIntent)
                     .setChannelId(CHANNEL_ID)
                     .setSmallIcon(R.drawable.ic_baseline_cleaning_services_24)

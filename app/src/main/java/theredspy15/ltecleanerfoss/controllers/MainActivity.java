@@ -26,7 +26,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.PeriodicWorkRequest;
@@ -52,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -63,9 +61,10 @@ public class MainActivity extends AppCompatActivity {
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
 
-        PeriodicWorkRequest periodicWork = new PeriodicWorkRequest.Builder(CleanWorker.class, 21, TimeUnit.MINUTES,5,TimeUnit.MINUTES)
+        PeriodicWorkRequest.Builder builder = new PeriodicWorkRequest.Builder(CleanWorker.class, 15, TimeUnit.MINUTES);
+        PeriodicWorkRequest periodicWorkRequest = builder
                 .build();
-        WorkManager.getInstance().enqueueUniquePeriodicWork(CleanWorker.class.getSimpleName(), ExistingPeriodicWorkPolicy.KEEP,periodicWork);
+        WorkManager.getInstance().enqueueUniquePeriodicWork("Cleaner Worker",  ExistingPeriodicWorkPolicy.REPLACE,periodicWorkRequest);
     }
 
     /**
@@ -99,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void animateBtn() {
-        binding.topSpacer.setVisibility(View.GONE);
         binding.fileScrollView.setVisibility(View.VISIBLE);
     }
 
@@ -192,9 +190,22 @@ public class MainActivity extends AppCompatActivity {
      * If there is any error while deleting, turns text view of path red
      * @param file file to delete
      */
-    public synchronized TextView displayPath(File file) {
+    public synchronized TextView displayDeletion(File file) {
         // creating and adding a text view to the scroll view with path to file
         TextView textView = printTextView(file.getAbsolutePath(), getResources().getColor(R.color.colorAccent));
+
+        // adding to scroll view
+        runOnUiThread(() -> binding.fileListView.addView(textView));
+
+        // scroll to bottom
+        binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
+
+        return textView;
+    }
+
+    public synchronized TextView displayText(String text) {
+        // creating and adding a text view to the scroll view with path to file
+        TextView textView = printTextView(text, Color.YELLOW);
 
         // adding to scroll view
         runOnUiThread(() -> binding.fileListView.addView(textView));

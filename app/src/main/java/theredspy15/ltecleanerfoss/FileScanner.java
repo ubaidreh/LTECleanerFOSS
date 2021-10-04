@@ -211,12 +211,16 @@ public class FileScanner {
     public long startScan() {
         FileScanner.isRunning = true;
         byte cycles = 0;
-        byte maxCycles = 10;
+        byte maxCycles = 1;
         List<File> foundFiles;
         if (!delete) maxCycles = 1; // when nothing is being deleted. Stops duplicates from being found
 
         // removes the need to 'clean' multiple times to get everything
+        if (MainActivity.prefs.getBoolean("multirun", false)) maxCycles = 10;
         while (cycles < maxCycles) {
+
+            // cycle indicator
+            if (gui != null) ((MainActivity)context).displayText("Running Cycle"+" "+(cycles+1)+"/"+maxCycles);
 
             // find files
             foundFiles = getListFiles();
@@ -226,7 +230,7 @@ public class FileScanner {
             for (File file : foundFiles) {
                 if (filter(file)) { // filter
                     TextView tv = null;
-                    if (gui != null) tv = ((MainActivity)context).displayPath(file);
+                    if (gui != null) tv = ((MainActivity)context).displayDeletion(file);
 
                     if (delete) {
                         kilobytesTotal += file.length();
@@ -250,6 +254,9 @@ public class FileScanner {
             }
 
             if (filesRemoved == 0) break; // nothing found this run, no need to run again
+
+            // cycle indicator
+            if (gui != null) ((MainActivity)context).displayText("Finished Cycle"+" "+(cycles+1)+"/"+maxCycles);
 
             filesRemoved = 0; // reset for next cycle
             ++cycles;

@@ -10,37 +10,49 @@
     android:key="settings"
     app:iconSpaceReserved="false">
 
-    <Preference android:title="@string/donate"
-        android:key="donate"
-        app:iconSpaceReserved="false"
-        android:summary="@string/donate_sum">
-        <intent android:action="android.intent.action.VIEW"
-            android:data="https://www.paypal.me/theredspy15" />
-    </Preference>
+    <PreferenceCategory android:title="Links" app:iconSpaceReserved="false">
+        <Preference android:title="@string/donate"
+            android:key="donate"
+            app:iconSpaceReserved="false"
+            android:summary="@string/donate_sum">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.paypal.me/theredspy15" />
+        </Preference>
 
-    <Preference android:title="@string/privacy_policy"
-        android:key="privacyPolicy"
-        app:iconSpaceReserved="false"
-        android:summary="@string/privacy_sum">
-        <intent android:action="android.intent.action.VIEW"
-            android:data="https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html" />
-    </Preference>
+        <Preference android:title="@string/privacy_policy"
+            android:key="privacyPolicy"
+            app:iconSpaceReserved="false"
+            android:summary="@string/privacy_sum">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://cdn.rawgit.com/TheRedSpy15/LTECleanerFOSS/d9522c76/privacy_policy.html" />
+        </Preference>
 
-    <Preference android:title="@string/other_apps"
-        app:iconSpaceReserved="false">
-        <intent android:action="android.intent.action.VIEW"
-            android:data="https://play.google.com/store/apps/developer?id=TheRedSpy15" />
-    </Preference>
+        <Preference android:title="@string/other_apps"
+            android:summary="@string/other_apps_sum"
+            app:iconSpaceReserved="false">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/developer?id=TheRedSpy15" />
+        </Preference>
+    </PreferenceCategory>
 
-    <Preference android:title="@string/whitelist"
-        android:key="whitelist"
-        app:iconSpaceReserved="false"
-        android:summary="@string/whitelist_sum">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:targetPackage="theredspy15.ltecleanerfoss"
-            android:targetClass="theredspy15.ltecleanerfoss.controllers.WhitelistActivity" />
-    </Preference>
+    <PreferenceCategory android:title="Scanner" app:iconSpaceReserved="false">
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="true"
+            android:textColor="#FFF"
+            android:key="auto_white"
+            android:persistent="true"
+            android:summary="@string/autowhite_sum"
+            android:title="@string/auto_whitelist" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="false"
+            android:textColor="#FFF"
+            android:key="multirun"
+            android:persistent="true"
+            android:summary="Will rerun scan each time something is found with a limit of ten scans"
+            android:title="Double Checker" />
+    </PreferenceCategory>
 
     <PreferenceCategory android:title="Filters" app:iconSpaceReserved="false">
         <CheckBoxPreference
@@ -82,14 +94,6 @@
             android:persistent="true"
             android:summary="@string/apk_sum"
             android:title="@string/delete_apk_files" />
-        <CheckBoxPreference
-            app:iconSpaceReserved="false"
-            android:defaultValue="true"
-            android:textColor="#FFF"
-            android:key="auto_white"
-            android:persistent="true"
-            android:summary="@string/autowhite_sum"
-            android:title="@string/auto_whitelist" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/other" app:iconSpaceReserved="false">

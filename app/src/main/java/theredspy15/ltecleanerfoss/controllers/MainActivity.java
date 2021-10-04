@@ -55,8 +55,10 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.cleanButton.setOnClickListener(this::clean);
-        binding.settingsButton.setOnClickListener(this::settings);
+        binding.cleanBtn.setOnClickListener(this::clean);
+        binding.settingsBtn.setOnClickListener(this::settings);
+        binding.whitelistBtn.setOnClickListener(this::whitelist);
+        binding.analyzeBtn.setOnClickListener(this::analyze);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
@@ -76,6 +78,34 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public final void whitelist(View view) {
+        Intent intent = new Intent(this, WhitelistActivity.class);
+        startActivity(intent);
+    }
+
+    public final void analyze(View view) {
+        requestWriteExternalPermission();
+
+        if (!FileScanner.isRunning) {
+            new Thread(()-> scan(false)).start();
+        }
+    }
+
+    private void arrangeViews(boolean isDelete) {
+        if (isDelete) arrangeForClean();
+        else arrangeForAnalyze();
+    }
+
+    private void arrangeForClean() {
+        binding.frameLayout.setVisibility(View.VISIBLE);
+        binding.fileScrollView.setVisibility(View.GONE);
+    }
+
+    private void arrangeForAnalyze() {
+        binding.frameLayout.setVisibility(View.GONE);
+        binding.fileScrollView.setVisibility(View.VISIBLE);
+    }
+
     /**
      * Runs search and delete on background thread
      */
@@ -86,19 +116,13 @@ public class MainActivity extends AppCompatActivity {
             if (!prefs.getBoolean("one_click", false)) // one-click disabled
                 new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
                         .setTitle(R.string.select_task)
-                        .setMessage(R.string.do_you_want_to)
+                        .setMessage("Are you sure? Files deleted cannot be restored")
                         .setPositiveButton(R.string.clean, (dialog, whichButton) -> { // clean
                             new Thread(()-> scan(true)).start();
                         })
-                        .setNegativeButton(R.string.analyze, (dialog, whichButton) -> { // analyze
-                            new Thread(()-> scan(false)).start();
-                        }).show();
+                        .setNegativeButton(R.string.cancel, (dialog, whichButton) -> {dialog.dismiss();}).show();
             else new Thread(()-> scan(true)).start(); // one-click enabled
         }
-    }
-
-    public void animateBtn() {
-        binding.fileScrollView.setVisibility(View.VISIBLE);
     }
 
     /**
@@ -109,8 +133,11 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
-        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!FileScanner.isRunning));
+        if (delete) runOnUiThread(()->findViewById(R.id.cleanBtn).setEnabled(!FileScanner.isRunning));
+        else runOnUiThread(()->findViewById(R.id.analyzeBtn).setEnabled(!FileScanner.isRunning));
         reset();
+
+        runOnUiThread(()->arrangeViews(delete));
 
         File path = Environment.getExternalStorageDirectory();
 
@@ -134,7 +161,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         runOnUiThread(() -> {
-            animateBtn();
             binding.statusTextView.setText(getString(R.string.status_running));
 
             // crappy but working fix for percentage never reaching 100 exactly
@@ -154,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 
-        runOnUiThread(()->findViewById(R.id.cleanButton).setEnabled(!FileScanner.isRunning));
+        runOnUiThread(()->findViewById(R.id.cleanBtn).setEnabled(!FileScanner.isRunning));
         Looper.loop();
     }
 

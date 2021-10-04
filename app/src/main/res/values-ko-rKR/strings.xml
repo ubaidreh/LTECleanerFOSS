@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, 로그, 로그</string>
     <string name="aggressive_sum">여기에 나열하기에 너무 많음</string>
     <string name="apk_sum">안드로이드용 설치 프로그램 파일</string>
-    <string name="oneclick_sum">정리를 클릭할 때 대화 상자 메뉴가 없음</string>
+    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
     <string name="autowhite_sum">자동으로 보호해야 하는 폴더 발견</string>
     <string name="prompt_string">파일 액세스 권한을 추가하십시오.</string>
     <string name="settings_string">설정</string>
@@ -59,6 +59,7 @@
     <string name="daily_title">Daily Clean</string>
     <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
     <string name="other_apps">Check out my other apps!</string>
+    <string name="other_apps_sum">I try to have a new one out every week or so</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -7,6 +7,8 @@ package theredspy15.ltecleanerfoss.controllers;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -28,6 +30,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.work.ExistingPeriodicWorkPolicy;
 import androidx.work.PeriodicWorkRequest;
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -62,6 +66,17 @@ public class MainActivity extends AppCompatActivity {
         binding.whitelistBtn.setOnClickListener(this::whitelist);
         binding.analyzeBtn.setOnClickListener(this::analyze);
 
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        WhitelistActivity.getWhiteList();
+
+        PeriodicWorkRequest.Builder builder = new PeriodicWorkRequest.Builder(CleanWorker.class, 15, TimeUnit.MINUTES);
+        PeriodicWorkRequest periodicWorkRequest = builder
+                .build();
+        WorkManager.getInstance().enqueueUniquePeriodicWork("Cleaner Worker",  ExistingPeriodicWorkPolicy.REPLACE,periodicWorkRequest);
+    }
+
+    @Override public void onStart() {
+        super.onStart();
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             // In landscape
@@ -70,15 +85,6 @@ public class MainActivity extends AppCompatActivity {
             layoutParams.width = view.getHeight();
             view.setLayoutParams(layoutParams);
         }  // In portrait
-
-
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        WhitelistActivity.getWhiteList();
-
-        PeriodicWorkRequest.Builder builder = new PeriodicWorkRequest.Builder(CleanWorker.class, 15, TimeUnit.MINUTES);
-        PeriodicWorkRequest periodicWorkRequest = builder
-                .build();
-        WorkManager.getInstance().enqueueUniquePeriodicWork("Cleaner Worker",  ExistingPeriodicWorkPolicy.REPLACE,periodicWorkRequest);
     }
 
     /**
@@ -132,8 +138,19 @@ public class MainActivity extends AppCompatActivity {
                         .setPositiveButton(R.string.clean, (dialog, whichButton) -> { // clean
                             new Thread(()-> scan(true)).start();
                         })
-                        .setNegativeButton(R.string.cancel, (dialog, whichButton) -> {dialog.dismiss();}).show();
+                        .setNegativeButton(R.string.cancel, (dialog, whichButton) -> dialog.dismiss()).show();
             else new Thread(()-> scan(true)).start(); // one-click enabled
+        }
+    }
+
+    private void clearClipboard() { // TODO: test on emulator
+        ClipboardManager mCbm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            mCbm.clearPrimaryClip();
+        } else {
+            ClipboardManager clipService = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+            ClipData clipData = ClipData.newPlainText("", "");
+            clipService.setPrimaryClip(clipData);
         }
     }
 
@@ -151,9 +168,12 @@ public class MainActivity extends AppCompatActivity {
         });
         reset();
 
+        if (prefs.getBoolean("clipboard",false)) clearClipboard();
+
         runOnUiThread(()->arrangeViews(delete));
 
-        File path = Environment.getExternalStorageDirectory();
+        //File path = Environment.getExternalStorageDirectory();
+        File path = new File(Environment.getExternalStorageDirectory().getPath());
 
         // scanner setup
         FileScanner fs = new FileScanner(path, this)

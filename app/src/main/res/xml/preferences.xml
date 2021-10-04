@@ -113,6 +113,14 @@
             android:persistent="true"
             android:summary="@string/daily_sum"
             android:title="@string/daily_title" />
+        <CheckBoxPreference
+            app:iconSpaceReserved="false"
+            android:defaultValue="false"
+            android:textColor="#FFF"
+            android:key="clipboard"
+            android:persistent="true"
+            android:summary="Doesn't work on samsung devices"
+            android:title="Clear clipboard" />
     </PreferenceCategory>
 
 </PreferenceScreen>

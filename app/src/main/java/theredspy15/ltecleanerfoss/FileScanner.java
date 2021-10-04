@@ -45,7 +45,7 @@ public class FileScanner {
     private boolean corpse = false;
     private static final ArrayList<String> filters = new ArrayList<>();
     private static final String[] protectedFileList = {
-            "backup", "copy", "copies", "important", "do_not_edit"};
+            "backup", "copy", "copies", "important", "do_not_edit"}; // TODO: move to resources for translations
 
     public FileScanner(File path, Context context) {
         this.path = path;

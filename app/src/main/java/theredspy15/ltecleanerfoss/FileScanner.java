@@ -213,10 +213,10 @@ public class FileScanner {
         byte cycles = 0;
         byte maxCycles = 1;
         List<File> foundFiles;
+        if (MainActivity.prefs.getBoolean("multirun", false)) maxCycles = 10;
         if (!delete) maxCycles = 1; // when nothing is being deleted. Stops duplicates from being found
 
         // removes the need to 'clean' multiple times to get everything
-        if (MainActivity.prefs.getBoolean("multirun", false)) maxCycles = 10;
         while (cycles < maxCycles) {
 
             // cycle indicator
@@ -253,10 +253,10 @@ public class FileScanner {
                 }
             }
 
-            if (filesRemoved == 0) break; // nothing found this run, no need to run again
-
             // cycle indicator
             if (gui != null) ((MainActivity)context).displayText("Finished Cycle"+" "+(cycles+1)+"/"+maxCycles);
+
+            if (filesRemoved == 0) break; // nothing found this run, no need to run again
 
             filesRemoved = 0; // reset for next cycle
             ++cycles;

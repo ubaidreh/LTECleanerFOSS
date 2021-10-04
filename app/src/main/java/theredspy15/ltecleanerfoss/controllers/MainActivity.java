@@ -10,6 +10,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -19,6 +20,7 @@ import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -59,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
         binding.settingsBtn.setOnClickListener(this::settings);
         binding.whitelistBtn.setOnClickListener(this::whitelist);
         binding.analyzeBtn.setOnClickListener(this::analyze);
+
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // In landscape
+            View view = binding.frameLayout;
+            ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+            layoutParams.width = view.getHeight();
+            view.setLayoutParams(layoutParams);
+        }  // In portrait
+
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         WhitelistActivity.getWhiteList();
@@ -133,8 +145,10 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void scan(boolean delete) {
         Looper.prepare();
-        if (delete) runOnUiThread(()->findViewById(R.id.cleanBtn).setEnabled(!FileScanner.isRunning));
-        else runOnUiThread(()->findViewById(R.id.analyzeBtn).setEnabled(!FileScanner.isRunning));
+        runOnUiThread(()-> {
+            findViewById(R.id.cleanBtn).setEnabled(!FileScanner.isRunning);
+            findViewById(R.id.analyzeBtn).setEnabled(!FileScanner.isRunning);
+        });
         reset();
 
         runOnUiThread(()->arrangeViews(delete));
@@ -180,7 +194,10 @@ public class MainActivity extends AppCompatActivity {
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 
-        runOnUiThread(()->findViewById(R.id.cleanBtn).setEnabled(!FileScanner.isRunning));
+        runOnUiThread(()-> {
+            findViewById(R.id.cleanBtn).setEnabled(!FileScanner.isRunning);
+            findViewById(R.id.analyzeBtn).setEnabled(!FileScanner.isRunning);
+        });
         Looper.loop();
     }
 

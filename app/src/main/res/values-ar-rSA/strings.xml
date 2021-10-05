@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">يوجد الكثير ليتم عرضه هنا</string>
     <string name="apk_sum">ملفات برنامج التركيب للروبوت</string>
-    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
+    <string name="oneclick_sum">لا يوجد مربع حوار للتأكيد عند الضغط على المفتاح النظيف</string>
     <string name="autowhite_sum">اكتشاف الحافظات التي يجب حمايتها آليا</string>
     <string name="prompt_string">برجاء اضافة تصاريح التوصل للملفات</string>
     <string name="settings_string">المحددات</string>
@@ -55,11 +55,11 @@
     <string name="donate_sum">إشتري لي قهوة أو اختيار مقدار التبرع باستخدام PayPal بحيث يمكنني الاستمرار في دعم هذا التطبيق</string>
     <string name="recommended">المفضل</string>
     <string name="defaultwhitelist">المفترض</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
-    <string name="other_apps">Check out my other apps!</string>
-    <string name="other_apps_sum">I try to have a new one out every week or so</string>
+    <string name="other">مسائل أخرى</string>
+    <string name="daily_title">تنظيف يومي</string>
+    <string name="daily_sum">يتم تشغيله آليا بطريقة يومية ، بدون أن يكون عليك فتح التطبيق. لن يتم التعامل مع بعض الأجهزة ما لم يتم فتحها في الخلفية بسبب قيود OEM</string>
+    <string name="other_apps">تحقق من التطبيقات الأخرى الخاصة بي !</string>
+    <string name="other_apps_sum">أحاول أن يكون عندي واحد جديد كل إسبوع أو لذا</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>gol.</item>

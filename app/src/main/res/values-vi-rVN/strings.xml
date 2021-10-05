@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, nhật ký</string>
     <string name="aggressive_sum">Quá nhiều để liệt kê ở đây</string>
     <string name="apk_sum">Tập tin trình cài đặt cho android</string>
-    <string name="oneclick_sum">Không có trình đơn hội thoại khi nhấp sạch</string>
+    <string name="oneclick_sum">Không có hộp thoại xác nhận khi bấm nút sạch</string>
     <string name="autowhite_sum">Phát hiện thư mục cần được bảo vệ tự động</string>
     <string name="prompt_string">Vui lòng thêm quyền truy cập tập tin</string>
     <string name="settings_string">Thiết lập</string>
@@ -55,9 +55,22 @@
     <string name="donate_sum">Mua cà phê cho tôi! Hoặc chọn cách quyên góp bằng PayPal để tôi có thể giư ̃ lại ứng dụng này</string>
     <string name="recommended">Đề nghị</string>
     <string name="defaultwhitelist">Mặc định</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
+    <string name="other">Khác</string>
+    <string name="daily_title">Sạch hàng ngày</string>
+    <string name="daily_sum">Tự động chạy hàng ngày, không có bạn phải mở ứng dụng. Sẽ không làm việc trên một sô ́ thiết bị trư ̀ khi không được mở trong nền do hạn chê ́ OEM</string>
+    <string name="other_apps">Kiểm tra các ứng dụng khác!</string>
+    <string name="other_apps_sum">Mỗi tuần tôi lại có một người mới ra ngoài.</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

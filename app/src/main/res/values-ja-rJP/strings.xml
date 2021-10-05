@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">ここには表示できないほど多数の条件</string>
     <string name="apk_sum">Androidのインストーラーファイル</string>
-    <string name="oneclick_sum">「クリーン」クリック時のダイアログを非表示</string>
+    <string name="oneclick_sum">クリーン・ボタンが押されたときに確認ダイアログが表示</string>
     <string name="autowhite_sum">保護すべきフォルダーを自動的に検出する</string>
     <string name="prompt_string">ファイルのアクセス許可を追加してください</string>
     <string name="settings_string">設定</string>
@@ -55,9 +55,22 @@
     <string name="donate_sum">このアプリのサポートを続けられるように、私にコーヒーを買ってください！または、PayPalで寄付金額を選ぶこともできます。</string>
     <string name="recommended">推奨</string>
     <string name="defaultwhitelist">デフォルト</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
+    <string name="other">その他</string>
+    <string name="daily_title">日次クリーニング</string>
+    <string name="daily_sum">アプリケーションを開くことなく、毎日自動的に実行されます。 一部のデバイスでは、 OEM 制限によりバックグラウンドで左側が開かれていない場合は、</string>
+    <string name="other_apps">他のアプリを確認してください。</string>
+    <string name="other_apps_sum">私は毎週新しいものを試してみたいと思っている。</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

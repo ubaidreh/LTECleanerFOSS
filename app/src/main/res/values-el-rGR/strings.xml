@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">Πολλή λίστα εδώ.</string>
     <string name="apk_sum">Αρχεία του προγράμματος εγκατάστασης για το Android</string>
-    <string name="oneclick_sum">Δεν εμφανίζεται το παράθυρο διαλόγου \"Εκκαθάριση\"</string>
+    <string name="oneclick_sum">Δεν υπάρχει παράθυρο επιβεβαίωσης όταν πατηθεί το κουμπί.</string>
     <string name="autowhite_sum">Εντοπισμός φακέλων που πρέπει να προστατεύονται αυτόματα</string>
     <string name="prompt_string">Προσθέστε δικαιώματα πρόσβασης στο αρχείο.</string>
     <string name="settings_string">Ρυθμίσεις:</string>
@@ -55,9 +55,22 @@
     <string name="donate_sum">Κέρασέ με ένα καφέ! Ή να επιλέξετε πόσο να δωρίσουν χρησιμοποιώντας PayPal έτσι μπορώ να κρατήσει την υποστήριξη αυτής της εφαρμογής</string>
     <string name="recommended">Συνιστάται.</string>
     <string name="defaultwhitelist">Προεπιλογή:</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
+    <string name="other">\' Αλλα</string>
+    <string name="daily_title">Καθημερινή καθαριότητα</string>
+    <string name="daily_sum">Λειτουργεί αυτόματα καθημερινά, χωρίς να χρειάζεται να ανοίξετε την εφαρμογή. Δεν θα λειτουργήσει σε ορισμένες συσκευές αν δεν αφεθεί ανοικτή στο παρασκήνιο λόγω των περιορισμών OEM</string>
+    <string name="other_apps">Κοίτα τις άλλες εφαρμογές μου!</string>
+    <string name="other_apps_sum">Προσπαθώ να έχω ένα καινούργιο κάθε εβδομάδα.</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>- .log</item>

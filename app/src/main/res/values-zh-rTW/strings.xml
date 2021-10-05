@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp、 .log、日誌、日誌</string>
     <string name="aggressive_sum">這裡列出太多</string>
     <string name="apk_sum">Android 的安裝程式檔案</string>
-    <string name="oneclick_sum">按一下清除時，沒有對話框功能表</string>
+    <string name="oneclick_sum">按下清潔按鈕時沒有確認對話框</string>
     <string name="autowhite_sum">偵測應該自動保護的資料夾</string>
     <string name="prompt_string">請新增檔案存取許可權</string>
     <string name="settings_string">設定</string>
@@ -55,9 +55,22 @@
     <string name="donate_sum">給我買杯咖啡 或選擇使用 PayPal 捐贈多少，讓我可以繼續支援此應用程式</string>
     <string name="recommended">建議的</string>
     <string name="defaultwhitelist">預設</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
+    <string name="other">其他</string>
+    <string name="daily_title">每日清除</string>
+    <string name="daily_sum">每日自動執行，而不需要開啟應用程式。 除非由於 OEM 限制而在背景中開啟，否則將不會在某些裝置上運作</string>
+    <string name="other_apps">移出我的其他應用程式！</string>
+    <string name="other_apps_sum">我每周都試一次又一次</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

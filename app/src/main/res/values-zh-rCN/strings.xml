@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp， .log，日志和日志</string>
     <string name="aggressive_sum">此处列表太多</string>
     <string name="apk_sum">Android 的安装程序文件</string>
-    <string name="oneclick_sum">单击 \" 清除 \" 时没有对话框菜单</string>
+    <string name="oneclick_sum">按下清理按钮时没有确认对话框</string>
     <string name="autowhite_sum">检测应该自动保护的文件夹</string>
     <string name="prompt_string">请添加文件访问许可权</string>
     <string name="settings_string">设置</string>
@@ -57,7 +57,20 @@
     <string name="defaultwhitelist">缺省值</string>
     <string name="other">其他</string>
     <string name="daily_title">每日清理</string>
-    <string name="daily_sum">每天自动运行，无需打开应用程序</string>
+    <string name="daily_sum">每天自动运行，无需您打开应用程序。 将不会在某些设备上工作，除非由于 OEM 限制而在后台打开</string>
+    <string name="other_apps">看看我的其他应用！</string>
+    <string name="other_apps_sum">我试着大约每周发布一个新的</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

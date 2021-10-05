@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, 로그, 로그</string>
     <string name="aggressive_sum">여기에 나열하기에 너무 많음</string>
     <string name="apk_sum">안드로이드용 설치 프로그램 파일</string>
-    <string name="oneclick_sum">정리를 클릭할 때 대화 상자 메뉴가 없음</string>
+    <string name="oneclick_sum">정리 단추를 누를 때 확인 대화 상자 없음</string>
     <string name="autowhite_sum">자동으로 보호해야 하는 폴더 발견</string>
     <string name="prompt_string">파일 액세스 권한을 추가하십시오.</string>
     <string name="settings_string">설정</string>
@@ -55,9 +55,22 @@
     <string name="donate_sum">커피를 사세요! 아니면 이 앱을 계속 지원할 수 있도록 페이팔을 사용하여 기부할 금액을 선택하십시오.</string>
     <string name="recommended">권장</string>
     <string name="defaultwhitelist">기본값</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
+    <string name="other">기타</string>
+    <string name="daily_title">데일리 클린</string>
+    <string name="daily_sum">앱을 열 필요 없이 매일 자동으로 실행됩니다. OEM 제한사항으로 인해 백그라운드에서 열린 상태가 아니면 일부 장치에서 작동하지 않습니다.</string>
+    <string name="other_apps">다른 앱들을 확인해 보세요!</string>
+    <string name="other_apps_sum">나는 매주 새로운 것을 가지려고 노력한다.</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

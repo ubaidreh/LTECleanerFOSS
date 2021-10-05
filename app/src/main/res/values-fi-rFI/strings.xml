@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, lokit</string>
     <string name="aggressive_sum">Liian paljon listattavaksi.</string>
     <string name="apk_sum">Android-tiedostot</string>
-    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
+    <string name="oneclick_sum">Ei vahvistusta valintaikkunassa, kun puhdas painike on painettuna</string>
     <string name="autowhite_sum">Tunnisteita, jotka on suojattava automaattisesti</string>
     <string name="prompt_string">Lisää tiedoston käyttöoikeudet</string>
     <string name="settings_string">Asetukset</string>
@@ -55,11 +55,11 @@
     <string name="donate_sum">Osta minulle kahvia! Tai valita, kuinka paljon lahjoittaa PayPal niin voin jatkaa tukea tätä sovellusta</string>
     <string name="recommended">Suositeltava</string>
     <string name="defaultwhitelist">Oletusarvo</string>
-    <string name="other">Other</string>
+    <string name="other">Muut</string>
     <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
-    <string name="other_apps">Check out my other apps!</string>
-    <string name="other_apps_sum">I try to have a new one out every week or so</string>
+    <string name="daily_sum">Automaattisesti kulkee päivittäin, ilman että sinun täytyy avata sovellus. Ei toimi joidenkin laitteiden kanssa, ellei OEM-rajoituksista johtuen ole avoimia taustatietoja</string>
+    <string name="other_apps">Katsokaa muita sovelluksia!</string>
+    <string name="other_apps_sum">Yritän saada uuden ulos joka viikko tai niin</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

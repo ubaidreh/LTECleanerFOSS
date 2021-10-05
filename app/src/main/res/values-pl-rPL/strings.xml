@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Dzienniki, dzienniki</string>
     <string name="aggressive_sum">Zbyt wiele do wyświetlenia tutaj</string>
     <string name="apk_sum">Pliki instalacji aplikacji dla Androida</string>
-    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
+    <string name="oneclick_sum">Po naciśnięciu przycisku czyszczenia nie jest wyświetlane okno dialogowe potwierdzenia</string>
     <string name="autowhite_sum">Automatycznie wykryj foldery, które powinny zostać wykluczone</string>
     <string name="prompt_string">Aplikacja wymaga dostępu do plików</string>
     <string name="settings_string">Ustawienia</string>
@@ -57,9 +57,20 @@
     <string name="defaultwhitelist">Domyślne</string>
     <string name="other">Inne</string>
     <string name="daily_title">Czyszczenie codzienne</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app. Will not work on some devices unless left open in background due to OEM restrictions</string>
+    <string name="daily_sum">Automatyczne uruchamianie codziennie, bez konieczności otwierania aplikacji. Nie będzie działać na niektórych urządzeniach, o ile nie zostanie otwarte w tle z powodu ograniczeń OEM</string>
     <string name="other_apps">Sprawdź inne moje aplikacje!</string>
-    <string name="other_apps_sum">I try to have a new one out every week or so</string>
+    <string name="other_apps_sum">Staram się mieć coś nowego co tydzień lub tak</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

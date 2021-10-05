@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
             if (!prefs.getBoolean("one_click", false)) // one-click disabled
                 new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
                         .setTitle(R.string.select_task)
-                        .setMessage("Are you sure? Files deleted cannot be restored")
+                        .setMessage(R.string.are_you_sure_deletion)
                         .setPositiveButton(R.string.clean, (dialog, whichButton) -> { // clean
                             new Thread(()-> scan(true)).start();
                         })
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
         // failed scan
         if (path.listFiles() == null) { // is this needed? yes.
-            TextView textView = printTextView("Scan failed.", Color.RED);
+            TextView textView = printTextView(getString(R.string.failed_scan), Color.RED);
             runOnUiThread(() -> binding.fileListView.addView(textView));
         }
 
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
                     1);
 
             if (!Environment.isExternalStorageManager()) { // all files
-                Toast.makeText(this, "Permission needed!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.permission_needed, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
                 Uri uri = Uri.fromParts("package", getPackageName(), null);
                 intent.setData(uri);

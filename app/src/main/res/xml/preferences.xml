@@ -50,8 +50,8 @@
             android:textColor="#FFF"
             android:key="multirun"
             android:persistent="true"
-            android:summary="Will rerun scan each time something is found with a limit of ten scans"
-            android:title="Double Checker" />
+            android:summary="@string/double_check_sum"
+            android:title="@string/double_check_title" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Filters" app:iconSpaceReserved="false">
@@ -119,8 +119,8 @@
             android:textColor="#FFF"
             android:key="clipboard"
             android:persistent="true"
-            android:summary="Doesn't work on samsung devices"
-            android:title="Clear clipboard" />
+            android:summary="@string/samsung_not_work"
+            android:title="@string/clear_clipboard" />
     </PreferenceCategory>
 
 </PreferenceScreen>

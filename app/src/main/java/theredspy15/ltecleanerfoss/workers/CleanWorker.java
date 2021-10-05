@@ -60,7 +60,7 @@ public class CleanWorker extends Worker {
 
         // kilobytes found/freed text
         long kilobytesTotal = fs.startScan();
-        String title = "Cleaned:"+" "+MainActivity.convertSize(kilobytesTotal);
+        String title = getApplicationContext().getString(R.string.clean_notification)+" "+MainActivity.convertSize(kilobytesTotal);
         makeStatusNotification(title,getApplicationContext());
     }
 
@@ -69,7 +69,7 @@ public class CleanWorker extends Worker {
         // Name of Notification Channel for verbose notifications of background work
         final CharSequence VERBOSE_NOTIFICATION_CHANNEL_NAME = "Verbose WorkManager Notifications";
         final String VERBOSE_NOTIFICATION_CHANNEL_DESCRIPTION = "Shows notifications whenever work finishes";
-        final CharSequence NOTIFICATION_TITLE = "LTE Clean Worker Finished";
+        final CharSequence NOTIFICATION_TITLE = context.getString(R.string.notification_title);
         final String CHANNEL_ID = "VERBOSE_NOTIFICATION" ;
         final int NOTIFICATION_ID = 1;
 

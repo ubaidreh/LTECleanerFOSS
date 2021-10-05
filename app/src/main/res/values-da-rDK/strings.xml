@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, logge</string>
     <string name="aggressive_sum">Der er for meget at liste her</string>
     <string name="apk_sum">Installer-filer til android</string>
-    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
+    <string name="oneclick_sum">Ingen bekræftelsesdialogboks, når der trykkes på knappen</string>
     <string name="autowhite_sum">Registrér foldere, der skal beskyttes automatisk</string>
     <string name="prompt_string">Tilføj adgangstilladelser til fil</string>
     <string name="settings_string">Indstillinger</string>
@@ -55,11 +55,11 @@
     <string name="donate_sum">Køb mig en kop kaffe! Eller vælg, hvor meget der skal doneres ved hjælp af PayPal, så jeg kan fortsætte med at støtte denne app.</string>
     <string name="recommended">Anbefales</string>
     <string name="defaultwhitelist">Standard</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
-    <string name="other_apps">Check out my other apps!</string>
-    <string name="other_apps_sum">I try to have a new one out every week or so</string>
+    <string name="other">Andet</string>
+    <string name="daily_title">Daglig ren</string>
+    <string name="daily_sum">Automatisk kører dagligt, uden at du skal åbne appen. Vil ikke arbejde på nogle enheder, medmindre venstre i baggrunden er åben på grund af OEM-begrænsninger</string>
+    <string name="other_apps">Tjek mine andre apps!</string>
+    <string name="other_apps_sum">Jeg prøver at få en ny ud hver uge eller sådan noget.</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, log</string>
     <string name="aggressive_sum">Troppo da elencare qui</string>
     <string name="apk_sum">File installer per android</string>
-    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
+    <string name="oneclick_sum">Nessuna finestra di dialogo di conferma quando viene premuto il pulsante pulito</string>
     <string name="autowhite_sum">Rileva le cartelle che devono essere protette automaticamente</string>
     <string name="prompt_string">Aggiungere i permessi di accesso al file</string>
     <string name="settings_string">Impostazioni</string>
@@ -57,9 +57,20 @@
     <string name="defaultwhitelist">Predefinito</string>
     <string name="other">Altro</string>
     <string name="daily_title">Pulizia Quotidiana</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app. Will not work on some devices unless left open in background due to OEM restrictions</string>
-    <string name="other_apps">Check out my other apps!</string>
-    <string name="other_apps_sum">I try to have a new one out every week or so</string>
+    <string name="daily_sum">Automaticamente viene eseguito quotidianamente, senza che si debba aprire l\'app. Non funzionerà su alcuni dispositivi a meno che non sia lasciato aperto in background a causa delle limitazioni OEM</string>
+    <string name="other_apps">Scopri le mie altre app!</string>
+    <string name="other_apps_sum">Cerco di averne una nuova fuori ogni settimana o così</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>File</item>

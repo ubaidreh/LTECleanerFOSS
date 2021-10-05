@@ -60,17 +60,17 @@
     <string name="daily_sum">Automatisch wordt dagelijks uitgevoerd, zonder dat u de app te openen. Zal niet werken op sommige apparaten, tenzij links open op de achtergrond als gevolg van OEM-beperkingen</string>
     <string name="other_apps">Bekijk mijn andere apps!</string>
     <string name="other_apps_sum">Ik probeer elke week een nieuwe uit te hebben.</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">Toestemming nodig!</string>
+    <string name="failed_scan">Scan is mislukt.</string>
+    <string name="are_you_sure_deletion">Weet je het zeker? Verwijderde bestanden kunnen niet worden hersteld</string>
+    <string name="aggressive_filter_what_title">Wat agressieve filter doet</string>
+    <string name="adds_the_following">Hiermee voegt u de volgende filters toe:</string>
+    <string name="samsung_not_work">Werkt niet op samsung-apparaten</string>
+    <string name="clear_clipboard">Klembord wissen</string>
+    <string name="double_check_sum">Wordt elke keer dat er iets wordt gevonden met een limiet van tien scans opnieuw uitgevoerd</string>
+    <string name="double_check_title">Dubbele controle</string>
+    <string name="notification_title">LTE Clean Worker Voltooid</string>
+    <string name="clean_notification">Schoongemaakt:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

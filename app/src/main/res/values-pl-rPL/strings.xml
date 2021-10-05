@@ -57,7 +57,7 @@
     <string name="defaultwhitelist">Domyślne</string>
     <string name="other">Inne</string>
     <string name="daily_title">Czyszczenie codzienne</string>
-    <string name="daily_sum">Uruchamia się automatycznie każdego dnia, bez potrzeby otwierania aplikacji</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app. Will not work on some devices unless left open in background due to OEM restrictions</string>
     <string name="other_apps">Sprawdź inne moje aplikacje!</string>
     <string name="other_apps_sum">I try to have a new one out every week or so</string>
     <string-array name="generic_filter_files">

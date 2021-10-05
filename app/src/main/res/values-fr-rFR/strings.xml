@@ -60,17 +60,17 @@
     <string name="daily_sum">Exécuter automatiquement tous les jours, sans avoir à ouvrir l\'application. Ne fonctionne pas sur certains périphériques, sauf s\'il reste ouvert en arrière-plan en raison de restrictions OEM</string>
     <string name="other_apps">Regardez mes autres applications !</string>
     <string name="other_apps_sum">J\'essaie d\'en avoir une nouvelle chaque semaine.</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">Autorisation requise !</string>
+    <string name="failed_scan">Echec de l\'analyse.</string>
+    <string name="are_you_sure_deletion">Es-tu sûre? Les fichiers supprimés ne peuvent pas être restaurés</string>
+    <string name="aggressive_filter_what_title">Quel filtre agressif</string>
+    <string name="adds_the_following">Ajoute les filtres suivants:</string>
+    <string name="samsung_not_work">Ne fonctionne pas sur les unités samsung</string>
+    <string name="clear_clipboard">Effacer le presse-papiers</string>
+    <string name="double_check_sum">Réexécutez l\'analyse chaque fois qu\'un élément est détecté avec une limite de dix scans</string>
+    <string name="double_check_title">Vérificateur double</string>
+    <string name="notification_title">Travailleur propre LTE terminé</string>
+    <string name="clean_notification">Nettoyage:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Registros, registros</string>
     <string name="aggressive_sum">Demasiado para enumerar aquí</string>
     <string name="apk_sum">Archivos del instalador para android</string>
-    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
+    <string name="oneclick_sum">No hay diálogo de confirmación cuando se pulsa el botón limpio</string>
     <string name="autowhite_sum">Detectar carpetas que deben protegerse automáticamente</string>
     <string name="prompt_string">Añada permisos de acceso a archivos</string>
     <string name="settings_string">Configuración</string>
@@ -55,11 +55,11 @@
     <string name="donate_sum">¡Cómprame un Café! O elegir cuánto donar usando PayPal para que pueda seguir apoyando esta aplicación</string>
     <string name="recommended">Recomendado</string>
     <string name="defaultwhitelist">Valor predeterminado</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
-    <string name="other_apps">Check out my other apps!</string>
-    <string name="other_apps_sum">I try to have a new one out every week or so</string>
+    <string name="other">Otros</string>
+    <string name="daily_title">Limpieza diaria</string>
+    <string name="daily_sum">Automáticamente se ejecuta diariamente, sin que tengas que abrir la aplicación. No funcionará en algunos dispositivos a menos que se deje abierto en segundo plano debido a restricciones de OEM</string>
+    <string name="other_apps">¡echa un vistazo a mis otras aplicaciones!</string>
+    <string name="other_apps_sum">Trato de tener un nuevo fuera cada semana o así</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>Archivo</item>

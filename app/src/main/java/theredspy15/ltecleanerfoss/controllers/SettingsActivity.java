@@ -10,10 +10,15 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
 
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 import theredspy15.ltecleanerfoss.R;
+import theredspy15.ltecleanerfoss.workers.CleanWorker;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -43,6 +48,18 @@ public class SettingsActivity extends AppCompatActivity {
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                             (dialog, which) -> dialog.dismiss());
                     alertDialog.show();
+                }
+
+                return true;
+            });
+
+            findPreference("dailyclean").setOnPreferenceChangeListener((preference, newValue) -> {
+                boolean checked = ((CheckBoxPreference) preference).isChecked();
+                if (!checked) {
+                    PeriodicWorkRequest.Builder builder = new PeriodicWorkRequest.Builder(CleanWorker.class, 24, TimeUnit.HOURS);
+                    PeriodicWorkRequest periodicWorkRequest = builder
+                            .build();
+                    WorkManager.getInstance().enqueueUniquePeriodicWork("Cleaner Worker",  ExistingPeriodicWorkPolicy.KEEP,periodicWorkRequest);
                 }
 
                 return true;

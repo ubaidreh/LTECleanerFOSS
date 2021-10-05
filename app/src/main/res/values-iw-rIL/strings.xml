@@ -60,17 +60,17 @@
     <string name="daily_sum">הרצה אוטומטית של כל יום, ללא צורך לפתוח את היישום. לא יפעל על התקנים מסוימים אלא אם כן יישאר פתוח ברקע בשל מגבלות OEM</string>
     <string name="other_apps">בדוק את האפליקציות האחרות שלי!</string>
     <string name="other_apps_sum">אני מנסה להוציא אחד חדש כל שבוע.</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">הרשאה דרושה!</string>
+    <string name="failed_scan">הסריקה נכשלה.</string>
+    <string name="are_you_sure_deletion">אתה בטוח? לא ניתן לשחזר קבצים שנמחקו</string>
+    <string name="aggressive_filter_what_title">מה מסנן אגרסיבי עושה</string>
+    <string name="adds_the_following">מוסיף את המסננים הבאים:</string>
+    <string name="samsung_not_work">לא עובד על התקנים של דגימה</string>
+    <string name="clear_clipboard">ניקוי לוח הגזירים</string>
+    <string name="double_check_sum">יבצע הרצה מחדש של סריקה בכל פעם שמשהו נמצא עם מגבלה של 10 סריקות</string>
+    <string name="double_check_title">בודק כפול</string>
+    <string name="notification_title">עבודה נקייה של LTE הסתיימה</string>
+    <string name="clean_notification">ניקוי:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

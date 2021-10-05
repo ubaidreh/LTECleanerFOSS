@@ -60,17 +60,17 @@
     <string name="daily_sum">Wird automatisch täglich ausgeführt, ohne dass Sie die App öffnen müssen. Wird auf einigen Geräten nicht funktionieren, es sei denn, der Hintergrund ist aufgrund von OEM-Einschränkungen offen.</string>
     <string name="other_apps">Schauen Sie sich meine anderen Apps an!</string>
     <string name="other_apps_sum">Ich versuche, jede Woche einen neuen zu haben, oder so</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">Berechtigung erforderlich!</string>
+    <string name="failed_scan">Scan fehlgeschlagen.</string>
+    <string name="are_you_sure_deletion">Sind Sie sicher? Gelöschte Dateien können nicht wiederhergestellt werden</string>
+    <string name="aggressive_filter_what_title">Was für ein aggressiver Filter</string>
+    <string name="adds_the_following">Fügt die folgenden Filter hinzu:</string>
+    <string name="samsung_not_work">Funktioniert nicht auf Samsung-Geräten</string>
+    <string name="clear_clipboard">Zwischenablage löschen</string>
+    <string name="double_check_sum">Wird den Scan jedes Mal erneut ausführen, wenn bei einer Begrenzung von zehn Scans etwas gefunden wird.</string>
+    <string name="double_check_title">Doppelter Checker</string>
+    <string name="notification_title">LTE Clean Worker Beendet</string>
+    <string name="clean_notification">Bereinigt:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

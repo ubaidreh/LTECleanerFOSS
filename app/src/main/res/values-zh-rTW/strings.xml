@@ -60,6 +60,17 @@
     <string name="daily_sum">每日自動執行，而不需要開啟應用程式。 除非由於 OEM 限制而在背景中開啟，否則將不會在某些裝置上運作</string>
     <string name="other_apps">移出我的其他應用程式！</string>
     <string name="other_apps_sum">我每周都試一次又一次</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Loggar, loggar</string>
     <string name="aggressive_sum">För mycket att lista här</string>
     <string name="apk_sum">Installationsfiler för android</string>
-    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
+    <string name="oneclick_sum">Ingen bekräftelsedialogruta när ren knapp trycks ned</string>
     <string name="autowhite_sum">Detektera mappar som ska skyddas automatiskt</string>
     <string name="prompt_string">Lägg till filåtkomstbehörigheter</string>
     <string name="settings_string">Inställningar</string>
@@ -55,11 +55,22 @@
     <string name="donate_sum">Köp mig en kaffe! Eller välja hur mycket att donera med PayPal så att jag kan fortsätta att stödja den här appen</string>
     <string name="recommended">Rekommenderas</string>
     <string name="defaultwhitelist">Standard</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app. Will not work on some devices unless left open in background due to OEM restrictions</string>
-    <string name="other_apps">Check out my other apps!</string>
-    <string name="other_apps_sum">I try to have a new one out every week or so</string>
+    <string name="other">Andra slag</string>
+    <string name="daily_title">Dagligen rens</string>
+    <string name="daily_sum">Kör automatiskt dagligen, utan att du behöver öppna appen. Kommer inte att fungera på vissa enheter om de inte lämnas öppna i bakgrunden på grund av OEM-begränsningar</string>
+    <string name="other_apps">Kolla in mina andra appar!</string>
+    <string name="other_apps_sum">Jag försöker få ut en ny varje vecka, eller så.</string>
+    <string name="permission_needed">Permission needed!</string>
+    <string name="failed_scan">Scan failed.</string>
+    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
+    <string name="aggressive_filter_what_title">What aggressive filter does</string>
+    <string name="adds_the_following">Adds the following filters:</string>
+    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
+    <string name="clear_clipboard">Clear clipboard</string>
+    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
+    <string name="double_check_title">Double Checker</string>
+    <string name="notification_title">LTE Clean Worker Finished</string>
+    <string name="clean_notification">Cleaned:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

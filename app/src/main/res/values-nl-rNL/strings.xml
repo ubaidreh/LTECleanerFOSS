@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, logboeken, logboeken</string>
     <string name="aggressive_sum">Te veel om hier te vermelden</string>
     <string name="apk_sum">Installer-bestanden voor android</string>
-    <string name="oneclick_sum">No confirmation dialog when clean button is pressed</string>
+    <string name="oneclick_sum">Er is geen bevestigingsvenster wanneer u op de knop \" clean</string>
     <string name="autowhite_sum">Detecteren van mappen die automatisch moeten worden beschermd</string>
     <string name="prompt_string">Voeg bestandstoegangsmachtigingen toe</string>
     <string name="settings_string">Instellingen</string>
@@ -55,11 +55,11 @@
     <string name="donate_sum">Koop een koffie voor me! Of kies hoeveel te doneren met PayPal, zodat ik deze app kan blijven ondersteunen</string>
     <string name="recommended">Aanbevolen</string>
     <string name="defaultwhitelist">Standaard</string>
-    <string name="other">Other</string>
-    <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app</string>
-    <string name="other_apps">Check out my other apps!</string>
-    <string name="other_apps_sum">I try to have a new one out every week or so</string>
+    <string name="other">Andere</string>
+    <string name="daily_title">Dagelijks schoon</string>
+    <string name="daily_sum">Automatisch wordt dagelijks uitgevoerd, zonder dat u de app te openen. Zal niet werken op sommige apparaten, tenzij links open op de achtergrond als gevolg van OEM-beperkingen</string>
+    <string name="other_apps">Bekijk mijn andere apps!</string>
+    <string name="other_apps_sum">Ik probeer elke week een nieuwe uit te hebben.</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

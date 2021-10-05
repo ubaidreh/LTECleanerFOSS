@@ -60,17 +60,17 @@
     <string name="daily_sum">앱을 열 필요 없이 매일 자동으로 실행됩니다. OEM 제한사항으로 인해 백그라운드에서 열린 상태가 아니면 일부 장치에서 작동하지 않습니다.</string>
     <string name="other_apps">다른 앱들을 확인해 보세요!</string>
     <string name="other_apps_sum">나는 매주 새로운 것을 가지려고 노력한다.</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">필요한 권한!</string>
+    <string name="failed_scan">스캔이 실패했습니다.</string>
+    <string name="are_you_sure_deletion">확실해요? 삭제된 파일을 복원할 수 없음</string>
+    <string name="aggressive_filter_what_title">어떤 공격적인 필터가</string>
+    <string name="adds_the_following">다음 필터를 추가합니다.</string>
+    <string name="samsung_not_work">삼성장치에서 작동하지 않는다</string>
+    <string name="clear_clipboard">클립보드 지우기</string>
+    <string name="double_check_sum">스캔이 10개 제한된 것으로 발견될 때마다 스캔을 다시 실행합니다.</string>
+    <string name="double_check_title">더블 체크 프로그램</string>
+    <string name="notification_title">LTE 클린Worker 완료</string>
+    <string name="clean_notification">정리:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

@@ -57,7 +57,7 @@
     <string name="defaultwhitelist">По умолчанию</string>
     <string name="other">Прочее</string>
     <string name="daily_title">Ежедневная очистка</string>
-    <string name="daily_sum">Автоматически запускается ежедневно, без необходимости заходить в приложение</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app. Will not work on some devices unless left open in background due to OEM restrictions</string>
     <string name="other_apps">Check out my other apps!</string>
     <string name="other_apps_sum">I try to have a new one out every week or so</string>
     <string-array name="generic_filter_files">

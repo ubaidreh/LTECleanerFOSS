@@ -60,17 +60,17 @@
     <string name="daily_sum">يتم تشغيله آليا بطريقة يومية ، بدون أن يكون عليك فتح التطبيق. لن يتم التعامل مع بعض الأجهزة ما لم يتم فتحها في الخلفية بسبب قيود OEM</string>
     <string name="other_apps">تحقق من التطبيقات الأخرى الخاصة بي !</string>
     <string name="other_apps_sum">أحاول أن يكون عندي واحد جديد كل إسبوع أو لذا</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">الاذن بحاجة !</string>
+    <string name="failed_scan">فشل في المسح.</string>
+    <string name="are_you_sure_deletion">هل أنت متأكد ؟ لا يمكن استعادة الملفات التي تم حذفها</string>
+    <string name="aggressive_filter_what_title">ما هو مرشح البيانات العدواني</string>
+    <string name="adds_the_following">لاضافة مرشحات البيانات التالية :</string>
+    <string name="samsung_not_work">(لا تعمل على أجهزة (سامسونغ</string>
+    <string name="clear_clipboard">اخلاء المسودة</string>
+    <string name="double_check_sum">سيتم اعادة تشغيل المسح في كل مرة يتم ايجادها بحد أقصى من عشر scans</string>
+    <string name="double_check_title">وحدة فحص مزدوجة</string>
+    <string name="notification_title">انتهاء عمل Cleaner Cleaner</string>
+    <string name="clean_notification">اعادة تنظيم :</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>gol.</item>

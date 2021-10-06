@@ -60,17 +60,17 @@
     <string name="daily_sum">Rulează automat zilnic, fără a fi nevoie să deschideţi aplicaţia. Nu va funcţiona pe unele dispozitive decât dacă este lăsat deschis în fundal din cauza restricţiilor OEM</string>
     <string name="other_apps">Verificați celelalte aplicații!</string>
     <string name="other_apps_sum">Incerc sa am un nou scos in fiecare saptamana sau asa</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">Permisiune necesară!</string>
+    <string name="failed_scan">Scanare eşuată.</string>
+    <string name="are_you_sure_deletion">Sunteţi sigur? Fişierele şterse nu pot fi restaurate</string>
+    <string name="aggressive_filter_what_title">Ce filtru agresiv face</string>
+    <string name="adds_the_following">Adaugă următoarele filtre:</string>
+    <string name="samsung_not_work">Nu funcţionează pe dispozitive samsung</string>
+    <string name="clear_clipboard">Curăţare clipboard</string>
+    <string name="double_check_sum">Va rula din nou scanarea de fiecare dată când se găseşte ceva cu o limită de zece scanări</string>
+    <string name="double_check_title">Verificator dublu</string>
+    <string name="notification_title">Lucrător curant curat terminat</string>
+    <string name="clean_notification">Curăţat:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

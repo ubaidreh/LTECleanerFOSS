@@ -60,17 +60,17 @@
     <string name="daily_sum">Uygulamayı açmanıza gerek kalmadan her gün otomatik olarak çalışır. OEM kısıtlamaları nedeniyle arka planda açık bırakılmadıkça, bazı aygıtlar üzerinde çalışmayacaktır.</string>
     <string name="other_apps">Diğer uygulamalarımı kontrol et!</string>
     <string name="other_apps_sum">Her hafta yeni bir tane yapmaya çalışıyorum.</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">İzin gerekli!</string>
+    <string name="failed_scan">Tarama başarısız oldu.</string>
+    <string name="are_you_sure_deletion">Emin misin? Silinen dosyalar geri yüklenemez</string>
+    <string name="aggressive_filter_what_title">Hangi agresif süzgeç uygur</string>
+    <string name="adds_the_following">Aşağıdaki süzgeçleri ekler:</string>
+    <string name="samsung_not_work">Samsung aygıtlarında çalışmıyor</string>
+    <string name="clear_clipboard">Panoyu temizle</string>
+    <string name="double_check_sum">On taramanın bir sınırı olan bir şeyin her birinde tarama işlemi yeniden çalıştırılır</string>
+    <string name="double_check_title">Çift Denetleyici</string>
+    <string name="notification_title">LTE Clean Worker Bitti</string>
+    <string name="clean_notification">Temizlendi:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

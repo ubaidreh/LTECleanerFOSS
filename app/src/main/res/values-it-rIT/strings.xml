@@ -60,17 +60,17 @@
     <string name="daily_sum">Automaticamente viene eseguito quotidianamente, senza che si debba aprire l\'app. Non funzionerà su alcuni dispositivi a meno che non sia lasciato aperto in background a causa delle limitazioni OEM</string>
     <string name="other_apps">Scopri le mie altre app!</string>
     <string name="other_apps_sum">Cerco di averne una nuova fuori ogni settimana o così</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">Permesso necessario!</string>
+    <string name="failed_scan">Scansione non riuscita.</string>
+    <string name="are_you_sure_deletion">Sei sicuro? I file cancellati non possono essere ripristinati</string>
+    <string name="aggressive_filter_what_title">Quale filtro aggressivo fa</string>
+    <string name="adds_the_following">Aggiunge i seguenti filtri:</string>
+    <string name="samsung_not_work">Non funziona sui dispositivi samsung</string>
+    <string name="clear_clipboard">Clipboard chiari</string>
+    <string name="double_check_sum">Riserverà la scansione ogni volta che qualcosa si trova con un limite di dieci scansioni</string>
+    <string name="double_check_title">Doppio Checker</string>
+    <string name="notification_title">LTE Clean Worker Finito</string>
+    <string name="clean_notification">Pulito:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>File</item>

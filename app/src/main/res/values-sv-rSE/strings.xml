@@ -60,17 +60,17 @@
     <string name="daily_sum">Kör automatiskt dagligen, utan att du behöver öppna appen. Kommer inte att fungera på vissa enheter om de inte lämnas öppna i bakgrunden på grund av OEM-begränsningar</string>
     <string name="other_apps">Kolla in mina andra appar!</string>
     <string name="other_apps_sum">Jag försöker få ut en ny varje vecka, eller så.</string>
-    <string name="permission_needed">Permission needed!</string>
-    <string name="failed_scan">Scan failed.</string>
-    <string name="are_you_sure_deletion">Are you sure? Files deleted cannot be restored</string>
-    <string name="aggressive_filter_what_title">What aggressive filter does</string>
-    <string name="adds_the_following">Adds the following filters:</string>
-    <string name="samsung_not_work">Doesn\'t work on samsung devices</string>
-    <string name="clear_clipboard">Clear clipboard</string>
-    <string name="double_check_sum">Will rerun scan each time something is found with a limit of ten scans</string>
-    <string name="double_check_title">Double Checker</string>
-    <string name="notification_title">LTE Clean Worker Finished</string>
-    <string name="clean_notification">Cleaned:</string>
+    <string name="permission_needed">Behörighet behövs!</string>
+    <string name="failed_scan">Skanningen misslyckades.</string>
+    <string name="are_you_sure_deletion">Är du säker på det? Borttagna filer kan inte återställas</string>
+    <string name="aggressive_filter_what_title">Vilket aggressivt filter gör</string>
+    <string name="adds_the_following">Lägger till följande filter:</string>
+    <string name="samsung_not_work">Fungs inte på Samsung-enheter</string>
+    <string name="clear_clipboard">Rensa klippbordet</string>
+    <string name="double_check_sum">Will Rerun scan varje gång något hittas med en gräns på tio skanningar</string>
+    <string name="double_check_title">Dubbelkontroll</string>
+    <string name="notification_title">LTE rensad arbetskjul klar</string>
+    <string name="clean_notification">Rensade:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>

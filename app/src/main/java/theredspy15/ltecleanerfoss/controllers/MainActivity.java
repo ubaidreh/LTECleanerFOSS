@@ -133,14 +133,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void clearClipboard() { // TODO: test on emulator
-        ClipboardManager mCbm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            mCbm.clearPrimaryClip();
-        } else {
-            ClipboardManager clipService = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-            ClipData clipData = ClipData.newPlainText("", "");
-            clipService.setPrimaryClip(clipData);
+    private void clearClipboard() {
+        try {
+            ClipboardManager mCbm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                mCbm.clearPrimaryClip();
+            } else {
+                ClipboardManager clipService = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                ClipData clipData = ClipData.newPlainText("", "");
+                clipService.setPrimaryClip(clipData);
+            }
+        } catch (NullPointerException e) {
+            runOnUiThread(()->Toast.makeText(this, "Failed to clear clipboard", Toast.LENGTH_SHORT).show());
         }
     }
 

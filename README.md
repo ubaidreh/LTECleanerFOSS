@@ -41,6 +41,7 @@ December 13th, 2020:
     height="90">](https://play.google.com/store/apps/details?id=theredspy15.ltecleanerfoss)
 
 ## Features
+- Daily cleans
 
 Cleans:
 - Empty folders
@@ -50,7 +51,6 @@ Cleans:
 - Advertisement folders
 
 Upoming major features:
-- Daily cleans
 - Clean SD card
 - SAF file browser
 - Shortcuts

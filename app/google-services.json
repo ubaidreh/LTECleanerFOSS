@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216355724520",
+    "project_id": "lte-cleaner-f6f4b",
+    "storage_bucket": "lte-cleaner-f6f4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216355724520:android:ab17a067165e209fe27d5d",
+        "android_client_info": {
+          "package_name": "theredspy15.ltecleanerfoss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216355724520-olvfphb44abs5bub72le9hbvr7ek7d7n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3dWkV_14g50LWN3tnEhukLJw4_LA2FI4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216355724520-olvfphb44abs5bub72le9hbvr7ek7d7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

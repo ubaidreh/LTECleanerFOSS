@@ -52,7 +52,6 @@ Cleans:
 
 Upoming major features:
 - Clean SD card
-- SAF file browser
 - Shortcuts
 - Community made filters
 

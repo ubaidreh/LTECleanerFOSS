@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         AdView adView = new AdView(this);
         adView.setAdSize(AdSize.BANNER);
         adView.setAdUnitId(unitId);
-        binding.statusLayout.addView(adView);
+        binding.mainLayout.addView(adView);
         adView.loadAd(adRequest);
     }
 

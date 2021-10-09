@@ -14,8 +14,8 @@ android {
         applicationId "theredspy15.ltecleanerfoss"
         minSdkVersion 19
         targetSdkVersion 31
-        versionCode 49
-        versionName "4.8.5-playstore"
+        versionCode 50
+        versionName "4.8.6-playstore"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {

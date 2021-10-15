@@ -11,8 +11,8 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 48,
-      "versionName": "4.8.4-playstore",
+      "versionCode": 50,
+      "versionName": "4.8.6-playstore",
       "outputFile": "app-release.apk"
     }
   ],

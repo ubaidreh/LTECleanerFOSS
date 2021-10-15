@@ -110,5 +110,6 @@
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>thumbs?.db</item>
+        <item>.thumb[0-9]</item>
     </string-array>
 </resources>

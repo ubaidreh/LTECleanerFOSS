@@ -1,5 +1,7 @@
 ## LTECleanerFOSS
 
+Bitcoin address for donations: 394U4hMeLgiff4qgG2X8xRcgKGPLZcmrro
+
 ***The last Android cleaner you will ever need!***
 
 <img src="https://imgur.com/ykSLpTS.png" width="300">

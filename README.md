@@ -84,9 +84,10 @@ Buy us a coffee or two, as it enables us to put more free time into the active d
 <details>
   <summary>Contributors</summary>
   
-#### Logo creation
-
-* Big thanks to [Ander Méndez](https://github.com/mendezand) for creating the awesome logo!
+#### The Team  
+<a href="https://github.com/TheRedSpy15/LTECleanerFOSS/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=TheRedSpy15/LTECleanerFOSS" />
+</a>
      
 </details>
 

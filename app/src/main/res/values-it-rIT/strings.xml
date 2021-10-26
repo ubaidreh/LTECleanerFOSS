@@ -25,14 +25,14 @@
     <string name="one_click_clean">Pulizia con un click</string>
     <string name="freed">Liberato: </string>
     <string name="found">Trovato: </string>
-    <string name="auto_whitelist">Lista delle esclusioni automatica</string>
+    <string name="auto_whitelist">Esclusioni automatiche</string>
     <string name="reset_whitelist">Rimuovere tutte le esclusioni?</string>
     <string name="are_you_reset_whitelist">Sei sicuro di voler rimuovere tutte le esclusioni?</string>
     <string name="reset">Pulisci</string>
     <string name="delete_apk_files">Elimina i file .apk</string>
     <string name="lte_threading">LTE Threading (Più veloce)</string>
     <string name="default_whitelist">Esclusioni predefinite</string>
-    <string name="add_defaults">Aggiungi esclusioni consigliate</string>
+    <string name="add_defaults">Aggiungi Esclusioni Consigliate</string>
     <string name="nothing_found">Nessun elemento trovato</string>
     <string name="status_idle">Stato: Inattivo</string>
     <string name="progress_0">0%</string>
@@ -41,18 +41,18 @@
     <string name="whitelist_sum">Mostra i percorsi da escludere dalle scansioni</string>
     <string name="suggestion_sum">Apri una segnalazione su GitHub dalla app. Nessuna registrazione necessaria</string>
     <string name="generic_sum">.tmp, .log, Logs, log</string>
-    <string name="aggressive_sum">Troppi elementi per elencarli qui</string>
+    <string name="aggressive_sum">Troppi da elencare qui</string>
     <string name="apk_sum">File di installazione per Android</string>
-    <string name="oneclick_sum">Non mostrare un messaggio di conferma quando si clicca sul pulsante Pulizia</string>
+    <string name="oneclick_sum">Nessuna finestra di dialogo di conferma quando viene premuto il pulsante Pulisci</string>
     <string name="autowhite_sum">Rileva automaticamente le cartelle da proteggere</string>
-    <string name="prompt_string">È necessario concedere l\'autorizzazione di accesso ai file</string>
+    <string name="prompt_string">Si prega di concedere i permessi di archiviazione</string>
     <string name="settings_string">Impostazioni</string>
     <string name="hello_blank_fragment">Ciao frammento vuoto</string>
     <string name="title_activity_prompt">Richiesta attività</string>
     <string name="corpse_summary">File residui di app disinstallate</string>
     <string name="corpse_title">Elimina file obsoleti</string>
     <string name="donate">Dona</string>
-    <string name="donate_sum">Offrimi un caffè! Oppure scegli quanto donare usando PayPal, grazie alla tua donazione potrò continuare a dedicarmi allo sviluppo di questa applicazione</string>
+    <string name="donate_sum">Comprami un Caffè! Oppure scegli quanto donare usando PayPal così posso continuare a sostenere questa app!</string>
     <string name="recommended">Consigliato</string>
     <string name="defaultwhitelist">Predefinito</string>
     <string name="other">Altro</string>
@@ -67,7 +67,7 @@
     <string name="aggressive_filter_what_title">Quale filtro aggressivo fa</string>
     <string name="adds_the_following">Aggiunge i seguenti filtri:</string>
     <string name="samsung_not_work">Non funziona sui dispositivi samsung</string>
-    <string name="clear_clipboard">Clipboard chiari</string>
+    <string name="clear_clipboard">Pulisci gli appunti</string>
     <string name="double_check_sum">Riserverà la scansione ogni volta che qualcosa si trova con un limite di dieci scansioni</string>
     <string name="double_check_title">Doppio Checker</string>
     <string name="notification_title">LTE Clean Worker Finito</string>
@@ -87,7 +87,7 @@
     <string-array name="aggressive_filter_folders">
         <item>supersonicadi</item>
         <item>Cache</item>
-        <item>Statistiche</item>
+        <item>Analytics</item>
         <item>miniature?</item>
         <item>mobVista</item>
         <item>UnityAdsVideoCache</item>

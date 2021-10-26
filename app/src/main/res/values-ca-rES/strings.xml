@@ -3,10 +3,10 @@
   ~ Copyright 2020 Hunter J Drum
   -->
 <resources>
-    <string name="app_name">LTE Cleaner</string>
-    <string name="lte_cleaner">LTE Cleaner!</string>
-    <string name="no_files_found">No files found</string>
-    <string name="delete_empty_folders">Delete empty folders</string>
+    <string name="app_name">Netejador QQ</string>
+    <string name="lte_cleaner">Netejador QQ!</string>
+    <string name="no_files_found">No s\'han trobat fitxers</string>
+    <string name="delete_empty_folders">No suprimir carpetes buides</string>
     <string name="aggressive_filter">Enable aggressive filter</string>
     <string name="Save">Save</string>
     <string name="filter">Filter</string>

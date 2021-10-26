@@ -69,7 +69,7 @@
     <string name="samsung_not_work">Nie działa na urządzeniach firmy Samsung</string>
     <string name="clear_clipboard">Wyczyść schowek</string>
     <string name="double_check_sum">Skanowanie będzie ponownie uruchamiane za każdym razem, gdy znajdzie się coś z limitem dziesięciu skanów.</string>
-    <string name="double_check_title">Podwójne sprawdzanie</string>
+    <string name="double_check_title">Double Checker</string>
     <string name="notification_title">Czyszczenie procesu roboczego LTE zakończone</string>
     <string name="clean_notification">Oczyszczone:</string>
     <string-array name="generic_filter_files">

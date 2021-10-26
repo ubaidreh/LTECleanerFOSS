@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">Limpiador LTE</string>
-    <string name="lte_cleaner">¡Limpiador LTE!</string>
-    <string name="no_files_found">No se han encontrado archivos</string>
     <string name="delete_empty_folders">Eliminar carpetas vacías</string>
     <string name="aggressive_filter">Activar filtro agresivo</string>
-    <string name="Save">Guardar</string>
-    <string name="filter">Filtrar</string>
     <string name="whitelist">Lista blanca</string>
     <string name="privacy_policy">Política de privacidad</string>
     <string name="add_to_whitelist">Añadir a la lista blanca</string>
     <string name="add">Añadir</string>
     <string name="cancel">Cancelar</string>
     <string name="enter_file_name">Especifique el nombre de archivo/carpeta a filtrar</string>
-    <string name="make_suggestion">Hacer una sugerencia</string>
-    <string name="select_task">Seleccione una tarea</string>
-    <string name="do_you_want_to">¿Desea eliminar (Limpiar) los archivos encontrados o sólo visualizarlos (Analizar)?</string>
     <string name="clean">Limpiar</string>
     <string name="analyze">Analizar</string>
     <string name="enable_generic_filter">Activar filtro genérico</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">¿Está seguro de que desea eliminar la lista blanca?</string>
     <string name="reset">Limpiar</string>
     <string name="delete_apk_files">Eliminar archivos .apk</string>
-    <string name="lte_threading">LTE Threading (Faster)</string>
-    <string name="default_whitelist">Lista blanca predeterminada</string>
-    <string name="add_defaults">Añadir listas blancas recomendadas</string>
-    <string name="nothing_found">Nada encontrado</string>
     <string name="status_idle">Estado: Inactivo</string>
     <string name="progress_0">0%</string>
     <string name="status_running">Estado: En ejecución</string>
     <string name="privacy_sum">Consultar la política de privacidad (enlace externo)</string>
-    <string name="whitelist_sum">Muestra las rutas a excluir de los escaneos</string>
-    <string name="suggestion_sum">Abra una incidencia en GitHub desde la aplicación. No es necesaria una cuenta</string>
     <string name="generic_sum">.tmp, .log, Registros, registros</string>
     <string name="aggressive_sum">Demasiado para listar aquí</string>
     <string name="apk_sum">Archivos de instalación para Android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">Detectar carpetas que deben protegerse automáticamente</string>
     <string name="prompt_string">Por favor, conceda permiso de acceso a archivos</string>
     <string name="settings_string">Ajustes</string>
-    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
     <string name="title_activity_prompt">PromptActivity</string>
     <string name="corpse_summary">Archivos restantes de aplicaciones desinstaladas</string>
     <string name="corpse_title">Eliminar archivos de cadáveres</string>
-    <string name="donate">Donar</string>
-    <string name="donate_sum">¡Inviteme a un Café! O elija cuánto donar usando PayPal, para que pueda seguir manteniendo esta aplicación</string>
-    <string name="recommended">Recomendado</string>
     <string name="defaultwhitelist">Predeterminado</string>
     <string name="other">Otros</string>
     <string name="daily_title">Limpieza diaria</string>

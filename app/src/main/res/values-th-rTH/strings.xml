@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">ตัวล้างข้อมูล LTE</string>
-    <string name="lte_cleaner">เครื่องสะอาด LTE!</string>
-    <string name="no_files_found">ไม่พบไฟล์</string>
     <string name="delete_empty_folders">ลบโฟลเดอร์ว่าง</string>
     <string name="aggressive_filter">เปิดใช้งานตัวกรองที่รุนแรง</string>
-    <string name="Save">บันทึก</string>
-    <string name="filter">ตัวกรอง</string>
     <string name="whitelist">รายการที่อนุญาต</string>
     <string name="privacy_policy">นโยบายความเป็นส่วนตัว</string>
     <string name="add_to_whitelist">เพิ่มใน white list</string>
     <string name="add">เพิ่ม</string>
     <string name="cancel">ยกเลิก</string>
     <string name="enter_file_name">ป้อนชื่อไฟล์/ชื่อโฟลเดอร์ลงใน white list</string>
-    <string name="make_suggestion">ทำให้ข้อเสนอแนะ</string>
-    <string name="select_task">เลือกงาน</string>
-    <string name="do_you_want_to">คุณต้องการลบ (Clean) ไฟล์ที่พบทั้งหมดหรือแสดงผลเพียงอย่างเดียว (วิเคราะห์) ไฟล์?</string>
     <string name="clean">ล้างข้อมูล</string>
     <string name="analyze">การวิเคราะห์</string>
     <string name="enable_generic_filter">เปิดใช้งานตัวกรองทั่วไป</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">คุณแน่ใจว่าต้องการเคลียร์ white listหรือไม่?</string>
     <string name="reset">เคลียร์</string>
     <string name="delete_apk_files">ลบไฟล์. Apk</string>
-    <string name="lte_threading">LTE Threading (เร็วขึ้น)</string>
-    <string name="default_whitelist">รายการที่เชื่อถือได้ดีฟอลต์</string>
-    <string name="add_defaults">เพิ่มไวท์ลิสต์ที่แนะนำ</string>
-    <string name="nothing_found">ไม่พบสิ่งใด</string>
     <string name="status_idle">สถานะ: ไม่ได้ทำงาน</string>
     <string name="progress_0">0 %</string>
     <string name="status_running">สถานะ: กำลังรัน</string>
     <string name="privacy_sum">ดูนโยบายความเป็นส่วนตัว (ลิงก์ภายนอก)</string>
-    <string name="whitelist_sum">แสดงพาธที่จะแยกออกจากการสแกน</string>
-    <string name="suggestion_sum">เปิดประเด็นเกี่ยวกับ Git Hub จากแอพพลิเคชัน ไม่จำเป็นต้องมีบัญชี</string>
     <string name="generic_sum">. Tmp,. Log, บันทึกการทำงาน, บันทึกการทำงาน</string>
     <string name="aggressive_sum">มากเกินกว่าจะแสดงที่นี่</string>
     <string name="apk_sum">ไฟล์โปรแกรมติดตั้งสำหรับ android</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">ตรวจพบโฟลเดอร์ที่ควรถูกป้องกันแบบอัตโนมัติ</string>
     <string name="prompt_string">โปรดเพิ่มสิทธิ์การเข้าถึงไฟล์</string>
     <string name="settings_string">การตั้งค่า</string>
-    <string name="hello_blank_fragment">แฟรกเมนต์ Hello ว่าง</string>
     <string name="title_activity_prompt">กิจกรรมพร้อมต์</string>
     <string name="corpse_summary">ไฟล์ที่เหลือจากแอ็พที่ถอนการติดตั้ง</string>
     <string name="corpse_title">ลบไฟล์ศพ</string>
-    <string name="donate">บริจาค</string>
-    <string name="donate_sum">ซื้อกาแฟให้หน่อยสิ หรือเลือกว่าบริจาคเท่าไหร่โดยใช้ PayPal ผมจะได้สนับสนุน app นี้ต่อไป</string>
-    <string name="recommended">ที่แนะนำ</string>
     <string name="defaultwhitelist">ดีฟอลต์</string>
     <string name="other">อื่นๆ</string>
     <string name="daily_title">ล้างข้อมูลรายวัน</string>

@@ -43,7 +43,7 @@
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">ここには表示できないほど多数の条件</string>
     <string name="apk_sum">Androidのインストーラーファイル</string>
-    <string name="oneclick_sum">クリーン・ボタンが押されたときに確認ダイアログが表示</string>
+    <string name="oneclick_sum">クリーン・ボタンが押されたときに確認ダイアログを表示しません。</string>
     <string name="autowhite_sum">保護すべきフォルダーを自動的に検出する</string>
     <string name="prompt_string">ファイルのアクセス許可を追加してください</string>
     <string name="settings_string">設定</string>
@@ -57,14 +57,14 @@
     <string name="defaultwhitelist">デフォルト</string>
     <string name="other">その他</string>
     <string name="daily_title">日次クリーニング</string>
-    <string name="daily_sum">アプリケーションを開くことなく、毎日自動的に実行されます。 一部のデバイスでは、 OEM 制限によりバックグラウンドで左側が開かれていない場合は、</string>
+    <string name="daily_sum">アプリケーションを開くことなく、毎日自動的に実行されます。 一部のデバイスでは、 OEM 制限により、バックグラウンドに残されていない場合には実行できません。</string>
     <string name="other_apps">他のアプリを確認してください。</string>
-    <string name="other_apps_sum">私は毎週新しいものを試してみたいと思っている。</string>
+    <string name="other_apps_sum">ほぼ毎週新作をリリースすることを目標にしています</string>
     <string name="permission_needed">許可が必要です。</string>
-    <string name="failed_scan">スキャンが失敗した</string>
+    <string name="failed_scan">スキャンに失敗しました。</string>
     <string name="are_you_sure_deletion">- 確かか ? 削除されたファイルを復元する</string>
     <string name="are_you_sure_deletion_title">削除の確認</string>
-    <string name="aggressive_filter_what_title">攻撃フィルターの機能</string>
+    <string name="aggressive_filter_what_title">アグレッシブフィルターの機能</string>
     <string name="adds_the_following">次のフィルターを追加します。</string>
     <string name="samsung_not_work">サムソン・デバイスでは機能しません</string>
     <string name="clear_clipboard">クリップボードをクリア</string>

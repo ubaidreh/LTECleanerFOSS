@@ -4,21 +4,14 @@
   -->
 <resources>
     <string name="app_name">منظف LTE</string>
-    <string name="lte_cleaner">منظف LTE!</string>
-    <string name="no_files_found">لم يتم ايجاد ملفات</string>
     <string name="delete_empty_folders">حذف المجلدات الفارغة</string>
     <string name="aggressive_filter">اتاحة مرشح البيانات العدواني</string>
-    <string name="Save">حفظ</string>
-    <string name="filter">مرشح البيانات</string>
     <string name="whitelist">القائمة البيضاء</string>
     <string name="privacy_policy">سياسة الخصوصية</string>
     <string name="add_to_whitelist">إضافة للقائمة البيضاء</string>
     <string name="add">اضافة</string>
     <string name="cancel">الغاء</string>
     <string name="enter_file_name">أدخل اسم الملف/المجلد إلى القائمة البيضاء</string>
-    <string name="make_suggestion">تقديم اقتراح</string>
-    <string name="select_task">تحديد مهمة</string>
-    <string name="do_you_want_to">هل ترغب في حذف (تنظيف) كل الملفات التي تم ايجادها ، أو قم بعرض (تحليل) هذه الملفات فقط ؟</string>
     <string name="clean">تنظيف</string>
     <string name="analyze">تحليل</string>
     <string name="enable_generic_filter">اتاحة مرشح بيانات عام</string>
@@ -30,16 +23,10 @@
     <string name="are_you_reset_whitelist">هل أنت متأكد من أنك تريد مسح القائمة البيضاء؟</string>
     <string name="reset">محو</string>
     <string name="delete_apk_files">حذف ملفات .apk</string>
-    <string name="lte_threading">LTE Threading (أسرع)</string>
-    <string name="default_whitelist">القائمة البيضاء الافتراضية</string>
-    <string name="add_defaults">إضافة القوائم البيضاء الموصى بها</string>
-    <string name="nothing_found">لم يتم ايجاد شيء</string>
     <string name="status_idle">الحالة : غير فعال</string>
     <string name="progress_0">0%</string>
     <string name="status_running">الحالة : تشغيل</string>
     <string name="privacy_sum">عرض سياسة الخصوصية (رابط خارجي)</string>
-    <string name="whitelist_sum">يعرض المسارات التي سيتم استبعادها من عمليات المسح</string>
-    <string name="suggestion_sum">قم بفتح مشكلة في GitHub من التطبيق. لا حاجة للحساب</string>
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">يوجد الكثير ليتم عرضه هنا</string>
     <string name="apk_sum">ملفات المثبت للأندرويد</string>
@@ -47,13 +34,9 @@
     <string name="autowhite_sum">اكتشاف الحافظات التي يجب حمايتها آليا</string>
     <string name="prompt_string">الرجاء إضافة أذونات الوصول إلى الملفات</string>
     <string name="settings_string">الإعدادات</string>
-    <string name="hello_blank_fragment">مرحباً بالجزء الفارغ</string>
     <string name="title_activity_prompt">رسالة حث</string>
     <string name="corpse_summary">الملفات المتبقية من التطبيقات غير المثبتة</string>
     <string name="corpse_title">حذف الملفات الميتة</string>
-    <string name="donate">التبرع</string>
-    <string name="donate_sum">إشتري لي قهوة أو اختيار مقدار التبرع باستخدام PayPal بحيث يمكنني الاستمرار في دعم هذا التطبيق</string>
-    <string name="recommended">موصى بها</string>
     <string name="defaultwhitelist">الافتراضي</string>
     <string name="other">أخرى</string>
     <string name="daily_title">تنظيف يومي</string>

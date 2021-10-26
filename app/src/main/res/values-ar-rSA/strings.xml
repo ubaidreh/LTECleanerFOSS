@@ -57,9 +57,9 @@
     <string name="defaultwhitelist">الافتراضي</string>
     <string name="other">أخرى</string>
     <string name="daily_title">تنظيف يومي</string>
-    <string name="daily_sum">تشغيل تلقائي يوميا، بدون الحاجة إلى فتح التطبيق. لن يعمل على بعض الأجهزة ما لم يترك مفتوحا في الخلفية بسبب القيود المفروضة على المصنع</string>
+    <string name="daily_sum">تشغيل تلقائي يوميا، بدون الحاجة إلى فتح التطبيق. لن تعمل على بعض الأجهزة ما لم تترك مفتوحة في الخلفية بسبب القيود المفروضة على المصنع</string>
     <string name="other_apps">تحقق من التطبيقات الأخرى الخاصة بي !</string>
-    <string name="other_apps_sum">أحاول أن أحصل على واحد جديد كل أسبوع أو نحو ذلك</string>
+    <string name="other_apps_sum">أحاول أن يكون عندي واحد جديد كل إسبوع أو لذا</string>
     <string name="permission_needed">الإذن مطلوب!</string>
     <string name="failed_scan">فشل في المسح.</string>
     <string name="are_you_sure_deletion">هل أنت متأكد ؟ لا يمكن استعادة الملفات التي تم حذفها</string>

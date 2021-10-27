@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         if (!FileScanner.isRunning) {
             if (!prefs.getBoolean("one_click", false)) // one-click disabled
                 new AlertDialog.Builder(this,R.style.MyAlertDialogTheme)
-                        .setTitle(R.string.select_task)
+                        .setTitle(R.string.are_you_sure_deletion_title)
                         .setMessage(R.string.are_you_sure_deletion)
                         .setPositiveButton(R.string.clean, (dialog, whichButton) -> { // clean
                             new Thread(()-> scan(true)).start();
@@ -164,7 +164,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (prefs.getBoolean("clipboard",false)) clearClipboard();
 
-        runOnUiThread(()->arrangeViews(delete));
+        runOnUiThread(()-> {
+            arrangeViews(delete);
+            binding.statusTextView.setText(getString(R.string.status_running));
+        });
 
         File path = Environment.getExternalStorageDirectory();
 
@@ -187,23 +190,17 @@ public class MainActivity extends AppCompatActivity {
             runOnUiThread(() -> binding.fileListView.addView(textView));
         }
 
-        runOnUiThread(() -> {
-            binding.statusTextView.setText(getString(R.string.status_running));
-
-            // crappy but working fix for percentage never reaching 100 exactly
-            binding.scanProgress.setProgress(binding.scanProgress.getMax());
-        });
-
         // kilobytes found/freed text
         long kilobytesTotal = fs.startScan();
         runOnUiThread(() -> {
-            if (delete) {
+            if (delete)
                 binding.statusTextView.setText(getString(R.string.freed) + " " + convertSize(kilobytesTotal));
-            } else {
+            else
                 binding.statusTextView.setText(getString(R.string.found) + " " + convertSize(kilobytesTotal));
-            }
-            TextView textView = binding.frameLayout.findViewById(R.id.scanTextView);
-            textView.setText("100%");// crappy but working fix for percentage never reaching 100 exactly
+
+            // crappy but working fix for percentage never reaching 100 exactly
+            binding.scanProgress.setProgress(binding.scanProgress.getMax());
+            binding.scanTextView.setText("100%");
         });
         binding.fileScrollView.post(() -> binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN));
 

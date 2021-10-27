@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "theredspy15.ltecleanerfoss",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 50,
+      "versionName": "4.8.6-playstore",
+      "outputFile": "app-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

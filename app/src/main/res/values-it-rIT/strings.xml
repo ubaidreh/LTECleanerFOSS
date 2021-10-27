@@ -11,7 +11,7 @@
     <string name="add_to_whitelist">Aggiungi alla lista delle esclusioni</string>
     <string name="add">Aggiungi</string>
     <string name="cancel">Annulla</string>
-    <string name="enter_file_name">Inserisci nome del file/cartella da escludere</string>
+    <string name="enter_file_name">Inserisci il nome del file o della cartella da escludere</string>
     <string name="clean">Pulizia</string>
     <string name="analyze">Analisi</string>
     <string name="enable_generic_filter">Abilita filtro generico</string>
@@ -30,7 +30,7 @@
     <string name="generic_sum">.tmp, .log, Logs, log</string>
     <string name="aggressive_sum">Troppi elementi per elencarli qui</string>
     <string name="apk_sum">File di installazione per Android</string>
-    <string name="oneclick_sum">Non mostrare un messaggio di conferma quando si clicca sul pulsante Pulizia</string>
+    <string name="oneclick_sum">Non mostrare alcun messaggio di conferma quando viene premuto il pulsante Pulizia</string>
     <string name="autowhite_sum">Rileva automaticamente le cartelle da proteggere</string>
     <string name="prompt_string">È necessario concedere l\'autorizzazione di accesso ai file</string>
     <string name="settings_string">Impostazioni</string>
@@ -40,7 +40,7 @@
     <string name="defaultwhitelist">Predefinito</string>
     <string name="other">Altro</string>
     <string name="daily_title">Pulizia Quotidiana</string>
-    <string name="daily_sum">Automaticamente viene eseguito quotidianamente, senza che si debba aprire l\'app. Non funzionerà su alcuni dispositivi a meno che non sia lasciato aperto in background a causa delle limitazioni OEM</string>
+    <string name="daily_sum">Viene eseguita automaticamente ogni giorno, anche con l\'app chiusa. Su alcuni dispositivi, a causa delle restrizioni imposte dal costruttore, potrebbe non funzionare a meno che l\'app non resti aperta in background</string>
     <string name="other_apps">Scopri le mie altre app!</string>
     <string name="other_apps_sum">Cerco di farne uscire una più o meno ogni settimana</string>
     <string name="permission_needed">Permesso necessario!</string>
@@ -53,7 +53,7 @@
     <string name="clear_clipboard">Pulisci gli appunti</string>
     <string name="double_check_sum">La scansione verrà ripetuta ogni volta che qualcosa viene trovato, fino a un massimo di dieci scansioni</string>
     <string name="double_check_title">Controllo doppio</string>
-    <string name="notification_title">LTE Clean Worker Finito</string>
+    <string name="notification_title">Processo di pulizia LTE terminato</string>
     <string name="clean_notification">Pulito:</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>

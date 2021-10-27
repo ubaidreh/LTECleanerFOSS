@@ -30,7 +30,7 @@
     <string name="generic_sum">.tmp, .log, Logs, logs</string>
     <string name="aggressive_sum">Слишком много элементов для того, чтобы отобразить их здесь</string>
     <string name="apk_sum">Файлы установщиков андроид-приложений</string>
-    <string name="oneclick_sum">При нажатии кнопки \"очистить\" окно подтверждения не появляется</string>
+    <string name="oneclick_sum">Не отображать окно подтверждения при нажатии кнопки \"очистить\"</string>
     <string name="autowhite_sum">Автоматическое обнаружение папок, которые должны быть защищены</string>
     <string name="prompt_string">Пожалуйста, предоставьте разрешение для доступа к файлам</string>
     <string name="settings_string">Настройки</string>
@@ -40,12 +40,13 @@
     <string name="defaultwhitelist">По умолчанию</string>
     <string name="other">Прочее</string>
     <string name="daily_title">Ежедневная очистка</string>
-    <string name="daily_sum">Автоматически запускается ежедневно, без необходимости открывать приложение. Не будет работать на некоторых устройствах, если они не будут открыты в фоновом режиме из-за ограничений OEM</string>
+    <string name="daily_sum">Очистка автоматически запускается ежедневно без необходимости вручную открывать приложение. Не будет работать на некоторых устройствах, если приложение не открыто в фоновом режиме, ввиду ограничений OEM</string>
     <string name="other_apps">Зацени мои другие приложения!</string>
     <string name="other_apps_sum">Я стараюсь, чтобы у меня была новая жизнь каждую неделю, или так</string>
     <string name="permission_needed">Необходимы разрешения!</string>
     <string name="failed_scan">Сканирование завершилось неудачно.</string>
     <string name="are_you_sure_deletion">Вы уверены? Невозможно восстановить удаленные файлы</string>
+    <string name="are_you_sure_deletion_title">Подтвердить удаление</string>
     <string name="aggressive_filter_what_title">Что делает агрессивный фильтр</string>
     <string name="adds_the_following">Добавляет следующие фильтры:</string>
     <string name="samsung_not_work">Не работает на устройствах с самсунг</string>
@@ -83,11 +84,14 @@
         <item>fseventsd</item>
         <item>Отчеты</item>
         <item>Отчеты</item>
-        <item>.Trash</item>
+        <item>.Корзина</item>
         <item>кэш</item>
+        <item>Плазмод</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>thumbs? .db</item>
+        <item>.thumb[0-9]</item>
+        <item>Плазмод</item>
     </string-array>
 </resources>

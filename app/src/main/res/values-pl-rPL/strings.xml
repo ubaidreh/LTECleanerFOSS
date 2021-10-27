@@ -12,7 +12,7 @@
     <string name="add">Dodaj</string>
     <string name="cancel">Anuluj</string>
     <string name="enter_file_name">Wprowadź nazwę pliku/folderu do wykluczenia</string>
-    <string name="clean">Wyszyść</string>
+    <string name="clean">Wyczyść</string>
     <string name="analyze">Analizuj</string>
     <string name="enable_generic_filter">Włącz filtr ogólny</string>
     <string name="one_click_clean">Czyszczenie jednym kliknięciem</string>
@@ -42,16 +42,17 @@
     <string name="daily_title">Czyszczenie codzienne</string>
     <string name="daily_sum">Automatyczne uruchamianie codziennie, bez konieczności otwierania aplikacji. Nie będzie działać na niektórych urządzeniach, o ile nie zostanie otwarte w tle z powodu ograniczeń OEM</string>
     <string name="other_apps">Sprawdź inne moje aplikacje!</string>
-    <string name="other_apps_sum">Staram się mieć coś nowego co tydzień lub tak</string>
+    <string name="other_apps_sum">Staram się mieć coś nowego raz na tydzień</string>
     <string name="permission_needed">Wymagane uprawnienie!</string>
     <string name="failed_scan">Skanowanie nie powiodło się.</string>
     <string name="are_you_sure_deletion">Czy na pewno? Nie można odtworzyć usuniętych plików</string>
+    <string name="are_you_sure_deletion_title">Potwierdź usuwanie</string>
     <string name="aggressive_filter_what_title">Jaki jest agresywny filtr</string>
     <string name="adds_the_following">Dodaje następujące filtry:</string>
-    <string name="samsung_not_work">Nie działa na urządzeniach samsung</string>
+    <string name="samsung_not_work">Nie działa na urządzeniach firmy Samsung</string>
     <string name="clear_clipboard">Wyczyść schowek</string>
     <string name="double_check_sum">Skanowanie będzie ponownie uruchamiane za każdym razem, gdy znajdzie się coś z limitem dziesięciu skanów.</string>
-    <string name="double_check_title">Double Checker</string>
+    <string name="double_check_title">Podwójne sprawdzanie</string>
     <string name="notification_title">Czyszczenie procesu roboczego LTE zakończone</string>
     <string name="clean_notification">Oczyszczone:</string>
     <string-array name="generic_filter_files">
@@ -85,9 +86,12 @@
         <item>bugreports</item>
         <item>.Kosz</item>
         <item>pamięć podręczna</item>
+        <item>splashad</item>
     </string-array>
     <string-array name="aggressive_filter_files">
         <item>.exo</item>
         <item>thumbs? .db</item>
+        <item>.thumb[0-9]</item>
+        <item>splashad</item>
     </string-array>
 </resources>

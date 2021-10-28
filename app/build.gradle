@@ -2,7 +2,11 @@
  * Copyright 2020 Hunter J Drum
  */
 
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
+
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 31
@@ -10,8 +14,8 @@ android {
         applicationId "theredspy15.ltecleanerfoss"
         minSdkVersion 19
         targetSdkVersion 31
-        versionCode 48
-        versionName "4.8.5"
+        versionCode 51
+        versionName "4.8.7-playstore"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -19,8 +23,8 @@ android {
     }
     buildTypes {
         debug {
-            minifyEnabled false
-            shrinkResources false
+            minifyEnabled true
+            shrinkResources true
             debuggable true
         }
 
@@ -41,6 +45,11 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-firestore'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "android.arch.work:work-runtime:1.0.1"

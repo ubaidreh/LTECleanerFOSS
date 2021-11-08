@@ -9,9 +9,7 @@
     <string name="whitelist">白名单</string>
     <string name="privacy_policy">隐私策略</string>
     <string name="add_to_whitelist">添加到白名单</string>
-    <string name="add">加添</string>
     <string name="cancel">取消</string>
-    <string name="enter_file_name">输入文件/文件夹名称以白名单</string>
     <string name="clean">清洁</string>
     <string name="analyze">分析</string>
     <string name="enable_generic_filter">启用通用过滤器</string>
@@ -37,10 +35,9 @@
     <string name="title_activity_prompt">提示活动</string>
     <string name="corpse_summary">从已卸载应用程序遗留的文件</string>
     <string name="corpse_title">删除尸体文件</string>
-    <string name="defaultwhitelist">缺省值</string>
     <string name="other">其他</string>
     <string name="daily_title">每日清理</string>
-    <string name="daily_sum">每天自动运行，无需您打开应用程序。 将不会在某些设备上工作，除非由于 OEM 限制而在后台打开</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
     <string name="other_apps">看看我的其他应用！</string>
     <string name="other_apps_sum">我试着大约每周发布一个新的</string>
     <string name="permission_needed">需要许可 !</string>
@@ -55,6 +52,16 @@
     <string name="double_check_title">双校验器</string>
     <string name="notification_title">LTE 清除工作程序已完成</string>
     <string name="clean_notification">已清除:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -93,5 +100,10 @@
         <item>拇指?.db</item>
         <item>.thumb[0-9]</item>
         <item>splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>

@@ -37,7 +37,7 @@
     <string name="corpse_title">Διαγραφή αρχείων πτωμάτων</string>
     <string name="other">\' Αλλα</string>
     <string name="daily_title">Καθημερινή καθαριότητα</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
+    <string name="daily_sum">Λειτουργεί αυτόματα καθημερινά, χωρίς να χρειάζεται να ανοίξετε την εφαρμογή.</string>
     <string name="other_apps">Κοίτα τις άλλες εφαρμογές μου!</string>
     <string name="other_apps_sum">Προσπαθώ να έχω ένα καινούργιο κάθε εβδομάδα.</string>
     <string name="permission_needed">Χρειάζεται άδεια!</string>
@@ -52,16 +52,16 @@
     <string name="double_check_title">Διπλό Checker</string>
     <string name="notification_title">Ολοκληρώθηκε η εκκαθάριση LTE</string>
     <string name="clean_notification">Καθαρισμός:</string>
-    <string name="empty_whitelist">Nothing in whitelist</string>
-    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
-    <string name="theme_title">Select Theme</string>
-    <string name="filters_category_title">Filters</string>
-    <string name="scanner_category_title">Scanner</string>
-    <string name="links_category_title">Links</string>
-    <string name="settings_page_title">Settings</string>
-    <string name="remove_from_whitelist">Remove from whitelist?</string>
-    <string name="delete">Delete</string>
-    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
+    <string name="empty_whitelist">Τίποτα στη Whitelist</string>
+    <string name="theme_sum">Θα ακολουθήσει τις ρυθμίσεις του συστήματος. Επανεκκινήστε την εφαρμογή.</string>
+    <string name="theme_title">Επιλογή θέματος:</string>
+    <string name="filters_category_title">Φίλτρα φίλτρων</string>
+    <string name="scanner_category_title">Σαρωτής:</string>
+    <string name="links_category_title">-Συνδέσεις</string>
+    <string name="settings_page_title">Ρυθμίσεις:</string>
+    <string name="remove_from_whitelist">-Κατάργηση από τη λευκή;</string>
+    <string name="delete">Διαγραφή:</string>
+    <string name="clipboard_clear_failed">Απέτυχε η εκκαθάριση του πρόχειρο.</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>- .log</item>
@@ -102,8 +102,8 @@
         <item>Splashad</item>
     </string-array>
     <string-array name="themes">
-        <item>Auto</item>
-        <item>Light</item>
-        <item>Dark</item>
+        <item>\' Αυτόματα</item>
+        <item>Φως!</item>
+        <item>-Ναι.</item>
     </string-array>
 </resources>

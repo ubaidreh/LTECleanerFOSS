@@ -37,7 +37,7 @@
     <string name="corpse_title">Удалить остатки</string>
     <string name="other">Прочее</string>
     <string name="daily_title">Ежедневная очистка</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
+    <string name="daily_sum">Автоматически запускается ежедневно, без необходимости открывать приложение.</string>
     <string name="other_apps">Зацени мои другие приложения!</string>
     <string name="other_apps_sum">Я стараюсь, чтобы у меня была новая жизнь каждую неделю, или так</string>
     <string name="permission_needed">Необходимы разрешения!</string>
@@ -52,16 +52,16 @@
     <string name="double_check_title">Двойная проверка</string>
     <string name="notification_title">Приемка очистки LTE завершена</string>
     <string name="clean_notification">Очищено:</string>
-    <string name="empty_whitelist">Nothing in whitelist</string>
-    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
-    <string name="theme_title">Select Theme</string>
-    <string name="filters_category_title">Filters</string>
-    <string name="scanner_category_title">Scanner</string>
-    <string name="links_category_title">Links</string>
-    <string name="settings_page_title">Settings</string>
-    <string name="remove_from_whitelist">Remove from whitelist?</string>
-    <string name="delete">Delete</string>
-    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
+    <string name="empty_whitelist">В белом списке нет ничего</string>
+    <string name="theme_sum">В противном случае последуют параметры системы. Перезапустить приложение, чтобы выполнить действие</string>
+    <string name="theme_title">Выбрать тему</string>
+    <string name="filters_category_title">Фильтры</string>
+    <string name="scanner_category_title">Сканер</string>
+    <string name="links_category_title">Ссылки</string>
+    <string name="settings_page_title">Параметры</string>
+    <string name="remove_from_whitelist">Удалить из белого списка?</string>
+    <string name="delete">Удалить</string>
+    <string name="clipboard_clear_failed">Не удалось очистить буфер обмена</string>
     <string-array name="generic_filter_files">
         <item>Tmp</item>
         <item>.log</item>
@@ -102,8 +102,8 @@
         <item>Плазмод</item>
     </string-array>
     <string-array name="themes">
-        <item>Auto</item>
-        <item>Light</item>
-        <item>Dark</item>
+        <item>Автоматически</item>
+        <item>Свет</item>
+        <item>Темный</item>
     </string-array>
 </resources>

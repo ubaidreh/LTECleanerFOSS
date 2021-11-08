@@ -9,9 +9,7 @@
     <string name="whitelist">Белый список</string>
     <string name="privacy_policy">Политика конфиденциальности</string>
     <string name="add_to_whitelist">Добавить в белый список</string>
-    <string name="add">Добавить</string>
     <string name="cancel">Отмена</string>
-    <string name="enter_file_name">Введите имя файла/папки в белый список</string>
     <string name="clean">Очистка</string>
     <string name="analyze">Анализ</string>
     <string name="enable_generic_filter">Включить универсальный фильтр</string>
@@ -37,10 +35,9 @@
     <string name="title_activity_prompt">Операция приглашения</string>
     <string name="corpse_summary">Файлы, оставшиеся от удалённых приложений</string>
     <string name="corpse_title">Удалить остатки</string>
-    <string name="defaultwhitelist">По умолчанию</string>
     <string name="other">Прочее</string>
     <string name="daily_title">Ежедневная очистка</string>
-    <string name="daily_sum">Очистка автоматически запускается ежедневно без необходимости вручную открывать приложение. Не будет работать на некоторых устройствах, если приложение не открыто в фоновом режиме, ввиду ограничений OEM</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
     <string name="other_apps">Зацени мои другие приложения!</string>
     <string name="other_apps_sum">Я стараюсь, чтобы у меня была новая жизнь каждую неделю, или так</string>
     <string name="permission_needed">Необходимы разрешения!</string>
@@ -55,6 +52,16 @@
     <string name="double_check_title">Двойная проверка</string>
     <string name="notification_title">Приемка очистки LTE завершена</string>
     <string name="clean_notification">Очищено:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
     <string-array name="generic_filter_files">
         <item>Tmp</item>
         <item>.log</item>
@@ -93,5 +100,10 @@
         <item>thumbs? .db</item>
         <item>.thumb[0-9]</item>
         <item>Плазмод</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>

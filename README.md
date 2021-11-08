@@ -1,7 +1,5 @@
 ## LTECleanerFOSS
 
-Bitcoin address for donations: 394U4hMeLgiff4qgG2X8xRcgKGPLZcmrro
-
 ***The last Android cleaner you will ever need!***
 
 <img src="https://imgur.com/ykSLpTS.png" width="300">
@@ -78,8 +76,9 @@ Buy us a coffee or two, as it enables us to put more free time into the active d
     <td align="center">Github Sponsors</td>
     <td><a href="https://github.com/sponsors/TheRedSpy15">https://github.com/sponsors/TheRedSpy15</a></td>
   </tr>
-
 </table>
+
+(Or if you prefer) Bitcoin address: 394U4hMeLgiff4qgG2X8xRcgKGPLZcmrro
 
 #### The Team  
 <a href="https://github.com/TheRedSpy15/LTECleanerFOSS/graphs/contributors">

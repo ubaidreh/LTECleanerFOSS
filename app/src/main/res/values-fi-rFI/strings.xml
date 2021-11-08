@@ -9,9 +9,7 @@
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Yksityisyyden suoja</string>
     <string name="add_to_whitelist">Lisää valkoiseen luetteloon</string>
-    <string name="add">Lisää</string>
     <string name="cancel">Peruuta</string>
-    <string name="enter_file_name">Anna tiedoston/kansion nimi valkoiseksi</string>
     <string name="clean">Puhdas</string>
     <string name="analyze">Analysoi</string>
     <string name="enable_generic_filter">Ota yleinen suodatin käyttöön</string>
@@ -37,10 +35,9 @@
     <string name="title_activity_prompt">PromptAktiviteetti</string>
     <string name="corpse_summary">Asennemattomasta sovelluksesta jääneet tiedostot</string>
     <string name="corpse_title">Poista ruumistiedostot</string>
-    <string name="defaultwhitelist">Oletusarvo</string>
     <string name="other">Muut</string>
     <string name="daily_title">Daily Clean</string>
-    <string name="daily_sum">Automaattisesti kulkee päivittäin, ilman että sinun täytyy avata sovellus. Ei toimi joidenkin laitteiden kanssa, ellei OEM-rajoituksista johtuen ole avoimia taustatietoja</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
     <string name="other_apps">Katsokaa muita sovelluksia!</string>
     <string name="other_apps_sum">Yritän saada uuden ulos joka viikko tai niin</string>
     <string name="permission_needed">Lupa tarvitaan!</string>
@@ -55,6 +52,16 @@
     <string name="double_check_title">Double Checker</string>
     <string name="notification_title">LTE-puhdas käsittelijä on valmis</string>
     <string name="clean_notification">Puhdistettu:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -93,5 +100,10 @@
         <item>Peukalot?</item>
         <item>Peukalo[0-9]</item>
         <item>Splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>

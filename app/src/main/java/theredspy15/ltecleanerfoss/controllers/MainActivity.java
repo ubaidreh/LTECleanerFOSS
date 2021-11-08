@@ -32,12 +32,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
-import androidx.viewbinding.BuildConfig;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 
 import java.io.File;
 import java.text.DecimalFormat;
@@ -69,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
         binding.analyzeBtn.setOnClickListener(this::analyze);
 
         WhitelistActivity.getWhiteList(prefs);
-
-        loadAdData();
     }
 
     @Override public void onStart() {
@@ -83,24 +75,6 @@ public class MainActivity extends AppCompatActivity {
             layoutParams.width = view.getHeight();
             view.setLayoutParams(layoutParams);
         }  // In portrait
-    }
-
-    private void loadAdData() {
-        String unitId;
-        if (BuildConfig.BUILD_TYPE.contentEquals("debug")) {
-            unitId = "ca-app-pub-3940256099942544/6300978111";
-        } else {
-            unitId = "ca-app-pub-5128547878021429/8516214533"; // production only!
-            Toast.makeText(this, "Debug mode active", Toast.LENGTH_SHORT).show();
-        }
-
-        MobileAds.initialize(this, initializationStatus -> { });
-        AdRequest adRequest = new AdRequest.Builder().build();
-        AdView adView = new AdView(this);
-        adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId(unitId);
-        binding.mainLayout.addView(adView);
-        adView.loadAd(adRequest);
     }
 
     /**

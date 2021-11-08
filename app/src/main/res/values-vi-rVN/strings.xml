@@ -9,9 +9,7 @@
     <string name="whitelist">Trắng</string>
     <string name="privacy_policy">Chính sách riêng</string>
     <string name="add_to_whitelist">Thêm vào danh sách trắng</string>
-    <string name="add">Thêm</string>
     <string name="cancel">Hủy</string>
-    <string name="enter_file_name">Nhập vào tên tập tin/thư mục để làm trắng</string>
     <string name="clean">Sạch</string>
     <string name="analyze">Phân tích</string>
     <string name="enable_generic_filter">Bật bộ lọc chung</string>
@@ -37,10 +35,9 @@
     <string name="title_activity_prompt">Lời nhắc</string>
     <string name="corpse_summary">Tập tin bị bỏ qua các ứng dụng không cài đặt</string>
     <string name="corpse_title">Xoá tập tin xác chết</string>
-    <string name="defaultwhitelist">Mặc định</string>
     <string name="other">Khác</string>
     <string name="daily_title">Sạch hàng ngày</string>
-    <string name="daily_sum">Tự động chạy hàng ngày, không có bạn phải mở ứng dụng. Sẽ không làm việc trên một sô ́ thiết bị trư ̀ khi không được mở trong nền do hạn chê ́ OEM</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
     <string name="other_apps">Kiểm tra các ứng dụng khác!</string>
     <string name="other_apps_sum">Mỗi tuần tôi lại có một người mới ra ngoài.</string>
     <string name="permission_needed">Cho phép!</string>
@@ -55,6 +52,16 @@
     <string name="double_check_title">Trình kiểm tra kép</string>
     <string name="notification_title">Công nhân sạch LTE kết thúc</string>
     <string name="clean_notification">Dọn dẹp:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -93,5 +100,10 @@
         <item>ngón tay cái? .db</item>
         <item>.ngón cái[0-9]</item>
         <item>Splenad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>

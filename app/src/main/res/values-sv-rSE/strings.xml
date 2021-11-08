@@ -37,7 +37,7 @@
     <string name="corpse_title">Ta bort likfiler</string>
     <string name="other">Andra slag</string>
     <string name="daily_title">Dagligen rens</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
+    <string name="daily_sum">Kör automatiskt dagligen, utan att du behöver öppna appen.</string>
     <string name="other_apps">Kolla in mina andra appar!</string>
     <string name="other_apps_sum">Jag försöker få ut en ny varje vecka, eller så.</string>
     <string name="permission_needed">Behörighet behövs!</string>
@@ -52,16 +52,16 @@
     <string name="double_check_title">Dubbelkontroll</string>
     <string name="notification_title">LTE rensad arbetskjul klar</string>
     <string name="clean_notification">Rensade:</string>
-    <string name="empty_whitelist">Nothing in whitelist</string>
-    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
-    <string name="theme_title">Select Theme</string>
-    <string name="filters_category_title">Filters</string>
-    <string name="scanner_category_title">Scanner</string>
-    <string name="links_category_title">Links</string>
-    <string name="settings_page_title">Settings</string>
-    <string name="remove_from_whitelist">Remove from whitelist?</string>
-    <string name="delete">Delete</string>
-    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
+    <string name="empty_whitelist">Inget i whitelist</string>
+    <string name="theme_sum">Kommer på annat sätt att följa systeminställningarna. Starta om app för att få effekt</string>
+    <string name="theme_title">Välj tema</string>
+    <string name="filters_category_title">Filter</string>
+    <string name="scanner_category_title">Skanner</string>
+    <string name="links_category_title">Länkar</string>
+    <string name="settings_page_title">Inställningar</string>
+    <string name="remove_from_whitelist">Vill du ta bort från vitlistan?</string>
+    <string name="delete">Radera</string>
+    <string name="clipboard_clear_failed">Det gick inte att rensa klippbordet</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -102,8 +102,8 @@
         <item>splashad</item>
     </string-array>
     <string-array name="themes">
-        <item>Auto</item>
-        <item>Light</item>
-        <item>Dark</item>
+        <item>Automatiskt</item>
+        <item>Ljus</item>
+        <item>Mörkt</item>
     </string-array>
 </resources>

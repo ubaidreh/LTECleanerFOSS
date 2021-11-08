@@ -9,9 +9,7 @@
     <string name="whitelist">-Whitelist</string>
     <string name="privacy_policy">Πολιτική απορρήτου:</string>
     <string name="add_to_whitelist">Προσθήκη στη λίστα επιτρεπών</string>
-    <string name="add">Προσθήκη</string>
     <string name="cancel">Ακύρωση.</string>
-    <string name="enter_file_name">Καταχωρήστε το όνομα αρχείου/φακέλου στη λίστα επιτρεπών</string>
     <string name="clean">Καθαρό.</string>
     <string name="analyze">Ανάλυση:</string>
     <string name="enable_generic_filter">Ενεργοποίηση γενικού φίλτρου</string>
@@ -37,10 +35,9 @@
     <string name="title_activity_prompt">Προτροπή /</string>
     <string name="corpse_summary">Αρχεία που απομένουν από απεγκατάσταση εφαρμογών.</string>
     <string name="corpse_title">Διαγραφή αρχείων πτωμάτων</string>
-    <string name="defaultwhitelist">Προεπιλογή:</string>
     <string name="other">\' Αλλα</string>
     <string name="daily_title">Καθημερινή καθαριότητα</string>
-    <string name="daily_sum">Λειτουργεί αυτόματα καθημερινά, χωρίς να χρειάζεται να ανοίξετε την εφαρμογή. Δεν θα λειτουργήσει σε ορισμένες συσκευές αν δεν αφεθεί ανοικτή στο παρασκήνιο λόγω των περιορισμών OEM</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
     <string name="other_apps">Κοίτα τις άλλες εφαρμογές μου!</string>
     <string name="other_apps_sum">Προσπαθώ να έχω ένα καινούργιο κάθε εβδομάδα.</string>
     <string name="permission_needed">Χρειάζεται άδεια!</string>
@@ -55,6 +52,16 @@
     <string name="double_check_title">Διπλό Checker</string>
     <string name="notification_title">Ολοκληρώθηκε η εκκαθάριση LTE</string>
     <string name="clean_notification">Καθαρισμός:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>- .log</item>
@@ -93,5 +100,10 @@
         <item>-Ταμπς;</item>
         <item>αντίχειρα[0-9]</item>
         <item>Splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>

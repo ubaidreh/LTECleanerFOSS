@@ -9,9 +9,7 @@
     <string name="whitelist">Beyaz Liste</string>
     <string name="privacy_policy">Gizlilik İlkesi</string>
     <string name="add_to_whitelist">Beyaz listeye ekle</string>
-    <string name="add">Ekle</string>
     <string name="cancel">İptal</string>
-    <string name="enter_file_name">Dosya/klasör adını beyaz listeye girin</string>
     <string name="clean">Temizle</string>
     <string name="analyze">Çözümle</string>
     <string name="enable_generic_filter">Soysal süzgeci etkinleştir</string>
@@ -37,10 +35,9 @@
     <string name="title_activity_prompt">Etkinlik PromptEtkinliği</string>
     <string name="corpse_summary">Kaldırılan uygulamalardan kalan dosyalar</string>
     <string name="corpse_title">Ceset dosyalarını sil</string>
-    <string name="defaultwhitelist">Varsayılan</string>
     <string name="other">Diğer</string>
     <string name="daily_title">Günlük Temiz</string>
-    <string name="daily_sum">Uygulamayı açmanıza gerek kalmadan her gün otomatik olarak çalışır. OEM kısıtlamaları nedeniyle arka planda açık bırakılmadıkça, bazı aygıtlar üzerinde çalışmayacaktır.</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
     <string name="other_apps">Diğer uygulamalarımı kontrol et!</string>
     <string name="other_apps_sum">Her hafta yeni bir tane yapmaya çalışıyorum.</string>
     <string name="permission_needed">İzin gerekli!</string>
@@ -55,6 +52,16 @@
     <string name="double_check_title">Çift Denetleyici</string>
     <string name="notification_title">LTE Clean Worker Bitti</string>
     <string name="clean_notification">Temizlendi:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -93,5 +100,10 @@
         <item>başparmak? .db</item>
         <item>.thumb[0-9]</item>
         <item>splass</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>

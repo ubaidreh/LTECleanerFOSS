@@ -37,7 +37,7 @@
     <string name="corpse_title">Elimina file obsoleti</string>
     <string name="other">Altro</string>
     <string name="daily_title">Pulizia Quotidiana</string>
-    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
+    <string name="daily_sum">Automaticamente viene eseguito quotidianamente, senza che si debba aprire l\'app.</string>
     <string name="other_apps">Scopri le mie altre app!</string>
     <string name="other_apps_sum">Cerco di farne uscire una più o meno ogni settimana</string>
     <string name="permission_needed">Permesso necessario!</string>
@@ -52,16 +52,16 @@
     <string name="double_check_title">Controllo doppio</string>
     <string name="notification_title">Processo di pulizia LTE terminato</string>
     <string name="clean_notification">Pulito:</string>
-    <string name="empty_whitelist">Nothing in whitelist</string>
-    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
-    <string name="theme_title">Select Theme</string>
-    <string name="filters_category_title">Filters</string>
+    <string name="empty_whitelist">Niente in whitelist</string>
+    <string name="theme_sum">Altrimenti seguiranno le impostazioni di sistema. Riavvia l\'app per prendere effetto</string>
+    <string name="theme_title">Seleziona Tema</string>
+    <string name="filters_category_title">Filtri</string>
     <string name="scanner_category_title">Scanner</string>
-    <string name="links_category_title">Links</string>
-    <string name="settings_page_title">Settings</string>
-    <string name="remove_from_whitelist">Remove from whitelist?</string>
-    <string name="delete">Delete</string>
-    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
+    <string name="links_category_title">Link</string>
+    <string name="settings_page_title">Impostazioni</string>
+    <string name="remove_from_whitelist">Rimuovere dal whitelist?</string>
+    <string name="delete">Elimina</string>
+    <string name="clipboard_clear_failed">Impossibile cancellare gli appunti</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>File</item>
@@ -103,7 +103,7 @@
     </string-array>
     <string-array name="themes">
         <item>Auto</item>
-        <item>Light</item>
-        <item>Dark</item>
+        <item>Luce</item>
+        <item>Buio</item>
     </string-array>
 </resources>

@@ -9,9 +9,7 @@
     <string name="whitelist">Whitelist</string>
     <string name="privacy_policy">Datenschutzrichtlinie</string>
     <string name="add_to_whitelist">Zur Whitelist hinzufügen</string>
-    <string name="add">Hinzufügen</string>
     <string name="cancel">Abbrechen</string>
-    <string name="enter_file_name">Datei-/Ordnernamen in Whitelist eingeben</string>
     <string name="clean">Bereinigen</string>
     <string name="analyze">Analysieren</string>
     <string name="enable_generic_filter">Generischen Filter aktivieren</string>
@@ -37,10 +35,9 @@
     <string name="title_activity_prompt">PromptActivity</string>
     <string name="corpse_summary">Dateien, die von deinstallierten Apps übrig bleiben</string>
     <string name="corpse_title">Corpse-Dateien löschen</string>
-    <string name="defaultwhitelist">Standard</string>
     <string name="other">Sonstige</string>
     <string name="daily_title">Tägliche Reinigung</string>
-    <string name="daily_sum">Wird automatisch täglich ausgeführt, ohne dass Sie die App öffnen müssen. Wird auf einigen Geräten nicht funktionieren, es sei denn, der Hintergrund ist aufgrund von OEM-Einschränkungen offen.</string>
+    <string name="daily_sum">Automatically runs daily, without you having to open the app.</string>
     <string name="other_apps">Schauen Sie sich meine anderen Apps an!</string>
     <string name="other_apps_sum">Ich versuche, jede Woche einen neuen zu haben, oder so</string>
     <string name="permission_needed">Berechtigung erforderlich!</string>
@@ -55,6 +52,16 @@
     <string name="double_check_title">Doppelter Checker</string>
     <string name="notification_title">LTE Clean Worker Beendet</string>
     <string name="clean_notification">Bereinigt:</string>
+    <string name="empty_whitelist">Nothing in whitelist</string>
+    <string name="theme_sum">Will otherwise follow system settings. Restart app to take effect</string>
+    <string name="theme_title">Select Theme</string>
+    <string name="filters_category_title">Filters</string>
+    <string name="scanner_category_title">Scanner</string>
+    <string name="links_category_title">Links</string>
+    <string name="settings_page_title">Settings</string>
+    <string name="remove_from_whitelist">Remove from whitelist?</string>
+    <string name="delete">Delete</string>
+    <string name="clipboard_clear_failed">Failed to clear clipboard</string>
     <string-array name="generic_filter_files">
         <item>.tmp</item>
         <item>.log</item>
@@ -93,5 +100,10 @@
         <item>thumbs? .db</item>
         <item>.thumb[0-9]</item>
         <item>Splashad</item>
+    </string-array>
+    <string-array name="themes">
+        <item>Auto</item>
+        <item>Light</item>
+        <item>Dark</item>
     </string-array>
 </resources>

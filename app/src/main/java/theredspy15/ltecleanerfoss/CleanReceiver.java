@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.SystemClock;
 
 public class CleanReceiver extends BroadcastReceiver {
-    private static final int PERIOD = (int) AlarmManager.INTERVAL_DAY;
+    private static final int PERIOD = 86400000;
     private static final int INITIAL_DELAY = 60000; // 60 seconds
 
     @Override

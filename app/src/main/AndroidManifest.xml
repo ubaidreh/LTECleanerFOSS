@@ -39,7 +39,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/SettingsTheme" />
         <activity
-            android:exported="true"
             android:name="theredspy15.ltecleanerfoss.controllers.MainActivity"
             android:screenOrientation="portrait"
             android:exported="true">

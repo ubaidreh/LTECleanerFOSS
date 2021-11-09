@@ -63,23 +63,6 @@ Upoming major features:
   * Create a [Pull Request](https://opensource.guide/how-to-contribute/#opening-a-pull-request)
   * Translate this app into more languages on [Crowdin](https://crowdin.com/project/lte-cleaner)
 
-## Support by donating
-
-Buy us a coffee or two, as it enables us to put more free time into the active development.
-
-<table>
-  <tr>
-    <th colspan="3">Thank you for donating</th>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://github.com/sponsors/TheRedSpy15"><img src="https://github.blog/wp-content/uploads/2019/05/mona-heart-featured.png" height=25/></a></td>
-    <td align="center">Github Sponsors</td>
-    <td><a href="https://github.com/sponsors/TheRedSpy15">https://github.com/sponsors/TheRedSpy15</a></td>
-  </tr>
-</table>
-
-(Or if you prefer) Bitcoin address: 394U4hMeLgiff4qgG2X8xRcgKGPLZcmrro
-
 #### The Team  
 <a href="https://github.com/TheRedSpy15/LTECleanerFOSS/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TheRedSpy15/LTECleanerFOSS" />

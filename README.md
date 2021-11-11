@@ -40,6 +40,8 @@ October 7th, 2021:
 
 ## Features
 - Daily cleans
+- Clipboard clearing
+- Easy whitelists
 
 Cleans:
 - Empty folders

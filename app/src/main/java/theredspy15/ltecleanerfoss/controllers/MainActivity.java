@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
     public ActivityMainBinding binding;
 
-    @SuppressLint("LogConditional")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (prefs == null) updateTheme();

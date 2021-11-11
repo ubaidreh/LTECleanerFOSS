@@ -22,7 +22,6 @@ import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -65,18 +64,6 @@ public class MainActivity extends AppCompatActivity {
         WhitelistActivity.getWhiteList(prefs);
     }
 
-    @Override public void onStart() {
-        super.onStart();
-        int orientation = getResources().getConfiguration().orientation;
-        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            // In landscape
-            View view = binding.frameLayout;
-            ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-            layoutParams.width = view.getHeight();
-            view.setLayoutParams(layoutParams);
-        }  // In portrait
-    }
-
     /**
      * Starts the settings activity
      * @param view the view that is clickedprefs = getSharedPreferences("Settings",0);
@@ -105,13 +92,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void arrangeForClean() {
-        binding.frameLayout.setVisibility(View.VISIBLE);
-        binding.fileScrollView.setVisibility(View.GONE);
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            binding.frameLayout.setVisibility(View.VISIBLE);
+            binding.fileScrollView.setVisibility(View.GONE);
+        }
     }
 
     private void arrangeForAnalyze() {
-        binding.frameLayout.setVisibility(View.GONE);
-        binding.fileScrollView.setVisibility(View.VISIBLE);
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            binding.frameLayout.setVisibility(View.GONE);
+            binding.fileScrollView.setVisibility(View.VISIBLE);
+        }
     }
 
     /**

@@ -26,7 +26,7 @@ public class CleanReceiver extends BroadcastReceiver {
         Intent i = new Intent(ctxt, CleanReceiver.class);
         PendingIntent pi;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
-            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_MUTABLE);
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_IMMUTABLE);
         } else {
             pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_UPDATE_CURRENT);
         }
@@ -42,7 +42,7 @@ public class CleanReceiver extends BroadcastReceiver {
         Intent i = new Intent(ctxt, CleanReceiver.class);
         PendingIntent pi;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
-            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_MUTABLE);
+            pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_IMMUTABLE);
         } else {
             pi = PendingIntent.getBroadcast(ctxt, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
         }

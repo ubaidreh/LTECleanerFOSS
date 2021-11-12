@@ -1,7 +1,5 @@
 ## LTECleanerFOSS
 
-***The last Android cleaner you will ever need!***
-
 <img src="https://imgur.com/ykSLpTS.png" width="300">
 
 ![Android CI](https://github.com/TheRedSpy15/LTECleanerFOSS/workflows/Android%20CI/badge.svg)
@@ -10,6 +8,10 @@
 ![code-inspector](https://www.code-inspector.com/project/2073/score/svg)
 ![code-grade](https://www.code-inspector.com/project/2073/status/svg)
 [![GitHub license](https://img.shields.io/github/license/TheRedSpy15/LTECleanerFOSS?color=lightgrey)](/blob/master/LICENSE)
+
+![Alt](https://repobeats.axiom.co/api/embed/e57b4b0c0e47daffc4e7feb4cff54fa6a1bc4120.svg "Repobeats analytics image")
+
+***The last Android cleaner you will ever need!***
 
 Tired of the abundance of phone cleaners on the play store? Tired of 
 them being extremely shady? Tired of them doing nothing? Tired of ads? 

@@ -59,7 +59,7 @@ Upoming major features:
 
 ## Screenshots
 
-<img src="/Screenshots/Screenshot_1529468353_framed.png" width="200">
+<img src="/Screenshots/Screenshot_20211110-234739_LTE Cleaner_framed.png" width="200">
 
 ## Join the team
   * Test the app with different devices

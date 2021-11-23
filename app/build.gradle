@@ -6,8 +6,6 @@ plugins {
     id 'com.android.application'
 }
 
-apply plugin: 'com.google.gms.google-services'
-
 android {
     compileSdkVersion 30
     defaultConfig {
@@ -15,7 +13,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 57
-        versionName "4.9.4-playstore"
+        versionName "4.9.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -45,20 +43,13 @@ android {
 }
 
 dependencies {
-    implementation "com.android.billingclient:billing:4.0.0"
-
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
-    implementation 'com.airbnb.android:lottie:4.2.0'
-
-    implementation 'com.google.android.gms:play-services-ads:20.4.0'
-    implementation platform('com.google.firebase:firebase-bom:28.4.1')
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.airbnb.android:lottie:4.2.1'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //noinspection GradleCompatible
-    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     testImplementation 'junit:junit:4.13.2'

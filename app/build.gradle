@@ -6,7 +6,6 @@ plugins {
     id 'com.android.application'
 }
 
-apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 
 android {
@@ -15,8 +14,8 @@ android {
         applicationId "theredspy15.ltecleanerfoss"
         minSdkVersion 23
         targetSdkVersion 31
-        versionCode 58
-        versionName "4.9.5-playstore"
+        versionCode 59
+        versionName "4.9.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -48,11 +47,6 @@ android {
 dependencies {
     implementation 'dev.shreyaspatil.MaterialDialog:MaterialDialog:2.2.2'
     implementation 'com.airbnb.android:lottie:4.2.1'
-
-    implementation 'com.google.android.gms:play-services-ads:20.5.0'
-    implementation platform('com.google.firebase:firebase-bom:28.4.1')
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-firestore'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 

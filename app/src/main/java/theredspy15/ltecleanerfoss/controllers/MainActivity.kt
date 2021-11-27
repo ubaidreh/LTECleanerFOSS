@@ -27,13 +27,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.preference.PreferenceManager
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
 import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
-import theredspy15.ltecleanerfoss.BuildConfig
 import theredspy15.ltecleanerfoss.FileScanner
 import theredspy15.ltecleanerfoss.R
 import theredspy15.ltecleanerfoss.databinding.ActivityMainBinding
@@ -53,24 +48,6 @@ class MainActivity : AppCompatActivity() {
         binding!!.whitelistBtn.setOnClickListener { whitelist() }
         binding!!.analyzeBtn.setOnClickListener { analyze() }
         WhitelistActivity.getWhiteList(prefs)
-        loadAdData()
-    }
-
-    private fun loadAdData() {
-        val unitId: String
-        if (BuildConfig.DEBUG) {
-            unitId = "ca-app-pub-3940256099942544/6300978111"
-            Toast.makeText(this, "Debug mode active", Toast.LENGTH_SHORT).show()
-        } else {
-            unitId = "ca-app-pub-5128547878021429/8516214533" // production only!
-        }
-        MobileAds.initialize(this) { }
-        val adRequest = AdRequest.Builder().build()
-        val adView = AdView(this)
-        adView.adSize = AdSize.BANNER
-        adView.adUnitId = unitId
-        binding!!.mainLayout.addView(adView)
-        adView.loadAd(adRequest)
     }
 
     /**

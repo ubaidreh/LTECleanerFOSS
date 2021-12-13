@@ -28,12 +28,6 @@ android {
             debuggable true
         }
 
-        release {
-            minifyEnabled true
-            shrinkResources true
-            debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -42,6 +36,16 @@ android {
     buildFeatures {
         viewBinding true
     }
+		release {
+			minifyEnabled true
+			shrinkResources true
+			crunchPngs true
+			ext.enableCrashlytics = false
+			ext.alwaysUpdateBuildId = false
+			debuggable false
+			signingConfig signingConfigs.main
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
 }
 
 dependencies {

@@ -212,14 +212,12 @@ class FileScanner(private val path: File, context: Context?) {
 
                         // deletion
                         if (!file.delete() && tv != null) { // failed to remove file and the textView is visible (not null)
-                                (context as MainActivity?)!!.runOnUiThread {
-                                    tv.setTextColor(
-                                        Color.GRAY // error effect - red looks too concerning
-                                    )
-                                }
+                            (context as MainActivity?)!!.runOnUiThread {
+                                tv.setTextColor(
+                                    Color.GRAY // error effect - red looks too concerning
+                                )
                             }
                         }
-                        
                     }
                 }
                 if (gui != null) { // progress

@@ -99,18 +99,17 @@ class FileScanner(private val path: File, context: Context?) {
      * @return true if the file's extension is in the filter, false otherwise
      */
     fun filter(file: File?): Boolean {
-        try {
-            if (file != null) {
+        if (file != null) {
+            try {
                 // corpse checking - TODO: needs improved!
                 when {
-                    file.parentFile != null && file.parentFile.parentFile != null && corpse -> {
-                        when {
-                            file.parentFile.name == "data" &&
-                                    file.parentFile.parentFile.name == "Android" &&
-                                    !installedPackages.contains(file.name) &&
-                                    file.name != ".nomedia" -> return true
-                        }
-                    }
+                    corpse &&
+                    file.parentFile != null && 
+                    file.parentFile.parentFile != null && 
+                    file.parentFile.name == "data" &&
+                    file.parentFile.parentFile.name == "Android" &&
+                    file.name != ".nomedia" &&
+                    !installedPackages.contains(file.name) -> return true
                 }
                 // empty folder
                 if (file.isDirectory && isDirectoryEmpty(file) && emptyDir) return true
@@ -122,9 +121,9 @@ class FileScanner(private val path: File, context: Context?) {
                     if (file.absolutePath.lowercase(Locale.getDefault()).matches(filter.lowercase(Locale.getDefault()).toRegex()))
                         return true
                 }
+            } catch (e: NullPointerException) {
+                return false
             }
-        } catch (e: NullPointerException) {
-            return false
         }
         return false // not empty folder or file in filter
     }

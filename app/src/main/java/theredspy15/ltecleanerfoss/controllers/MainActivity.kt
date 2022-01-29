@@ -70,23 +70,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Arranges the layout accordingly
+     */
     private fun arrangeViews(isDelete: Boolean) {
-        if (isDelete) arrangeForClean() else arrangeForAnalyze()
-    }
-
-    private fun arrangeForClean() {
         val orientation = resources.configuration.orientation
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            binding!!.frameLayout.visibility = View.VISIBLE
-            binding!!.fileScrollView.visibility = View.GONE
-        }
-    }
-
-    private fun arrangeForAnalyze() {
-        val orientation = resources.configuration.orientation
-        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            binding!!.frameLayout.visibility = View.GONE
-            binding!!.fileScrollView.visibility = View.VISIBLE
+            if (isDelete) {
+                binding!!.frameLayout.visibility = View.VISIBLE
+                binding!!.fileScrollView.visibility = View.GONE
+            } else {
+                binding!!.frameLayout.visibility = View.GONE
+                binding!!.fileScrollView.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -262,7 +258,7 @@ class MainActivity : AppCompatActivity() {
                 this, arrayOf(
                     Manifest.permission.WRITE_EXTERNAL_STORAGE,
                     Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.MANAGE_EXTERNAL_STORAGE
+                    Manifest.permission.MANAGE_EXTERNAL_STORAGE // starting from android 11 and above, manage external storage is now required due to storageAccessFramework
                 ),
                 1
             )

@@ -65,6 +65,8 @@ Upoming major features:
   * Create a [Pull Request](https://opensource.guide/how-to-contribute/#opening-a-pull-request)
   * Translate this app into more languages on [Crowdin](https://crowdin.com/project/lte-cleaner)
 
+Changes are first made on the master branch, then cherry picked on to the others
+
 #### The Team  
 <a href="https://github.com/TheRedSpy15/LTECleanerFOSS/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TheRedSpy15/LTECleanerFOSS" />

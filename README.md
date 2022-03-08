@@ -23,9 +23,7 @@ __LTE Cleaner is 100% free, open source, ad free, and deletes everything it clai
 <details>
   <summary>Notice</summary>
 
-October 7th, 2021:
-
-10/7/2021 Marks the start of a new direction for LTE Cleaner. The playstore varient will have ads now displayed. While all other sources remain the same
+March 7th, 2022: All software & products developed by me and my company, are no longer be distributed to Belarus or Russia.
 
 </details>
 

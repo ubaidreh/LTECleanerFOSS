@@ -143,8 +143,8 @@ class MainActivity : AppCompatActivity() {
     private fun scan(delete: Boolean) {
         Looper.prepare()
         runOnUiThread {
-            findViewById<View>(R.id.cleanBtn).isEnabled = !FileScanner.isRunning
-            findViewById<View>(R.id.analyzeBtn).isEnabled = !FileScanner.isRunning
+            binding.cleanBtn.isEnabled = !FileScanner.isRunning
+            binding.analyzeBtn.isEnabled = !FileScanner.isRunning
         }
         reset()
         if (prefs!!.getBoolean("clipboard", false)) clearClipboard()
@@ -187,8 +187,8 @@ class MainActivity : AppCompatActivity() {
         }
         binding.fileScrollView.post { binding.fileScrollView.fullScroll(ScrollView.FOCUS_DOWN) }
         runOnUiThread {
-            findViewById<View>(R.id.cleanBtn).isEnabled = !FileScanner.isRunning
-            findViewById<View>(R.id.analyzeBtn).isEnabled = !FileScanner.isRunning
+            binding.cleanBtn.isEnabled = !FileScanner.isRunning
+            binding.analyzeBtn.isEnabled = !FileScanner.isRunning
         }
         Looper.loop()
     }

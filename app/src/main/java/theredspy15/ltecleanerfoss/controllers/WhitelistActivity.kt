@@ -20,25 +20,21 @@ import dev.shreyaspatil.MaterialDialog.MaterialDialog
 import dev.shreyaspatil.MaterialDialog.interfaces.DialogInterface
 import theredspy15.ltecleanerfoss.R
 import theredspy15.ltecleanerfoss.databinding.ActivityWhitelistBinding
-import java.util.*
-import kotlin.collections.ArrayList
 
 class WhitelistActivity : AppCompatActivity() {
-    var binding: ActivityWhitelistBinding? = null
+    lateinit var binding: ActivityWhitelistBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_whitelist)
-        binding = ActivityWhitelistBinding.inflate(
-            layoutInflater
-        )
-        setContentView(binding!!.root)
-        binding!!.newButton.setOnClickListener { addToWhiteList() }
+        binding = ActivityWhitelistBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.newButton.setOnClickListener { addToWhiteList() }
         getWhiteList(MainActivity.prefs)
         loadViews()
     }
 
     private fun loadViews() {
-        binding!!.pathsLayout.removeAllViews()
+        binding.pathsLayout.removeAllViews()
         val layout = LinearLayout.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
@@ -50,7 +46,7 @@ class WhitelistActivity : AppCompatActivity() {
             textView.setText(R.string.empty_whitelist)
             textView.textAlignment = View.TEXT_ALIGNMENT_CENTER
             textView.textSize = 18f
-            runOnUiThread { binding!!.pathsLayout.addView(textView, layout) }
+            runOnUiThread { binding.pathsLayout.addView(textView, layout) }
         } else {
             for (path in whiteList) {
                 val button = Button(this)
@@ -64,7 +60,7 @@ class WhitelistActivity : AppCompatActivity() {
                 val drawable = button.background as GradientDrawable
                 drawable.setColor(Color.GRAY)
                 drawable.alpha = 30
-                runOnUiThread { binding!!.pathsLayout.addView(button, layout) }
+                runOnUiThread { binding.pathsLayout.addView(button, layout) }
             }
         }
     }
@@ -78,7 +74,7 @@ class WhitelistActivity : AppCompatActivity() {
                 dialogInterface.dismiss()
                 whiteList.remove(path)
                 MainActivity.prefs!!.edit().putStringSet("whitelist", HashSet(whiteList)).apply()
-                binding!!.pathsLayout.removeView(button)
+                binding.pathsLayout.removeView(button)
             }
             .setNegativeButton(getString(R.string.cancel)) { dialogInterface: DialogInterface, _: Int -> dialogInterface.dismiss() }
             .build()

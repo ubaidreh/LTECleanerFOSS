@@ -18,7 +18,7 @@ android {
         versionName "4.9.7"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    lintOptions {
+    lint {
         abortOnError false
     }
     buildTypes {

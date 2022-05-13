@@ -23,7 +23,7 @@ __LTE Cleaner is 100% free, open source, ad free, and deletes everything it clai
 <details>
   <summary>Notice</summary>
 
-March 7th, 2022: All software & products developed by me and my company, are no longer be distributed to Belarus or Russia.
+May 13th, 2022: This project is temporaily on maintainence mode. I am currently working on projects for my startup and all my coding time is going into that for now. I will accept just about any pull request. But no real updates for some time. This will not be as long of a break as last time. But probably a couple months
 
 </details>
 

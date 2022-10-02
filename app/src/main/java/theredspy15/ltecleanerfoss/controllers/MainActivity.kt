@@ -57,6 +57,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    //commit testing
+
     fun whitelist() {
         val intent = Intent(this, WhitelistActivity::class.java)
         startActivity(intent)
